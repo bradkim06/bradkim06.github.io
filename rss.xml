@@ -1,58 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 05 Aug 2020 12:47:48 GMT</lastBuildDate><item><title><![CDATA[React JSX]]></title><description><![CDATA[What is JSX? JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React. Coding…]]></description><link>https://bradkim06.github.io/React/JSX/</link><guid isPermaLink="false">https://bradkim06.github.io/React/JSX/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is JSX?&lt;/h1&gt;
-&lt;p&gt;JSX stands for JavaScript XML.&lt;/p&gt;
-&lt;p&gt;JSX allows us to write HTML in React.&lt;/p&gt;
-&lt;p&gt;JSX makes it easier to write and add HTML in React.&lt;/p&gt;
-&lt;h1&gt;Coding JSX&lt;/h1&gt;
-&lt;p&gt;JSX allows us to write HTML elements in JavaScript and place them in the DOM without any &lt;code class=&quot;language-text&quot;&gt;createElement()&lt;/code&gt;  and/or &lt;code class=&quot;language-text&quot;&gt;appendChild()&lt;/code&gt; methods.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You are not required to use JSX, but JSX makes it easier to write React applications.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Let us demonstrate with two examples, the first uses JSX and the second does not:&lt;/p&gt;
-&lt;h3&gt;JSX:&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I Love JSX!&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myelement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Without JSX:&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;h1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;I do not use JSX!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myelement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.&lt;/p&gt;
-&lt;p&gt;JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.&lt;/p&gt;
-&lt;h1&gt;Expressions in JSX&lt;/h1&gt;
-&lt;p&gt;With JSX you can write expressions inside curly braces &lt;code class=&quot;language-text&quot;&gt;{ }&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:&lt;/p&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;React is &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt; times better with JSX&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Inserting a Large Block of HTML&lt;/h1&gt;
-&lt;p&gt;To write HTML on multiple lines, put the HTML inside parentheses:&lt;/p&gt;
-&lt;h3&gt;Create a list with three list items:&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Apples&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Bananas&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Cherries&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;One Top Level Element&lt;/h1&gt;
-&lt;p&gt;The HTML code must be wrapped in ONE top level element.&lt;/p&gt;
-&lt;p&gt;So if you like to write two headers, you must put them inside a parent element, like a &lt;code class=&quot;language-text&quot;&gt;div&lt;/code&gt; element&lt;/p&gt;
-&lt;h3&gt;Wrap two headers inside one DIV element:&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I am a Header.&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I am a Header too.&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1&gt;Elements Must be Closed&lt;/h1&gt;
-&lt;p&gt;JSX follows XML rules, and therefore HTML elements must be properly closed.&lt;/p&gt;
-&lt;h3&gt;Close empty elements with /&gt;&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;JSX will throw an error if the HTML is not properly closed.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[React Render HTML]]></title><description><![CDATA[React’s goal is in many ways to render HTML in a web page. React renders HTML to the web page by using a function called . The Render…]]></description><link>https://bradkim06.github.io/React/RenderHTML/</link><guid isPermaLink="false">https://bradkim06.github.io/React/RenderHTML/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React’s goal is in many ways to render HTML in a web page.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 05 Aug 2020 12:55:34 GMT</lastBuildDate><item><title><![CDATA[React Render HTML]]></title><description><![CDATA[React’s goal is in many ways to render HTML in a web page. React renders HTML to the web page by using a function called . The Render…]]></description><link>https://bradkim06.github.io/React/RenderHTML/</link><guid isPermaLink="false">https://bradkim06.github.io/React/RenderHTML/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React’s goal is in many ways to render HTML in a web page.&lt;/p&gt;
 &lt;p&gt;React renders HTML to the web page by using a function called &lt;code class=&quot;language-text&quot;&gt;ReactDOM.render()&lt;/code&gt;.&lt;/p&gt;
 &lt;h1&gt;The Render Function&lt;/h1&gt;
 &lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;ReactDOM.render()&lt;/code&gt; function takes two arguments, HTML code and an HTML element.&lt;/p&gt;
@@ -381,67 +327,61 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
   &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/react/react_getstarted.asp&quot;&gt;React Getting Started - w3schools.com&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-1. R 프로그래밍 기초]]></title><description><![CDATA[R 기초  데이터 분석 도구 R의 특성 이해 변수 값 할당, 삭제 연산자 확인, 우선순위 함수 생성 방법 R 기초 중에 기초 | 기능 | R 코드 | 비고 |
-| 출력하기 | print(a), cat(“a”,“b”,“c) | print() 출력형식 X…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-1/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;R 기초&lt;/strong&gt;&lt;/h1&gt;
-&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 분석 도구 R의 특성 이해&lt;/li&gt;
-&lt;li&gt;변수 값 할당, 삭제&lt;/li&gt;
-&lt;li&gt;연산자 확인, 우선순위&lt;/li&gt;
-&lt;li&gt;함수 생성 방법&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;R 기초 중에 기초&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; | &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-| &lt;strong&gt;출력하기&lt;/strong&gt; | print(a), cat(“a”,“b”,“c) | print() 출력형식 X 한번에 하나&lt;br&gt;cat() 여러 항목을 묶어서 연결된 결과로 출력 |
-| &lt;strong&gt;대입연산자&lt;/strong&gt; | &amp;#x3C;-, &amp;#x3C;&amp;#x3C;-, =, -&gt; | |
-| &lt;strong&gt;변수 목록보기&lt;/strong&gt; | ls(), ls, str() | |
-|  &lt;strong&gt;변수 삭제&lt;/strong&gt; | rm() | rm(list=ls()): 모든 변수 삭제 |
-|  &lt;strong&gt;벡터 생성&lt;/strong&gt; | c() | |
-|  &lt;strong&gt;R 함수 정의&lt;/strong&gt; | function(param1, param2) {expr 1, expr 2} | |
-|  &lt;strong&gt;데이터 할당&lt;/strong&gt; | a&amp;#x3C;-1, a=1 | |
-|  &lt;strong&gt;화면 프린트&lt;/strong&gt; | a, print(a) | |
-| &lt;strong&gt;결합&lt;/strong&gt; | x&amp;#x3C;-c(1,2,3,4) | C함수는 문자,숫자,논리값,변수 모두 결합 가능 |
-| &lt;strong&gt;수열&lt;/strong&gt; | 1:5, seq(from=0, to=20, by=2) | 숫자 생성 |
-| &lt;strong&gt;반복&lt;/strong&gt; | rep(1, time=5), rep(1:4, each=2) | 변수의 값을 time인자만큼 반복 |
-|  &lt;strong&gt;문자 붙이기&lt;/strong&gt; | A&amp;#x3C;-paste(“a”,“b”,“c”, sep=”-”) | |
-|  &lt;strong&gt;문자열 추출&lt;/strong&gt; | substr(“Bigdataanalysis”,1,4) | substr(문자열,시작,끝) |
-| &lt;strong&gt;논리값&lt;/strong&gt; | a&amp;#x3C;-True, a&amp;#x3C;-T | |
-|  &lt;strong&gt;논리 연산자&lt;/strong&gt; | ==, !=, &amp;#x3C;=, &gt;= | |
-|  &lt;strong&gt;벡터 원소 선택&lt;/strong&gt; | V[n], V[-n] | |&lt;/p&gt;
-&lt;h3&gt;벡터의 연산&lt;/h3&gt;
-&lt;p&gt;|  &lt;strong&gt;연산자 우선순위&lt;/strong&gt; | &lt;strong&gt;뜻&lt;/strong&gt; | &lt;strong&gt;표현방법&lt;/strong&gt; |
-| &lt;strong&gt;[ ]&lt;/strong&gt; | 인덱스 | a[1] |
-| &lt;strong&gt;$&lt;/strong&gt; | 요소 뽑아내기 | a$coef |
-| &lt;strong&gt;^&lt;/strong&gt; | 지수 | 5^2 |
-| &lt;strong&gt;+-&lt;/strong&gt; | 단항 마이너스, 플러스 | -3, +5 |
-| &lt;strong&gt;:&lt;/strong&gt; | 수열 생성 | 1:10 |
-| &lt;strong&gt;%any%&lt;/strong&gt; | 특수 연산자 | %/%나눗셈 몫, %% 나머지&lt;br&gt;, %&lt;em&gt;% 행렬의 곱 |
-| &lt;strong&gt;&lt;/em&gt; /&lt;/strong&gt; | 곱하기 나누기 | 3*5, 3/5 |
-| &lt;strong&gt;+ -&lt;/strong&gt; | 더하기 빼기 | 3+5, 3-5 |
-| &lt;strong&gt;!&lt;/strong&gt; | Not | !(3==5) |
-| &lt;strong&gt;&amp;#x26;&lt;/strong&gt; | and | TRUE &amp;#x26; TRUE |
-| &lt;code style=&quot;color:black&quot;&gt;&lt;strong&gt;|&lt;/strong&gt;&lt;/code&gt; | OR | |
-| &lt;strong&gt;~&lt;/strong&gt; | 식(formula) | |
-| &lt;strong&gt;-&gt; -&gt;&gt;&lt;/strong&gt; | 오른쪽 대입 | 3-&gt;a |
-| &lt;strong&gt;=&lt;/strong&gt;, &lt;strong&gt;&amp;#x3C;- &amp;#x3C;&amp;#x3C;-&lt;/strong&gt; | 왼쪽 대입 | |
-| &lt;strong&gt;?&lt;/strong&gt; | 도움말 |&lt;/p&gt;
-&lt;h3&gt;벡터의 기초통계&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드(var=변수)&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-| &lt;strong&gt;평균&lt;/strong&gt; | mean(var) | |
-| &lt;strong&gt;합계&lt;/strong&gt; | sum(var) | |
-| &lt;strong&gt;중앙값&lt;/strong&gt; | median(var) | |
-| &lt;strong&gt;로그&lt;/strong&gt; | log(var) | |
-| &lt;strong&gt;표준편차&lt;/strong&gt; | sd(var) | |
-| &lt;strong&gt;분산&lt;/strong&gt; | var(변수) | |
-| &lt;strong&gt;공분산&lt;/strong&gt; | cov(변수1, 변수2) | |
-| &lt;strong&gt;상관계수&lt;/strong&gt; | cor(변수1, 변수2) | |
-|  &lt;strong&gt;변수의 길이 값&lt;/strong&gt; | length(var) | |&lt;/p&gt;
-&lt;h3&gt;R 프로그래밍시 자주하는 실수&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-|  &lt;strong&gt;경로 역슬래시 두번&lt;/strong&gt; | f:\dataedu\r\test.csv&lt;br&gt;(f: dataedurtest.csv) | \\ or / |
-|  &lt;strong&gt;&amp;#x3C;-붙여쓰기&lt;/strong&gt; | x&amp;#x3C;-pi | Error: object “x” not found |
-|  &lt;strong&gt;여러줄 식&lt;/strong&gt; | &gt; sum&amp;#x3C;-1+2+3&lt;br&gt;&gt; +4+5&lt;br&gt;[1]9&lt;br&gt;&gt;sum&lt;br&gt;[1]6|
-|  &lt;strong&gt;1:n+1, 1:(n+1) 차이&lt;/strong&gt; | &gt; n&amp;#x3C;-5;&lt;br&gt;&gt; 1:n+1;&lt;br&gt;[1] 2 3 4 5 6&lt;br&gt;&gt; 1:(n+1);&lt;br&gt;[1] 1 2 3 4 5 6 | |&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-2. 입력과 출력]]></title><description><![CDATA[입력과 출력  입력(Import), 출력(Export)이해 다양한 구조(고정자리수, 구분자)와 형식(txt, csv등)의 외부데이터를 읽는다. 웹(web)에서 데이터 테이블의 데이터를 읽는다. 복잡한 구조의 데이터 파일을 읽는다. R…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-2/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-2/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;입력과 출력&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/react/react_getstarted.asp&quot;&gt;React Getting Started - w3schools.com&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React JSX]]></title><description><![CDATA[What is JSX? JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes it easier to write and add HTML in React. Coding…]]></description><link>https://bradkim06.github.io/React/JSX/</link><guid isPermaLink="false">https://bradkim06.github.io/React/JSX/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is JSX?&lt;/h1&gt;
+&lt;p&gt;JSX stands for JavaScript XML.&lt;/p&gt;
+&lt;p&gt;JSX allows us to write HTML in React.&lt;/p&gt;
+&lt;p&gt;JSX makes it easier to write and add HTML in React.&lt;/p&gt;
+&lt;h1&gt;Coding JSX&lt;/h1&gt;
+&lt;p&gt;JSX allows us to write HTML elements in JavaScript and place them in the DOM without any &lt;code class=&quot;language-text&quot;&gt;createElement()&lt;/code&gt;  and/or &lt;code class=&quot;language-text&quot;&gt;appendChild()&lt;/code&gt; methods.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are not required to use JSX, but JSX makes it easier to write React applications.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let us demonstrate with two examples, the first uses JSX and the second does not:&lt;/p&gt;
+&lt;h3&gt;JSX:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I Love JSX!&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myelement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Without JSX:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;h1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;I do not use JSX!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myelement&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.&lt;/p&gt;
+&lt;p&gt;JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.&lt;/p&gt;
+&lt;h1&gt;Expressions in JSX&lt;/h1&gt;
+&lt;p&gt;With JSX you can write expressions inside curly braces &lt;code class=&quot;language-text&quot;&gt;{ }&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:&lt;/p&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;React is &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt; times better with JSX&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Inserting a Large Block of HTML&lt;/h1&gt;
+&lt;p&gt;To write HTML on multiple lines, put the HTML inside parentheses:&lt;/p&gt;
+&lt;h3&gt;Create a list with three list items:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Apples&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Bananas&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Cherries&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;One Top Level Element&lt;/h1&gt;
+&lt;p&gt;The HTML code must be wrapped in ONE top level element.&lt;/p&gt;
+&lt;p&gt;So if you like to write two headers, you must put them inside a parent element, like a &lt;code class=&quot;language-text&quot;&gt;div&lt;/code&gt; element&lt;/p&gt;
+&lt;h3&gt;Wrap two headers inside one DIV element:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I am a Header.&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;I am a Header too.&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;Elements Must be Closed&lt;/h1&gt;
+&lt;p&gt;JSX follows XML rules, and therefore HTML elements must be properly closed.&lt;/p&gt;
+&lt;h3&gt;Close empty elements with /&gt;&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myelement &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JSX will throw an error if the HTML is not properly closed.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-2. 입력과 출력]]></title><description><![CDATA[입력과 출력  입력(Import), 출력(Export)이해 다양한 구조(고정자리수, 구분자)와 형식(txt, csv등)의 외부데이터를 읽는다. 웹(web)에서 데이터 테이블의 데이터를 읽는다. 복잡한 구조의 데이터 파일을 읽는다. R…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-2/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-2/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;입력과 출력&lt;/strong&gt;&lt;/h1&gt;
 &lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;입력(Import), 출력(Export)이해&lt;/li&gt;
@@ -505,7 +445,67 @@ Larry&lt;br&gt;
 &lt;li&gt;L[[“Moe”]]와 L$Moe는 둘다 같은 원소.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Implement Jekyll Search]]></title><description><![CDATA[Create search.json Search Script 1. without installing anything 2. Download Search Script Search Box Setting & Usage See more option Simple…]]></description><link>https://bradkim06.github.io/Jekyll/Jekyll-Search/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Jekyll-Search/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;Create search.json&lt;/strong&gt;&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-1. R 프로그래밍 기초]]></title><description><![CDATA[R 기초  데이터 분석 도구 R의 특성 이해 변수 값 할당, 삭제 연산자 확인, 우선순위 함수 생성 방법 R 기초 중에 기초 | 기능 | R 코드 | 비고 |
+| 출력하기 | print(a), cat(“a”,“b”,“c) | print() 출력형식 X…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-1/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;R 기초&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 분석 도구 R의 특성 이해&lt;/li&gt;
+&lt;li&gt;변수 값 할당, 삭제&lt;/li&gt;
+&lt;li&gt;연산자 확인, 우선순위&lt;/li&gt;
+&lt;li&gt;함수 생성 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;R 기초 중에 기초&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; | &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+| &lt;strong&gt;출력하기&lt;/strong&gt; | print(a), cat(“a”,“b”,“c) | print() 출력형식 X 한번에 하나&lt;br&gt;cat() 여러 항목을 묶어서 연결된 결과로 출력 |
+| &lt;strong&gt;대입연산자&lt;/strong&gt; | &amp;#x3C;-, &amp;#x3C;&amp;#x3C;-, =, -&gt; | |
+| &lt;strong&gt;변수 목록보기&lt;/strong&gt; | ls(), ls, str() | |
+|  &lt;strong&gt;변수 삭제&lt;/strong&gt; | rm() | rm(list=ls()): 모든 변수 삭제 |
+|  &lt;strong&gt;벡터 생성&lt;/strong&gt; | c() | |
+|  &lt;strong&gt;R 함수 정의&lt;/strong&gt; | function(param1, param2) {expr 1, expr 2} | |
+|  &lt;strong&gt;데이터 할당&lt;/strong&gt; | a&amp;#x3C;-1, a=1 | |
+|  &lt;strong&gt;화면 프린트&lt;/strong&gt; | a, print(a) | |
+| &lt;strong&gt;결합&lt;/strong&gt; | x&amp;#x3C;-c(1,2,3,4) | C함수는 문자,숫자,논리값,변수 모두 결합 가능 |
+| &lt;strong&gt;수열&lt;/strong&gt; | 1:5, seq(from=0, to=20, by=2) | 숫자 생성 |
+| &lt;strong&gt;반복&lt;/strong&gt; | rep(1, time=5), rep(1:4, each=2) | 변수의 값을 time인자만큼 반복 |
+|  &lt;strong&gt;문자 붙이기&lt;/strong&gt; | A&amp;#x3C;-paste(“a”,“b”,“c”, sep=”-”) | |
+|  &lt;strong&gt;문자열 추출&lt;/strong&gt; | substr(“Bigdataanalysis”,1,4) | substr(문자열,시작,끝) |
+| &lt;strong&gt;논리값&lt;/strong&gt; | a&amp;#x3C;-True, a&amp;#x3C;-T | |
+|  &lt;strong&gt;논리 연산자&lt;/strong&gt; | ==, !=, &amp;#x3C;=, &gt;= | |
+|  &lt;strong&gt;벡터 원소 선택&lt;/strong&gt; | V[n], V[-n] | |&lt;/p&gt;
+&lt;h3&gt;벡터의 연산&lt;/h3&gt;
+&lt;p&gt;|  &lt;strong&gt;연산자 우선순위&lt;/strong&gt; | &lt;strong&gt;뜻&lt;/strong&gt; | &lt;strong&gt;표현방법&lt;/strong&gt; |
+| &lt;strong&gt;[ ]&lt;/strong&gt; | 인덱스 | a[1] |
+| &lt;strong&gt;$&lt;/strong&gt; | 요소 뽑아내기 | a$coef |
+| &lt;strong&gt;^&lt;/strong&gt; | 지수 | 5^2 |
+| &lt;strong&gt;+-&lt;/strong&gt; | 단항 마이너스, 플러스 | -3, +5 |
+| &lt;strong&gt;:&lt;/strong&gt; | 수열 생성 | 1:10 |
+| &lt;strong&gt;%any%&lt;/strong&gt; | 특수 연산자 | %/%나눗셈 몫, %% 나머지&lt;br&gt;, %&lt;em&gt;% 행렬의 곱 |
+| &lt;strong&gt;&lt;/em&gt; /&lt;/strong&gt; | 곱하기 나누기 | 3*5, 3/5 |
+| &lt;strong&gt;+ -&lt;/strong&gt; | 더하기 빼기 | 3+5, 3-5 |
+| &lt;strong&gt;!&lt;/strong&gt; | Not | !(3==5) |
+| &lt;strong&gt;&amp;#x26;&lt;/strong&gt; | and | TRUE &amp;#x26; TRUE |
+| &lt;code style=&quot;color:black&quot;&gt;&lt;strong&gt;|&lt;/strong&gt;&lt;/code&gt; | OR | |
+| &lt;strong&gt;~&lt;/strong&gt; | 식(formula) | |
+| &lt;strong&gt;-&gt; -&gt;&gt;&lt;/strong&gt; | 오른쪽 대입 | 3-&gt;a |
+| &lt;strong&gt;=&lt;/strong&gt;, &lt;strong&gt;&amp;#x3C;- &amp;#x3C;&amp;#x3C;-&lt;/strong&gt; | 왼쪽 대입 | |
+| &lt;strong&gt;?&lt;/strong&gt; | 도움말 |&lt;/p&gt;
+&lt;h3&gt;벡터의 기초통계&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드(var=변수)&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+| &lt;strong&gt;평균&lt;/strong&gt; | mean(var) | |
+| &lt;strong&gt;합계&lt;/strong&gt; | sum(var) | |
+| &lt;strong&gt;중앙값&lt;/strong&gt; | median(var) | |
+| &lt;strong&gt;로그&lt;/strong&gt; | log(var) | |
+| &lt;strong&gt;표준편차&lt;/strong&gt; | sd(var) | |
+| &lt;strong&gt;분산&lt;/strong&gt; | var(변수) | |
+| &lt;strong&gt;공분산&lt;/strong&gt; | cov(변수1, 변수2) | |
+| &lt;strong&gt;상관계수&lt;/strong&gt; | cor(변수1, 변수2) | |
+|  &lt;strong&gt;변수의 길이 값&lt;/strong&gt; | length(var) | |&lt;/p&gt;
+&lt;h3&gt;R 프로그래밍시 자주하는 실수&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+|  &lt;strong&gt;경로 역슬래시 두번&lt;/strong&gt; | f:\dataedu\r\test.csv&lt;br&gt;(f: dataedurtest.csv) | \\ or / |
+|  &lt;strong&gt;&amp;#x3C;-붙여쓰기&lt;/strong&gt; | x&amp;#x3C;-pi | Error: object “x” not found |
+|  &lt;strong&gt;여러줄 식&lt;/strong&gt; | &gt; sum&amp;#x3C;-1+2+3&lt;br&gt;&gt; +4+5&lt;br&gt;[1]9&lt;br&gt;&gt;sum&lt;br&gt;[1]6|
+|  &lt;strong&gt;1:n+1, 1:(n+1) 차이&lt;/strong&gt; | &gt; n&amp;#x3C;-5;&lt;br&gt;&gt; 1:n+1;&lt;br&gt;[1] 2 3 4 5 6&lt;br&gt;&gt; 1:(n+1);&lt;br&gt;[1] 1 2 3 4 5 6 | |&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implement Jekyll Search]]></title><description><![CDATA[Create search.json Search Script 1. without installing anything 2. Download Search Script Search Box Setting & Usage See more option Simple…]]></description><link>https://bradkim06.github.io/Jekyll/Jekyll-Search/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Jekyll-Search/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;Create search.json&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;liquid&quot;&gt;&lt;pre class=&quot;language-liquid&quot;&gt;&lt;code class=&quot;language-liquid&quot;&gt;{&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;raw&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;}
 &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;
@@ -706,63 +706,7 @@ document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&q
 &lt;li&gt;사생활 침해 -&gt; 동의에서 책임으로&lt;/li&gt;
 &lt;li&gt;책임 원칙 훼손 -&gt; 결과 기반 책임 원칙 고수&lt;/li&gt;
 &lt;li&gt;데이터 오용 -&gt; 알고리즘 접근 허용&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap1-1. 데이터의 이해]]></title><description><![CDATA[The category summarizes the study for (Advanced Data Analytics Semi-Professional) National Technical Certificate personally…]]></description><link>https://bradkim06.github.io/study_adsp/Chap1-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/Chap1-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The category summarizes the study for &lt;code class=&quot;language-text&quot;&gt;ADsP&lt;/code&gt;(Advanced Data Analytics Semi-Professional) National Technical Certificate personally.&lt;/p&gt;
-&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 정의에 대해 이해한다.&lt;/li&gt;
-&lt;li&gt;데이터베이스의 정의와 특징을 이해한다.&lt;/li&gt;
-&lt;li&gt;데이터베이스 활용에 대해 이해한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;strong&gt;1절. 데이터와 정보&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;데이터의 유형&lt;/h2&gt;
-&lt;p&gt;| 구분                                  | 형태          | 특징                              |
-| &lt;strong&gt;정성적 데이터(qualitative data)&lt;/strong&gt;     | 언어,문자 등  | 저장,검색,분석에 &lt;strong&gt;많은&lt;/strong&gt; 비용 소모   |
-| &lt;strong&gt;정량적 데이터(quantitative data)&lt;/strong&gt;    | 수치,도형,기호 등 | &lt;code class=&quot;language-text&quot;&gt;정형화가 된 데이터&lt;/code&gt;로 비용 소모가 &lt;strong&gt;적음&lt;/strong&gt;|&lt;/p&gt;
-&lt;h2&gt;지식경영의 핵심 이슈&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;암묵지&lt;/strong&gt;: 개인의 &lt;code class=&quot;language-text&quot;&gt;내면화(internalization)&lt;/code&gt;된 지식 -&gt; 조직의 지식으로 &lt;code class=&quot;language-text&quot;&gt;공통화(socialization)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;형식지&lt;/strong&gt;: 언어,기호,숫자로 &lt;code class=&quot;language-text&quot;&gt;표출화(externalization)&lt;/code&gt;된 지식 -&gt; 개인의 지식으로 &lt;code class=&quot;language-text&quot;&gt;연결화(combiation)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;데이터와 정보의 관계&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;데이터(Data)&lt;/strong&gt;: 개별 데이터 자체로는 의미가 중요하지 않은 &lt;code class=&quot;language-text&quot;&gt;객관적인 사실&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;정보(Information)&lt;/strong&gt;: 데이터의 가공, 처리와 데이터간 연간관계 속에서 &lt;code class=&quot;language-text&quot;&gt;의미&lt;/code&gt;가 도출된 것.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;지식(Knowledge)&lt;/strong&gt;: 유의미한 정보를 분류하고 개인적인 경험을 결합시켜 &lt;code class=&quot;language-text&quot;&gt;고유의 지식&lt;/code&gt;으로 내재화된 것.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;지혜(Wisdom)&lt;/strong&gt;: 지식의 축적과 아이디어가 결합된 &lt;code class=&quot;language-text&quot;&gt;창의적인 산물&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1&gt;&lt;strong&gt;3절. 데이터베이스의 활용&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;기업내부 데이터베이스&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;OLTP(On-Line Transaction Processing)&lt;/strong&gt;: 데이터 &lt;code class=&quot;language-text&quot;&gt;갱신&lt;/code&gt; 위주&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OLAP(On-Line Analytical Processing)&lt;/strong&gt;: 비지니스 관점에서 데이터 &lt;code class=&quot;language-text&quot;&gt;조회&lt;/code&gt; 위주&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;2000년대 기업 데이터베이스&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;CRM(Customer Relationship Management)&lt;/strong&gt;: 기업이 고객과 관련된 내외부 자료를 분석,통합해 &lt;code class=&quot;language-text&quot;&gt;고객 중심 자원&lt;/code&gt;을 극대화.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SCM(Supply Chain Management)&lt;/strong&gt;: 외부 업체, 고객 등 거래관계에 있는 기업들간 IT를 이용한 &lt;code class=&quot;language-text&quot;&gt;공급망 최적화&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;분야별 데이터베이스&lt;/h2&gt;
-&lt;h3&gt;제조 부문&lt;/h3&gt;
-&lt;p&gt;ERP -&gt; CRM, Client/Server -&gt; Web Database&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ERP(Enterprise Resource Planning)&lt;/strong&gt;: 경영자원(인사,재무,생산 등)을 하나의 통합 시스템으로 재구축.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BI(Business Intelligence)&lt;/strong&gt;: 데이터를 정리하고 분석해 &lt;code class=&quot;language-text&quot;&gt;기업의 의사결정&lt;/code&gt;에 활용하는 프로세스.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CRM(Customer Relationship Management)&lt;/strong&gt;: 기업이 고객과 관련된 내외부 자료를 분석,통합해 &lt;code class=&quot;language-text&quot;&gt;고객 중심 자원&lt;/code&gt;을 극대화.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RTE(Real-Time Enterprise)&lt;/strong&gt;: 회사 전 부문의 정보를 하나로 통합&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;금융 부문&lt;/h3&gt;
-&lt;p&gt;DB 활용 마케팅&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;EAI(Enterprise Application Intergration)&lt;/strong&gt;: 정보를 중앙 집중적으로 통합,관리 사용.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;EDW(Enterprise Data Warehouse)&lt;/strong&gt;: 기존 DW(Data Warehouse)를 확장한 모델.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;유통 부문&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;KMS(Knowledge Management System)&lt;/strong&gt;: 기업 경영이 생산,제조에서 &lt;code class=&quot;language-text&quot;&gt;지식&lt;/code&gt;의 관점으로 새롭게 조명.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RFID&lt;/strong&gt;: 주파수를 이용해 ID를 식별하는 SYSTEM.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;사회기반 부문&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;EDI(Electronic Data Interchange)&lt;/strong&gt;: 주문서,납품서,청구서 등 무역에 필요한 각종 서류를 표준화된 양식으로 전자적 신호로 바꿔 거래처에 전송하는 시스템.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap1-3. 가치 창조를 위한 데이터 사이언스와 전략 인사이트]]></title><description><![CDATA[빅데이터 회의론의 원인과 해소 방안 일차원적 분석과 가치 기반 분석의 차이 데이터 사이언스와 데이터 사이언티스트 이해 빅데이터 시대의 가치 패러다임 변화…]]></description><link>https://bradkim06.github.io/study_adsp/chap1-3/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap1-3/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap1-3. 가치 창조를 위한 데이터 사이언스와 전략 인사이트]]></title><description><![CDATA[빅데이터 회의론의 원인과 해소 방안 일차원적 분석과 가치 기반 분석의 차이 데이터 사이언스와 데이터 사이언티스트 이해 빅데이터 시대의 가치 패러다임 변화…]]></description><link>https://bradkim06.github.io/study_adsp/chap1-3/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap1-3/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;빅데이터 회의론의 원인과 해소 방안&lt;/li&gt;
 &lt;li&gt;일차원적 분석과 가치 기반 분석의 차이&lt;/li&gt;
@@ -834,259 +778,7 @@ document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&q
 &lt;li&gt;대용량의 정형 및 비정형 데이터 저장, 접근이 가능한 저장소.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap2-2. 분석 마스터 플랜]]></title><description><![CDATA[데이터 분석을 위한 마스터 플랜 수립 이해. 분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정. 데이터 분석 거버넌스 체계. 데이터 분석 조직구조와 교육내용.…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-2/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-2/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 분석을 위한 마스터 플랜 수립 이해.&lt;/li&gt;
-&lt;li&gt;분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정.&lt;/li&gt;
-&lt;li&gt;데이터 분석 거버넌스 체계.&lt;/li&gt;
-&lt;li&gt;데이터 분석 조직구조와 교육내용.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;strong&gt;1절. 마스터 플랜 수립 프레임 워크&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;가) 마스터 플랜 수립 개요&lt;/h2&gt;
-&lt;h3&gt;우선순위 고려요소&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;전략적 중요도&lt;/li&gt;
-&lt;li&gt;비즈니스 성과 / ROI&lt;/li&gt;
-&lt;li&gt;실행 용이성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;적용범위 / 방식 고려요소&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;업무 내재화 적용 수준&lt;/li&gt;
-&lt;li&gt;분석 데이터 적용 수준&lt;/li&gt;
-&lt;li&gt;기술 적용 수준&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;&lt;code class=&quot;language-text&quot;&gt;ISP(Information Strategy Planning)&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;조직 내외부 환경을 분석하여 기회나 문제점 도출, 사용자의 요구사항을 분석하여 시스템 구축 우선순위를 결정하는 중장기 마스터 플랜을 수립하는 절차.&lt;/p&gt;
-&lt;h2&gt;나) 수행 과제 도출 및 우선순위 평가&lt;/h2&gt;
-&lt;h3&gt;일반적인 우선순위 평가 예시&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;전략적 중요도&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;전략적 필요성&lt;/li&gt;
-&lt;li&gt;시급성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;실행 용이성&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;투자 용이성&lt;/li&gt;
-&lt;li&gt;기술 용이성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;ROI관점에서 빅데이터 핵심 특징&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;투자비용(Investment) 요소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;크기(Volume), 다양성(Variety), 속도(Velocity)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;비즈니스 효과(Return) 요소&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;가치(Value)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;데이터 분석과제 추진시 고려해야 하는 우선순위 평가 기준&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;시급성 &amp;#x3C;-&gt; 전략적 중요도&lt;/li&gt;
-&lt;li&gt;난이도 &amp;#x3C;-&gt; 실행 용이성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;다) 이행계획 수립&lt;/h2&gt;
-&lt;h3&gt;로드맵 수립&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;과제의 1차적 우선순위 결정.&lt;/li&gt;
-&lt;li&gt;단계적 구현 로드맵 수립.&lt;/li&gt;
-&lt;li&gt;단계별로 추진하고자 하는 목표 정의.&lt;/li&gt;
-&lt;li&gt;단계별 추진 내용 정렬.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;세부 이행계획 수립&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;반복&lt;/code&gt;적인 분석체계 주로 사용. &lt;/p&gt;
-&lt;p&gt;데이터 수집 및 확보, 분석데이터 준비는 순차적 진행 &lt;code class=&quot;language-text&quot;&gt;모델링 반복&lt;/code&gt; 진행하는 혼합형 주로 적용.&lt;/p&gt;
-&lt;h2&gt;2절. 분석 거버넌스 체계 수립&lt;/h2&gt;
-&lt;h2&gt;구성요소&lt;/h2&gt;
-&lt;p&gt;Organization, Process, System, Data, Human Resource&lt;/p&gt;
-&lt;h2&gt;데이터 분석 수준 진단&lt;/h2&gt;
-&lt;h4&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;분석 준비도&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;분석 업무&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;발생한 사실 분석업무&lt;/li&gt;
-&lt;li&gt;예측 분석업무&lt;/li&gt;
-&lt;li&gt;시뮬레이션 분석업무&lt;/li&gt;
-&lt;li&gt;최적화 분석 업무&lt;/li&gt;
-&lt;li&gt;분석업무 정기적 개선&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;분석 인력,조직&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;분석 전문가 직무 존재&lt;/li&gt;
-&lt;li&gt;분석 전문가 교육 훈련 프로그램&lt;/li&gt;
-&lt;li&gt;관리자들의 기본적 분석 능력&lt;/li&gt;
-&lt;li&gt;전사 분석업무 총괄 조직 존재&lt;/li&gt;
-&lt;li&gt;경영진의 분석 업무 이해 능력&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;분석 기법&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;업무별 적합한 분석기법 사용&lt;/li&gt;
-&lt;li&gt;분석업무 도입 방법론&lt;/li&gt;
-&lt;li&gt;분석기법 라이브러리&lt;/li&gt;
-&lt;li&gt;분석기법 효과성 평가&lt;/li&gt;
-&lt;li&gt;분석기법 정기적 개선&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;분석 데이터&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;분석업무를 위한 데이터 충분성&lt;/li&gt;
-&lt;li&gt;분석업무를 위한 데이터 신뢰성&lt;/li&gt;
-&lt;li&gt;분석업무를 위한 데이터 적시성&lt;/li&gt;
-&lt;li&gt;비구조적 데이터 관리&lt;/li&gt;
-&lt;li&gt;외부 데이터 활용 체계&lt;/li&gt;
-&lt;li&gt;기준 데이터 관리(MDM)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;분석 문화&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;사실에 근거한 의사결정&lt;/li&gt;
-&lt;li&gt;관리자의 데이터 중시 정도&lt;/li&gt;
-&lt;li&gt;회의 등에서 데이터 활용 상황&lt;/li&gt;
-&lt;li&gt;경영진의 직관 vs 데이터 기반의 의사결정&lt;/li&gt;
-&lt;li&gt;데이터 공유 및 협업 문화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;분석 인프라&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;운영시스템 데이터 통합&lt;/li&gt;
-&lt;li&gt;EAI, ETL등 데이터 유통체계&lt;/li&gt;
-&lt;li&gt;분석 전용 서버 및 스토리지&lt;/li&gt;
-&lt;li&gt;빅데이터 분석 환경&lt;/li&gt;
-&lt;li&gt;통계 분석 환경&lt;/li&gt;
-&lt;li&gt;비쥬얼 분석 환경&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;분석 성숙도&lt;/h4&gt;
-&lt;p&gt;| 도입 -&gt; 활용 -&gt; 확산 -&gt; 최적화 |
-| 비즈니스, 조직 및 역량, IT |&lt;/p&gt;
-&lt;h5&gt;조직의 성숙도 평가 도구&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;CMMI(Capability) Model&lt;/code&gt;&lt;/strong&gt; 5단계&lt;/p&gt;
-&lt;h2&gt;데이터 거버넌스 체계 수립&lt;/h2&gt;
-&lt;h4&gt;데이터 거버넌스&lt;/h4&gt;
-&lt;p&gt;전사 차원의 모든 데이터에 대하여 정책 및 지침, 표준화, 운영조직 및 책임 등의 표준화된 관리체계를 수립하고 운영을 위한 Framework, Repository를 구축하는 것.&lt;/p&gt;
-&lt;h4&gt;구성요소&lt;/h4&gt;
-&lt;p&gt;원칙, 조직, 프로세스&lt;/p&gt;
-&lt;h4&gt;체계&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;데이터 표준화&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 표준 용어 설정, 명명 규칙, 메타 데이터 구축, 데이터 사전 구축&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;데이터 관리 체계 &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;메타 데이터와 데이터 사전 관리 원친 수립&lt;/li&gt;
-&lt;li&gt;데이터 생명 주기 관리방안 수립&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;데이터 저장소 관리&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 관리 체계 지원을 위한 워크플로우 지원&lt;/li&gt;
-&lt;li&gt;데이터 구조 변경에 따른 &lt;code class=&quot;language-text&quot;&gt;사전 영향 평가&lt;/code&gt; 수행&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;표준화 활동&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 거버넌스 구축 후 주기적으로 점검 및 모니터링&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;데이터 조직 및 인력방안 수립&lt;/h2&gt;
-&lt;h4&gt;분석을 위한 3가지 조직 구조&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;집중구조&lt;/li&gt;
-&lt;li&gt;기능구조&lt;/li&gt;
-&lt;li&gt;분산구조&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;분석조직의 인력 구성&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;비즈니스 인력&lt;/li&gt;
-&lt;li&gt;IT기술 인력&lt;/li&gt;
-&lt;li&gt;분석전문 인력&lt;/li&gt;
-&lt;li&gt;변화관리 인력[겸직 가능]&lt;/li&gt;
-&lt;li&gt;교육담당 인력[겸직 가능]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;분석 과제 관리 프로세스 수립&lt;/h2&gt;
-&lt;h4&gt;과제 발굴&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;분석 Idea 발굴&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;분석과제 후보제안&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;분석과제 확정&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;과제 수행&lt;/h4&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;팀구성&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;분석과제 실행&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;분석과제 진행관리&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;결과 공유 / 개선&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap3-1. 데이터 분석 개요]]></title><description><![CDATA[데이터 처리 프로세스 이해 데이터 시각화 이해 데이터 공간분석 이해 탐색적 자료 분석 이해 데이터 처리 Legacy -> Staging -> ODS -> DW -> Data Mart -> R.SAS Data Warehouse, Data Mart…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 처리 프로세스 이해&lt;/li&gt;
-&lt;li&gt;데이터 시각화 이해&lt;/li&gt;
-&lt;li&gt;데이터 공간분석 이해&lt;/li&gt;
-&lt;li&gt;탐색적 자료 분석 이해&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;데이터 처리&lt;/h2&gt;
-&lt;p&gt;Legacy -&gt; Staging -&gt; ODS -&gt; DW -&gt; Data Mart -&gt; R.SAS&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data Warehouse, Data Mart를 통해 분석 데이터를 가져와서 사용&lt;/li&gt;
-&lt;li&gt;운영시스템(Legacy, Staging)에 직접 접근 &lt;code class=&quot;language-text&quot;&gt;X&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;시각화&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;가장 낮은 수준의 분석이지만 잘 사용하면 효율적&lt;/li&gt;
-&lt;li&gt;빅데이터 분석에서 시각화는 필수&lt;/li&gt;
-&lt;li&gt;탐색적 분석을 할 때 시각화는 필수&lt;/li&gt;
-&lt;li&gt;SNA 분석(사회연결망 분석)을 할 때 자주 활용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;공간분석(GIS)&lt;/h2&gt;
-&lt;p&gt;지도위에 관련 속성들을 생성하고 &lt;strong&gt;크기, 모양, 선 굵기&lt;/strong&gt; 등으로 구분하여 Insight 도출.&lt;/p&gt;
-&lt;h2&gt;탐색적 자료 분석(EDA)&lt;/h2&gt;
-&lt;p&gt;다양한 차원과 값을 조합해가며 &lt;strong&gt;특이한 점&lt;/strong&gt;이나 &lt;strong&gt;의미 있는 사실&lt;/strong&gt;을 도출하고 분석의 최종 목적을 달성해가는 과정. 데이터의 특징과 내재하는 &lt;strong&gt;구조적 관계&lt;/strong&gt;를 알아내기 위한 기법들의 통칭.&lt;/p&gt;
-&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;EDA의 4가지 주제&lt;/code&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;저항성의 강조&lt;/li&gt;
-&lt;li&gt;잔차 계산&lt;/li&gt;
-&lt;li&gt;자료변수의 재표현&lt;/li&gt;
-&lt;li&gt;그래프를 통한 현시성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;통계 분석&lt;/h2&gt;
-&lt;h3&gt;기술통계(descriptive statistics)&lt;/h3&gt;
-&lt;p&gt;모집단으로부터 표본을 추출하고 표본이 가지고 있는 정보를 쉽게 파악할 수 있도록 데이터를 정리, 요약하기 위해 숫자 또는 그래프의 형태로 표현하는 절차.&lt;/p&gt;
-&lt;h3&gt;추측(추론)통계(inferential statistics)&lt;/h3&gt;
-&lt;p&gt;모집단으로부터 추출된 표본의 표본통계량으로 부터 모집단의 특성인 &lt;code class=&quot;language-text&quot;&gt;모수&lt;/code&gt;에 관해 통계적으로 추론하는 절차.&lt;/p&gt;
-&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;데이터 마이닝&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;대표적인 고급 데이터 분석법, 대용량의 자료로부터 관계, 패턴, 규칙등을 탐색하고 모형화하여 &lt;strong&gt;이전에 알려지지 않은 유용한 지식&lt;/strong&gt;을 추출하는 분석 방법.&lt;/p&gt;
-&lt;h3&gt;데이터 마이닝 방법&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;데이터베이스에서의 지식 탐색&lt;/strong&gt;&lt;br&gt;
-Data Mart를 생성하면서 데이터들의 속성을 사전분석하여 지식을 얻는 방법.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;기계학습&lt;/strong&gt;&lt;br&gt;
-인공신경망, 의사결정나무, 클러스터링, 베이지안 분류, SVM 등&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;패턴인식&lt;/strong&gt;&lt;br&gt;
-장바구니분석, 연관규칙 등&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap2-1. 데이터 분석 기획의 이해]]></title><description><![CDATA[분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해. KDD분석 방법론 CRISP-DM분석 방법론 빅데이터 분석 방법론…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap2-1. 데이터 분석 기획의 이해]]></title><description><![CDATA[분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해. KDD분석 방법론 CRISP-DM분석 방법론 빅데이터 분석 방법론…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해.&lt;/li&gt;
 &lt;li&gt;KDD분석 방법론&lt;/li&gt;
@@ -1321,41 +1013,315 @@ Data Mart를 생성하면서 데이터들의 속성을 사전분석하여 지식
 &lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;KSA ISO 21500&lt;/code&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;범위, 시간, 원가, 품질, 통합, 조달(Procurement), 자원, 리스크, 의사소통, 이해관계자(Stakeholder)&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[JavaScript Tutorial Intro]]></title><description><![CDATA[I’m going to follow w3schools’s javascript
- JavaScript Can Change HTML Content One of many JavaScript HTML methods is . This example uses…]]></description><link>https://bradkim06.github.io/javascript/w3schools/Intro/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/Intro/</guid><pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I’m going to follow w3schools’s javascript
-&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h1&gt;&lt;strong&gt;JavaScript Can Change HTML Content&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;One of many JavaScript HTML methods is &lt;code class=&quot;language-text&quot;&gt;getElementById()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;This example uses the method to “find” an HTML element (with id=“demo”) and changes the element content (&lt;code class=&quot;language-text&quot;&gt;innerHTML&lt;/code&gt;) to “Hello JavaScript”:&lt;/p&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can change HTML content.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;document.getElementById(&quot;content&quot;).innerHTML = &quot;Hello JavaScript!&quot;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Result&lt;/h3&gt;
-&lt;p id=&quot;content&quot;&gt;JavaScript can change HTML content.&lt;/p&gt;
-&lt;button type=&quot;button&quot; onclick=&apos;document.getElementById(&quot;content&quot;).innerHTML = &quot;Hello JavaScript!&quot;&apos;&gt;Click Me!&lt;/button&gt;
-&lt;h1&gt;&lt;strong&gt;JavaScript Can Change HTML Styles (CSS)&lt;/strong&gt;&lt;/h1&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can change the style of an HTML element.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;style&apos;).style.fontSize=&apos;35px&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Result&lt;/h3&gt;
-&lt;p id=&quot;style&quot;&gt;JavaScript can change the style of an HTML element.&lt;/p&gt;
-&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;style&apos;).style.fontSize=&apos;35px&apos;&quot;&gt;Click Me!&lt;/button&gt;
-&lt;h2&gt;JavaScript Can Hide HTML Elements&lt;/h2&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hide&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can hide HTML elements.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;hide&apos;).style.display=&apos;none&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Result&lt;/h3&gt;
-&lt;p id=&quot;hide&quot;&gt;JavaScript can hide HTML elements.&lt;/p&gt;
-&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;hide&apos;).style.display=&apos;none&apos;&quot;&gt;Click Me!&lt;/button&gt;
-&lt;h2&gt;JavaScript Can Show HTML Elements&lt;/h2&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;show&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;none&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello JavaScript!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;show&apos;).style.display=&apos;block&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Result&lt;/h3&gt;
-&lt;p id=&quot;show&quot; style=&quot;display:none&quot;&gt;Hello JavaScript!&lt;/p&gt;
-&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;show&apos;).style.display=&apos;block&apos;&quot;&gt;Click Me!&lt;/button&gt;
-&lt;h2&gt;Referece&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/js/js_intro.asp&quot;&gt;JavaScript Intro&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Jekyll Tips]]></title><description><![CDATA[Jekyll Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static…]]></description><link>https://bradkim06.github.io/Jekyll/tips-of-Jekyll/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/tips-of-Jekyll/</guid><pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Jekyll&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap2-2. 분석 마스터 플랜]]></title><description><![CDATA[데이터 분석을 위한 마스터 플랜 수립 이해. 분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정. 데이터 분석 거버넌스 체계. 데이터 분석 조직구조와 교육내용.…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-2/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-2/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 분석을 위한 마스터 플랜 수립 이해.&lt;/li&gt;
+&lt;li&gt;분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정.&lt;/li&gt;
+&lt;li&gt;데이터 분석 거버넌스 체계.&lt;/li&gt;
+&lt;li&gt;데이터 분석 조직구조와 교육내용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;strong&gt;1절. 마스터 플랜 수립 프레임 워크&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;가) 마스터 플랜 수립 개요&lt;/h2&gt;
+&lt;h3&gt;우선순위 고려요소&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;전략적 중요도&lt;/li&gt;
+&lt;li&gt;비즈니스 성과 / ROI&lt;/li&gt;
+&lt;li&gt;실행 용이성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;적용범위 / 방식 고려요소&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;업무 내재화 적용 수준&lt;/li&gt;
+&lt;li&gt;분석 데이터 적용 수준&lt;/li&gt;
+&lt;li&gt;기술 적용 수준&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;code class=&quot;language-text&quot;&gt;ISP(Information Strategy Planning)&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;조직 내외부 환경을 분석하여 기회나 문제점 도출, 사용자의 요구사항을 분석하여 시스템 구축 우선순위를 결정하는 중장기 마스터 플랜을 수립하는 절차.&lt;/p&gt;
+&lt;h2&gt;나) 수행 과제 도출 및 우선순위 평가&lt;/h2&gt;
+&lt;h3&gt;일반적인 우선순위 평가 예시&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;전략적 중요도&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전략적 필요성&lt;/li&gt;
+&lt;li&gt;시급성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;실행 용이성&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;투자 용이성&lt;/li&gt;
+&lt;li&gt;기술 용이성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;ROI관점에서 빅데이터 핵심 특징&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;투자비용(Investment) 요소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;크기(Volume), 다양성(Variety), 속도(Velocity)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;비즈니스 효과(Return) 요소&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가치(Value)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;데이터 분석과제 추진시 고려해야 하는 우선순위 평가 기준&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;시급성 &amp;#x3C;-&gt; 전략적 중요도&lt;/li&gt;
+&lt;li&gt;난이도 &amp;#x3C;-&gt; 실행 용이성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;다) 이행계획 수립&lt;/h2&gt;
+&lt;h3&gt;로드맵 수립&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;과제의 1차적 우선순위 결정.&lt;/li&gt;
+&lt;li&gt;단계적 구현 로드맵 수립.&lt;/li&gt;
+&lt;li&gt;단계별로 추진하고자 하는 목표 정의.&lt;/li&gt;
+&lt;li&gt;단계별 추진 내용 정렬.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;세부 이행계획 수립&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;반복&lt;/code&gt;적인 분석체계 주로 사용. &lt;/p&gt;
+&lt;p&gt;데이터 수집 및 확보, 분석데이터 준비는 순차적 진행 &lt;code class=&quot;language-text&quot;&gt;모델링 반복&lt;/code&gt; 진행하는 혼합형 주로 적용.&lt;/p&gt;
+&lt;h2&gt;2절. 분석 거버넌스 체계 수립&lt;/h2&gt;
+&lt;h2&gt;구성요소&lt;/h2&gt;
+&lt;p&gt;Organization, Process, System, Data, Human Resource&lt;/p&gt;
+&lt;h2&gt;데이터 분석 수준 진단&lt;/h2&gt;
+&lt;h4&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;분석 준비도&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;분석 업무&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;발생한 사실 분석업무&lt;/li&gt;
+&lt;li&gt;예측 분석업무&lt;/li&gt;
+&lt;li&gt;시뮬레이션 분석업무&lt;/li&gt;
+&lt;li&gt;최적화 분석 업무&lt;/li&gt;
+&lt;li&gt;분석업무 정기적 개선&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분석 인력,조직&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;분석 전문가 직무 존재&lt;/li&gt;
+&lt;li&gt;분석 전문가 교육 훈련 프로그램&lt;/li&gt;
+&lt;li&gt;관리자들의 기본적 분석 능력&lt;/li&gt;
+&lt;li&gt;전사 분석업무 총괄 조직 존재&lt;/li&gt;
+&lt;li&gt;경영진의 분석 업무 이해 능력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분석 기법&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;업무별 적합한 분석기법 사용&lt;/li&gt;
+&lt;li&gt;분석업무 도입 방법론&lt;/li&gt;
+&lt;li&gt;분석기법 라이브러리&lt;/li&gt;
+&lt;li&gt;분석기법 효과성 평가&lt;/li&gt;
+&lt;li&gt;분석기법 정기적 개선&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분석 데이터&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;분석업무를 위한 데이터 충분성&lt;/li&gt;
+&lt;li&gt;분석업무를 위한 데이터 신뢰성&lt;/li&gt;
+&lt;li&gt;분석업무를 위한 데이터 적시성&lt;/li&gt;
+&lt;li&gt;비구조적 데이터 관리&lt;/li&gt;
+&lt;li&gt;외부 데이터 활용 체계&lt;/li&gt;
+&lt;li&gt;기준 데이터 관리(MDM)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분석 문화&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사실에 근거한 의사결정&lt;/li&gt;
+&lt;li&gt;관리자의 데이터 중시 정도&lt;/li&gt;
+&lt;li&gt;회의 등에서 데이터 활용 상황&lt;/li&gt;
+&lt;li&gt;경영진의 직관 vs 데이터 기반의 의사결정&lt;/li&gt;
+&lt;li&gt;데이터 공유 및 협업 문화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분석 인프라&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;운영시스템 데이터 통합&lt;/li&gt;
+&lt;li&gt;EAI, ETL등 데이터 유통체계&lt;/li&gt;
+&lt;li&gt;분석 전용 서버 및 스토리지&lt;/li&gt;
+&lt;li&gt;빅데이터 분석 환경&lt;/li&gt;
+&lt;li&gt;통계 분석 환경&lt;/li&gt;
+&lt;li&gt;비쥬얼 분석 환경&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;분석 성숙도&lt;/h4&gt;
+&lt;p&gt;| 도입 -&gt; 활용 -&gt; 확산 -&gt; 최적화 |
+| 비즈니스, 조직 및 역량, IT |&lt;/p&gt;
+&lt;h5&gt;조직의 성숙도 평가 도구&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;CMMI(Capability) Model&lt;/code&gt;&lt;/strong&gt; 5단계&lt;/p&gt;
+&lt;h2&gt;데이터 거버넌스 체계 수립&lt;/h2&gt;
+&lt;h4&gt;데이터 거버넌스&lt;/h4&gt;
+&lt;p&gt;전사 차원의 모든 데이터에 대하여 정책 및 지침, 표준화, 운영조직 및 책임 등의 표준화된 관리체계를 수립하고 운영을 위한 Framework, Repository를 구축하는 것.&lt;/p&gt;
+&lt;h4&gt;구성요소&lt;/h4&gt;
+&lt;p&gt;원칙, 조직, 프로세스&lt;/p&gt;
+&lt;h4&gt;체계&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;데이터 표준화&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 표준 용어 설정, 명명 규칙, 메타 데이터 구축, 데이터 사전 구축&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;데이터 관리 체계 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;메타 데이터와 데이터 사전 관리 원친 수립&lt;/li&gt;
+&lt;li&gt;데이터 생명 주기 관리방안 수립&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;데이터 저장소 관리&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 관리 체계 지원을 위한 워크플로우 지원&lt;/li&gt;
+&lt;li&gt;데이터 구조 변경에 따른 &lt;code class=&quot;language-text&quot;&gt;사전 영향 평가&lt;/code&gt; 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;표준화 활동&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 거버넌스 구축 후 주기적으로 점검 및 모니터링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;데이터 조직 및 인력방안 수립&lt;/h2&gt;
+&lt;h4&gt;분석을 위한 3가지 조직 구조&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;집중구조&lt;/li&gt;
+&lt;li&gt;기능구조&lt;/li&gt;
+&lt;li&gt;분산구조&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;분석조직의 인력 구성&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;비즈니스 인력&lt;/li&gt;
+&lt;li&gt;IT기술 인력&lt;/li&gt;
+&lt;li&gt;분석전문 인력&lt;/li&gt;
+&lt;li&gt;변화관리 인력[겸직 가능]&lt;/li&gt;
+&lt;li&gt;교육담당 인력[겸직 가능]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;분석 과제 관리 프로세스 수립&lt;/h2&gt;
+&lt;h4&gt;과제 발굴&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;분석 Idea 발굴&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;분석과제 후보제안&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;분석과제 확정&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;과제 수행&lt;/h4&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;팀구성&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;분석과제 실행&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;분석과제 진행관리&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;결과 공유 / 개선&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap1-1. 데이터의 이해]]></title><description><![CDATA[The category summarizes the study for (Advanced Data Analytics Semi-Professional) National Technical Certificate personally…]]></description><link>https://bradkim06.github.io/study_adsp/Chap1-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/Chap1-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The category summarizes the study for &lt;code class=&quot;language-text&quot;&gt;ADsP&lt;/code&gt;(Advanced Data Analytics Semi-Professional) National Technical Certificate personally.&lt;/p&gt;
+&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 정의에 대해 이해한다.&lt;/li&gt;
+&lt;li&gt;데이터베이스의 정의와 특징을 이해한다.&lt;/li&gt;
+&lt;li&gt;데이터베이스 활용에 대해 이해한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;strong&gt;1절. 데이터와 정보&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;데이터의 유형&lt;/h2&gt;
+&lt;p&gt;| 구분                                  | 형태          | 특징                              |
+| &lt;strong&gt;정성적 데이터(qualitative data)&lt;/strong&gt;     | 언어,문자 등  | 저장,검색,분석에 &lt;strong&gt;많은&lt;/strong&gt; 비용 소모   |
+| &lt;strong&gt;정량적 데이터(quantitative data)&lt;/strong&gt;    | 수치,도형,기호 등 | &lt;code class=&quot;language-text&quot;&gt;정형화가 된 데이터&lt;/code&gt;로 비용 소모가 &lt;strong&gt;적음&lt;/strong&gt;|&lt;/p&gt;
+&lt;h2&gt;지식경영의 핵심 이슈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;암묵지&lt;/strong&gt;: 개인의 &lt;code class=&quot;language-text&quot;&gt;내면화(internalization)&lt;/code&gt;된 지식 -&gt; 조직의 지식으로 &lt;code class=&quot;language-text&quot;&gt;공통화(socialization)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;형식지&lt;/strong&gt;: 언어,기호,숫자로 &lt;code class=&quot;language-text&quot;&gt;표출화(externalization)&lt;/code&gt;된 지식 -&gt; 개인의 지식으로 &lt;code class=&quot;language-text&quot;&gt;연결화(combiation)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;데이터와 정보의 관계&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;데이터(Data)&lt;/strong&gt;: 개별 데이터 자체로는 의미가 중요하지 않은 &lt;code class=&quot;language-text&quot;&gt;객관적인 사실&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;정보(Information)&lt;/strong&gt;: 데이터의 가공, 처리와 데이터간 연간관계 속에서 &lt;code class=&quot;language-text&quot;&gt;의미&lt;/code&gt;가 도출된 것.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;지식(Knowledge)&lt;/strong&gt;: 유의미한 정보를 분류하고 개인적인 경험을 결합시켜 &lt;code class=&quot;language-text&quot;&gt;고유의 지식&lt;/code&gt;으로 내재화된 것.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;지혜(Wisdom)&lt;/strong&gt;: 지식의 축적과 아이디어가 결합된 &lt;code class=&quot;language-text&quot;&gt;창의적인 산물&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;&lt;strong&gt;3절. 데이터베이스의 활용&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;기업내부 데이터베이스&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OLTP(On-Line Transaction Processing)&lt;/strong&gt;: 데이터 &lt;code class=&quot;language-text&quot;&gt;갱신&lt;/code&gt; 위주&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OLAP(On-Line Analytical Processing)&lt;/strong&gt;: 비지니스 관점에서 데이터 &lt;code class=&quot;language-text&quot;&gt;조회&lt;/code&gt; 위주&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2000년대 기업 데이터베이스&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CRM(Customer Relationship Management)&lt;/strong&gt;: 기업이 고객과 관련된 내외부 자료를 분석,통합해 &lt;code class=&quot;language-text&quot;&gt;고객 중심 자원&lt;/code&gt;을 극대화.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SCM(Supply Chain Management)&lt;/strong&gt;: 외부 업체, 고객 등 거래관계에 있는 기업들간 IT를 이용한 &lt;code class=&quot;language-text&quot;&gt;공급망 최적화&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;분야별 데이터베이스&lt;/h2&gt;
+&lt;h3&gt;제조 부문&lt;/h3&gt;
+&lt;p&gt;ERP -&gt; CRM, Client/Server -&gt; Web Database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ERP(Enterprise Resource Planning)&lt;/strong&gt;: 경영자원(인사,재무,생산 등)을 하나의 통합 시스템으로 재구축.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BI(Business Intelligence)&lt;/strong&gt;: 데이터를 정리하고 분석해 &lt;code class=&quot;language-text&quot;&gt;기업의 의사결정&lt;/code&gt;에 활용하는 프로세스.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CRM(Customer Relationship Management)&lt;/strong&gt;: 기업이 고객과 관련된 내외부 자료를 분석,통합해 &lt;code class=&quot;language-text&quot;&gt;고객 중심 자원&lt;/code&gt;을 극대화.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTE(Real-Time Enterprise)&lt;/strong&gt;: 회사 전 부문의 정보를 하나로 통합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;금융 부문&lt;/h3&gt;
+&lt;p&gt;DB 활용 마케팅&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;EAI(Enterprise Application Intergration)&lt;/strong&gt;: 정보를 중앙 집중적으로 통합,관리 사용.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EDW(Enterprise Data Warehouse)&lt;/strong&gt;: 기존 DW(Data Warehouse)를 확장한 모델.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;유통 부문&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KMS(Knowledge Management System)&lt;/strong&gt;: 기업 경영이 생산,제조에서 &lt;code class=&quot;language-text&quot;&gt;지식&lt;/code&gt;의 관점으로 새롭게 조명.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RFID&lt;/strong&gt;: 주파수를 이용해 ID를 식별하는 SYSTEM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;사회기반 부문&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;EDI(Electronic Data Interchange)&lt;/strong&gt;: 주문서,납품서,청구서 등 무역에 필요한 각종 서류를 표준화된 양식으로 전자적 신호로 바꿔 거래처에 전송하는 시스템.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap3-1. 데이터 분석 개요]]></title><description><![CDATA[데이터 처리 프로세스 이해 데이터 시각화 이해 데이터 공간분석 이해 탐색적 자료 분석 이해 데이터 처리 Legacy -> Staging -> ODS -> DW -> Data Mart -> R.SAS Data Warehouse, Data Mart…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-1/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-1/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 처리 프로세스 이해&lt;/li&gt;
+&lt;li&gt;데이터 시각화 이해&lt;/li&gt;
+&lt;li&gt;데이터 공간분석 이해&lt;/li&gt;
+&lt;li&gt;탐색적 자료 분석 이해&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;데이터 처리&lt;/h2&gt;
+&lt;p&gt;Legacy -&gt; Staging -&gt; ODS -&gt; DW -&gt; Data Mart -&gt; R.SAS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Warehouse, Data Mart를 통해 분석 데이터를 가져와서 사용&lt;/li&gt;
+&lt;li&gt;운영시스템(Legacy, Staging)에 직접 접근 &lt;code class=&quot;language-text&quot;&gt;X&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;시각화&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 낮은 수준의 분석이지만 잘 사용하면 효율적&lt;/li&gt;
+&lt;li&gt;빅데이터 분석에서 시각화는 필수&lt;/li&gt;
+&lt;li&gt;탐색적 분석을 할 때 시각화는 필수&lt;/li&gt;
+&lt;li&gt;SNA 분석(사회연결망 분석)을 할 때 자주 활용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;공간분석(GIS)&lt;/h2&gt;
+&lt;p&gt;지도위에 관련 속성들을 생성하고 &lt;strong&gt;크기, 모양, 선 굵기&lt;/strong&gt; 등으로 구분하여 Insight 도출.&lt;/p&gt;
+&lt;h2&gt;탐색적 자료 분석(EDA)&lt;/h2&gt;
+&lt;p&gt;다양한 차원과 값을 조합해가며 &lt;strong&gt;특이한 점&lt;/strong&gt;이나 &lt;strong&gt;의미 있는 사실&lt;/strong&gt;을 도출하고 분석의 최종 목적을 달성해가는 과정. 데이터의 특징과 내재하는 &lt;strong&gt;구조적 관계&lt;/strong&gt;를 알아내기 위한 기법들의 통칭.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;EDA의 4가지 주제&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;저항성의 강조&lt;/li&gt;
+&lt;li&gt;잔차 계산&lt;/li&gt;
+&lt;li&gt;자료변수의 재표현&lt;/li&gt;
+&lt;li&gt;그래프를 통한 현시성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;통계 분석&lt;/h2&gt;
+&lt;h3&gt;기술통계(descriptive statistics)&lt;/h3&gt;
+&lt;p&gt;모집단으로부터 표본을 추출하고 표본이 가지고 있는 정보를 쉽게 파악할 수 있도록 데이터를 정리, 요약하기 위해 숫자 또는 그래프의 형태로 표현하는 절차.&lt;/p&gt;
+&lt;h3&gt;추측(추론)통계(inferential statistics)&lt;/h3&gt;
+&lt;p&gt;모집단으로부터 추출된 표본의 표본통계량으로 부터 모집단의 특성인 &lt;code class=&quot;language-text&quot;&gt;모수&lt;/code&gt;에 관해 통계적으로 추론하는 절차.&lt;/p&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;데이터 마이닝&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;대표적인 고급 데이터 분석법, 대용량의 자료로부터 관계, 패턴, 규칙등을 탐색하고 모형화하여 &lt;strong&gt;이전에 알려지지 않은 유용한 지식&lt;/strong&gt;을 추출하는 분석 방법.&lt;/p&gt;
+&lt;h3&gt;데이터 마이닝 방법&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;데이터베이스에서의 지식 탐색&lt;/strong&gt;&lt;br&gt;
+Data Mart를 생성하면서 데이터들의 속성을 사전분석하여 지식을 얻는 방법.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;기계학습&lt;/strong&gt;&lt;br&gt;
+인공신경망, 의사결정나무, 클러스터링, 베이지안 분류, SVM 등&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;패턴인식&lt;/strong&gt;&lt;br&gt;
+장바구니분석, 연관규칙 등&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Jekyll Tips]]></title><description><![CDATA[Jekyll Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static…]]></description><link>https://bradkim06.github.io/Jekyll/tips-of-Jekyll/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/tips-of-Jekyll/</guid><pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Jekyll&lt;/h2&gt;
 &lt;p&gt;Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static website. You can tweak how you want the site URLs to look, what data gets displayed on the site, and more.&lt;/p&gt;
 &lt;h2&gt;gem&lt;/h2&gt;
 &lt;p&gt;A gem is code you can include in Ruby projects. It allows you to package up functionality and share it across other projects or with other people. Gems can perform functionality such as:&lt;/p&gt;
@@ -1397,7 +1363,41 @@ Link&lt;/p&gt;
         &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;a&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ item.url }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;{{ item.title }}&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
     {% endfor %}
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-{% endraw %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[The Basic of Jekyll]]></title><description><![CDATA[Jekyll Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static…]]></description><link>https://bradkim06.github.io/Jekyll/Basic-of-Jekyll/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Basic-of-Jekyll/</guid><pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Jekyll&lt;/h2&gt;
+{% endraw %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[JavaScript Tutorial Intro]]></title><description><![CDATA[I’m going to follow w3schools’s javascript
+ JavaScript Can Change HTML Content One of many JavaScript HTML methods is . This example uses…]]></description><link>https://bradkim06.github.io/javascript/w3schools/Intro/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/Intro/</guid><pubDate>Fri, 31 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I’m going to follow w3schools’s javascript
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;strong&gt;JavaScript Can Change HTML Content&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;One of many JavaScript HTML methods is &lt;code class=&quot;language-text&quot;&gt;getElementById()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This example uses the method to “find” an HTML element (with id=“demo”) and changes the element content (&lt;code class=&quot;language-text&quot;&gt;innerHTML&lt;/code&gt;) to “Hello JavaScript”:&lt;/p&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can change HTML content.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;document.getElementById(&quot;content&quot;).innerHTML = &quot;Hello JavaScript!&quot;&lt;span class=&quot;token punctuation&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p id=&quot;content&quot;&gt;JavaScript can change HTML content.&lt;/p&gt;
+&lt;button type=&quot;button&quot; onclick=&apos;document.getElementById(&quot;content&quot;).innerHTML = &quot;Hello JavaScript!&quot;&apos;&gt;Click Me!&lt;/button&gt;
+&lt;h1&gt;&lt;strong&gt;JavaScript Can Change HTML Styles (CSS)&lt;/strong&gt;&lt;/h1&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can change the style of an HTML element.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;style&apos;).style.fontSize=&apos;35px&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p id=&quot;style&quot;&gt;JavaScript can change the style of an HTML element.&lt;/p&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;style&apos;).style.fontSize=&apos;35px&apos;&quot;&gt;Click Me!&lt;/button&gt;
+&lt;h2&gt;JavaScript Can Hide HTML Elements&lt;/h2&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;hide&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;JavaScript can hide HTML elements.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;hide&apos;).style.display=&apos;none&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p id=&quot;hide&quot;&gt;JavaScript can hide HTML elements.&lt;/p&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;hide&apos;).style.display=&apos;none&apos;&quot;&gt;Click Me!&lt;/button&gt;
+&lt;h2&gt;JavaScript Can Show HTML Elements&lt;/h2&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;show&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;none&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Hello JavaScript!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;document.getElementById(&apos;show&apos;).style.display=&apos;block&apos;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Click Me!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p id=&quot;show&quot; style=&quot;display:none&quot;&gt;Hello JavaScript!&lt;/p&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById(&apos;show&apos;).style.display=&apos;block&apos;&quot;&gt;Click Me!&lt;/button&gt;
+&lt;h2&gt;Referece&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/js/js_intro.asp&quot;&gt;JavaScript Intro&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Basic of Jekyll]]></title><description><![CDATA[Jekyll Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static…]]></description><link>https://bradkim06.github.io/Jekyll/Basic-of-Jekyll/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Basic-of-Jekyll/</guid><pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Jekyll&lt;/h2&gt;
 &lt;p&gt;Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static website. You can tweak how you want the site URLs to look, what data gets displayed on the site, and more.&lt;/p&gt;
 &lt;h2&gt;gem&lt;/h2&gt;
 &lt;p&gt;A gem is code you can include in Ruby projects. It allows you to package up functionality and share it across other projects or with other people. Gems can perform functionality such as:&lt;/p&gt;
