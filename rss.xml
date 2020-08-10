@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Aug 2020 02:23:31 GMT</lastBuildDate><item><title><![CDATA[Data in Gatsby]]></title><description><![CDATA[Data in Gatsby A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn…]]></description><link>https://bradkim06.github.io/gatsby/dataInGatsby/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/dataInGatsby/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Data in Gatsby&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Aug 2020 06:11:19 GMT</lastBuildDate><item><title><![CDATA[Data in Gatsby]]></title><description><![CDATA[Data in Gatsby A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn…]]></description><link>https://bradkim06.github.io/gatsby/dataInGatsby/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/dataInGatsby/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Data in Gatsby&lt;/h1&gt;
 &lt;p&gt;A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn how to use data in Gatsby sites.&lt;/p&gt;
 &lt;h2&gt;What is Data?&lt;/h2&gt;
 &lt;p&gt;For the purpose of working in Gatsby, answer is “everything that lives outside a React component”.&lt;/p&gt;
@@ -74,9 +74,10 @@ npm install --save gatsby-plugin-typography typography react-typography typograp
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;src/pages/index.js&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;import React from “react”
-import Layout from “../components/layout”&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Layout &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;../components/layout&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Layout&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
       &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Amazing Pandas Eating Things&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
@@ -142,13 +143,39 @@ import Layout from “../components/layout”&lt;/p&gt;
 &lt;span class=&quot;token plain-text&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;token plain-text&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Result&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 618px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7e0fd0cd7f5a2e60c7958a01407a8c55/1a8dd/gatsby_tutorial4.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB2aCgf//EABcQAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQEAAQUCNc//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAEBAQAAAAAAAAAAAAAAAAAAIUH/2gAIAQEABj8CYr//xAAaEAACAwEBAAAAAAAAAAAAAAAAAREhMUGh/9oACAEBAAE/IXM89FigspZ//9oADAMBAAIAAwAAABCDz//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABsQAAICAwEAAAAAAAAAAAAAAAERACFBUWHR/9oACAEBAAE/ELVK9+ogODMAluhGp//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Result img&quot;
+        title=&quot;Result img&quot;
+        src=&quot;/static/7e0fd0cd7f5a2e60c7958a01407a8c55/1a8dd/gatsby_tutorial4.jpg&quot;
+        srcset=&quot;/static/7e0fd0cd7f5a2e60c7958a01407a8c55/953fe/gatsby_tutorial4.jpg 500w,
+/static/7e0fd0cd7f5a2e60c7958a01407a8c55/1a8dd/gatsby_tutorial4.jpg 618w&quot;
+        sizes=&quot;(max-width: 618px) 100vw, 618px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1&gt;Reference&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/tutorial/part-four/&quot;&gt;Data in Gatsby&lt;/a&gt;
 &lt;a href=&quot;https://www.howtographql.com/&quot;&gt;How To GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[1장. HTML5 문서]]></title><description><![CDATA[Reference Link Book Homepage]]></description><link>https://bradkim06.github.io/books/html5+Css3+JavaScript/html5문서/</link><guid isPermaLink="false">https://bradkim06.github.io/books/html5+Css3+JavaScript/html5문서/</guid><pubDate>Sun, 09 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Reference Link&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.minkbooks.com/&quot;&gt;Book Homepage&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby Trouble Shooting]]></title><description><![CDATA[Field “image” must not have a selection since type “String” has no subfields. Issue Page : https://github.com/gatsbyjs/gatsby/issues/13322]]></description><link>https://bradkim06.github.io/gatsby/troubleShooting/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/troubleShooting/</guid><pubDate>Sat, 08 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Field “image” must not have a selection since type “String” has no subfields.&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;gatsby clean
-gastby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Issue Page : &lt;a href=&quot;https://github.com/gatsbyjs/gatsby/issues/13322&quot;&gt;https://github.com/gatsbyjs/gatsby/issues/13322&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby without GraphQL]]></title><description><![CDATA[Gatsby makes it easy to programmatically control your pages. Pages can be created in three ways: Gatsby core automatically turns React…]]></description><link>https://bradkim06.github.io/gatsby/withoutGraphQL/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/withoutGraphQL/</guid><pubDate>Sat, 08 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gatsby makes it easy to programmatically control your pages.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.minkbooks.com/&quot;&gt;Book Homepage&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby without GraphQL]]></title><description><![CDATA[Gatsby makes it easy to programmatically control your pages. Pages can be created in three ways: Gatsby core automatically turns React…]]></description><link>https://bradkim06.github.io/gatsby/withoutGraphQL/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/withoutGraphQL/</guid><pubDate>Sat, 08 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gatsby makes it easy to programmatically control your pages.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pages can be created in three ways:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Gatsby core automatically turns React components in src/pages/* into pages. Note that you must make the component the default export&lt;/li&gt;
@@ -298,7 +325,17 @@ ActionOptions&lt;/li&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/#the-approach-fetch-data-and-use-gatsbys-createpages-api&quot;&gt;Using Gatsby Without GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Render HTML]]></title><description><![CDATA[React’s goal is in many ways to render HTML in a web page. React renders HTML to the web page by using a function called . The Render…]]></description><link>https://bradkim06.github.io/React/RenderHTML/</link><guid isPermaLink="false">https://bradkim06.github.io/React/RenderHTML/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React’s goal is in many ways to render HTML in a web page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/#the-approach-fetch-data-and-use-gatsbys-createpages-api&quot;&gt;Using Gatsby Without GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby Trouble Shooting]]></title><description><![CDATA[Field “image” must not have a selection since type “String” has no subfields. Issue Page : https://github.com/gatsbyjs/gatsby/issues/1332…]]></description><link>https://bradkim06.github.io/gatsby/troubleShooting/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/troubleShooting/</guid><pubDate>Sat, 08 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Field “image” must not have a selection since type “String” has no subfields.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;gatsby clean
+gastby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Issue Page : &lt;a href=&quot;https://github.com/gatsbyjs/gatsby/issues/13322&quot;&gt;https://github.com/gatsbyjs/gatsby/issues/13322&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;npm ERR! code ELIFECYCLE&lt;/h3&gt;
+&lt;p&gt;Step 1: &lt;code class=&quot;language-text&quot;&gt;$ npm cache clean --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Step 2: Delete  &lt;strong&gt;node_modules&lt;/strong&gt; by &lt;code class=&quot;language-text&quot;&gt;$ rm -rf node_modules package-lock.json&lt;/code&gt; folder or delete it &lt;strong&gt;manually&lt;/strong&gt; by going into the directory and right-click &gt; delete / move to trash. Also, delete .&lt;strong&gt;package-lock&lt;/strong&gt; json file too.&lt;/p&gt;
+&lt;p&gt;Step 3:&lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;This worked for me. Hopes it works for you too.&lt;/p&gt;
+&lt;p&gt;PS: Still if it is there, kindly check the error it is displaying in red and act accordingly. This error is specific to node.js environment. Happy Coding!!&lt;/p&gt;
+&lt;p&gt;Issue Page : &lt;a href=&quot;https://stackoverflow.com/questions/42308879/npm-err-code-elifecycle&quot;&gt;https://stackoverflow.com/questions/42308879/npm-err-code-elifecycle&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Render HTML]]></title><description><![CDATA[React’s goal is in many ways to render HTML in a web page. React renders HTML to the web page by using a function called . The Render…]]></description><link>https://bradkim06.github.io/React/RenderHTML/</link><guid isPermaLink="false">https://bradkim06.github.io/React/RenderHTML/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React’s goal is in many ways to render HTML in a web page.&lt;/p&gt;
 &lt;p&gt;React renders HTML to the web page by using a function called &lt;code class=&quot;language-text&quot;&gt;ReactDOM.render()&lt;/code&gt;.&lt;/p&gt;
 &lt;h1&gt;The Render Function&lt;/h1&gt;
 &lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;ReactDOM.render()&lt;/code&gt; function takes two arguments, HTML code and an HTML element.&lt;/p&gt;
