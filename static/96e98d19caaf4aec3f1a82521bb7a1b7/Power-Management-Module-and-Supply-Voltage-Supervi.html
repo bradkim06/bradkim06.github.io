@@ -1,0 +1,874 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Power Management Module and Supply Voltage
+Supervisor</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0c3aa7d3-726c-49de-bf7e-47d34c531f2e" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/one-1.svg"/></div><h1 class="page-title">Power Management Module and Supply Voltage
+Supervisor</h1></header><div class="page-body"><hr id="e13f642c-3255-4291-ab76-15d5e4bbc4aa"/><p id="e49e5f4f-65db-4bf6-894c-588c599501c5" class="">
+</p><h3 id="74240827-911d-4d93-bd6d-9c6a6418b4a1" class="">Date: <time>@Jan 16, 2020</time> </h3><h3 id="9990d8a5-fb69-4ed1-bf24-888dbd95a9f6" class="">Topic: Power Management Module (PMM) Introduction</h3><div id="1e6deb1d-6a9b-4a1f-be13-f6223bb2fa30" class="column-list"><div id="688a18a6-89c9-4464-a3d3-d8e55e689aba" style="width:25%" class="column"><h3 id="73b03e95-375f-437d-98aa-ce4d12f3b1b5" class="">Recall</h3><ol id="51707d8f-6243-42b6-9d28-62d71befb61c" class="numbered-list" start="1"><li>PMM 기능</li></ol><ol id="3f0ae2a7-f5c1-4570-b066-e26dea71b8e2" class="numbered-list" start="2"><li>PMM 상세 설명</li></ol><p id="bd83c0a0-7184-4b50-b0fd-49627e0ef7b5" class="">
+</p></div><div id="36608bc9-f488-472b-b719-1aa2a5dc33c0" style="width:75%" class="column"><h3 id="665b7b84-6c5a-4370-ae60-5c34f12e0e84" class="">Notes</h3><ol id="6a5d8b17-758d-474a-99df-99dc09839598" class="numbered-list" start="1"><li>PMM [Power Management Module] 기능<ul id="0f507bca-10bc-4874-955e-ad281a9d990c" class="bulleted-list"><li>공급 전압 (DVcc) 범위 : 1.8V ~ 3.6V</li></ul><ul id="9f147d12-c036-4c18-89e8-825e5d55840d" class="bulleted-list"><li>최대 4개의 프로그래밍 가능한 레벨의 장치 코어(Vcore)용 전압 생성</li></ul><ul id="8c5c26e7-d2b3-4790-9f94-03fa6c7dca01" class="bulleted-list"><li>프로그래밍 가능한 임계 값 레벨을 갖는 DVCC 및 VCORE 용 공급 전압 감시기 (SVS)</li></ul><ul id="1f352862-1e96-4405-8c8f-805ccceccabb" class="bulleted-list"><li>프로그래밍 가능한 임계 값 레벨이있는 DVCC 및 VCORE 용 공급 전압 모니터 (SVM)</li></ul><ul id="16b1c5ce-b4a0-43b7-96a7-be93585e4bd1" class="bulleted-list"><li>Brownout reset (BOR)</li></ul><ul id="495f9a0a-0da4-4a9a-b1d5-6a6bac9ae7b9" class="bulleted-list"><li>소프트웨어 액세스 가능한 전원 오류 표시기</li></ul><ul id="f7831135-1290-4f80-8d9f-fde9fa5aade9" class="bulleted-list"><li>전원 장애 상태에서의 I / O 보호</li></ul><ul id="5d0a34d0-111e-457d-b35a-d549e09582a9" class="bulleted-list"><li>소프트웨어 선택 가능한 Supervisor 또는 Monitor state 출력 (선택 사항)</li></ul></li></ol><ul id="6922b154-13a7-4da8-86d3-bccc4e022582" class="toggle"><li><details open=""><summary>원문</summary><p id="9ed4bc82-ad0b-436d-b129-cd4931d5bcdd" class="">PMM features include:
+• Wide supply voltage (DVCC) range: 1.8 V to 3.6 V
+• Generation of voltage for the device core (VCORE) with up to four programmable levels
+• Supply voltage supervisor (SVS) for DVCC and VCORE with programmable threshold levels
+• Supply voltage monitor (SVM) for DVCC and VCORE with programmable threshold levels
+• Brownout reset (BOR)
+• Software accessible power-fail indicators
+• I/O protection during power-fail condition
+• Software selectable supervisor or monitor state output (optional)</p><p id="7c5783c8-5c0d-404f-aaa6-a4358d841132" class="">
+</p></details></li></ul><p id="bebc578a-efbc-43b1-82ee-df5c0530a952" class="">
+</p><p id="46773670-b540-424e-a75f-03e68a63a282" class="">2. PMM 상세 설명</p><ul id="2a312376-6e85-47ff-93ed-8b64d5e05a1e" class="toggle"><li><details open=""><summary>PMM은 전원 공급 장치 및 장치의 감독과 관련된 모든 기능을 관리합니다. 주요 기능은 먼저 core logic의 공급 전압을 생성하는 것이고, 둘째는 디바이스에 적용되는 전압 (DVCC)과 코어에 대해 생성 된 전압 (VCORE)을 감독하고 모니터링하기위한 여러 메커니즘을 제공하는 것입니다.</summary><p id="d77165c4-812a-4171-bc1c-1f9ec6678a0b" class="">The PMM manages all functions related to the power supply and its supervision for the device. Its primary functions are first to generate a supply voltage for the core logic, and second, to provide several mechanisms for the supervision and monitoring of both the voltage applied to the device (DVCC) and the voltage generated for the core (VCORE).</p></details></li></ul><ul id="b18369d2-8525-415b-b12f-10b838c5dcb8" class="toggle"><li><details open=""><summary>PMM은 통합 <a href="https://www.notion.so/Low-dropout-regulator-Wikipedia-923eaedce1d5448b8a18dd076e75ab17">Low-dropout regulator - Wikipedia</a> 를 사용하여 장치 (DVCC)에 적용되는 1 차 전압에서 2 차 코어 전압 (VCORE)을 생성합니다. 
+일반적으로 VCORE는 CPU, 메모리 (플래시 및 RAM) 및 디지털 모듈에 전압을 공급하고 DVCC는 I / O 및 모든 아날로그 모듈 (오실레이터 포함)에 전압을 공급합니다.
+VCORE 출력은 전용 전압 레퍼런스를 사용하여 유지됩니다. VCORE는 최대 4 단계로 프로그래밍이 가능하여 CPU에 선택된 속도에 필요한만큼의 전력 만 제공합니다. <mark class="highlight-yellow_background">1장에서는 레귤레이터의 입력 또는 1 차 측을 하이 측이라고합니다. 2장에서는 출력 또는 2 차 측을 로우 측이라고합니다.
+[NOTE] 노란색 표시 뭔말임?</mark></summary><p id="652fabcb-f977-421a-8fc8-514c342ec704" class="">The PMM uses an integrated low-dropout voltage regulator (LDO) to produce a secondary core voltage (VCORE) from the primary one applied to the device (DVCC).
+In general, VCORE supplies the CPU, memories (flash and RAM), and the digital modules, while DVCC supplies the I/Os and all analog modules (including the oscillators).
+The VCORE output is maintained using a dedicated voltage reference. VCORE is programmable up to four steps, to provide only as much power as is needed for the speed that has been selected for the CPU.
+The input or primary side of the regulator is referred to in this chapter as its high side. The output or secondary side is referred to in this chapter as its low side.
+</p></details></li></ul><ul id="22743378-835b-4a5f-9cb3-59bd7ff29043" class="toggle"><li><details open=""><summary>코어에 필요한 최소 전압은 선택한 MCLK 속도에 따라 다릅니다. 그림 2-1은 주어진 코어 전압 설정에 대한 시스템 주파수와 장치에 적용되는 최소 요구 전압 간의 관계를 보여줍니다. 그림 2-1은 예일뿐입니다. 지원되는 코어 전압 수준과 주어진 장치에 대해 가능한 시스템 주파수 성능 수준을 확인하려면 장치 별 데이터 시트를 참조하십시오.</summary><p id="491ae0a8-676a-4b49-b255-6b589d87a038" class="">The required minimum voltage for the core depends on the selected MCLK rate. Figure 2-1 shows the relationship between the system frequency for a given core voltage setting, as well as the minimum required voltage applied to the device. Figure 2-1 is only an example—see the device-specific data sheet to determine which core voltage levels are supported and what level of system frequency performance is possible for a given device.</p></details></li></ul><figure id="426efd0e-60d2-4883-9484-017f6bb77fbe" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled.png"><img style="width:1009px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled.png"/></a></figure><p id="ecdd5638-68d5-4dfe-98d1-e91335f1fa66" class="">
+</p><ul id="35a94c0d-6ee8-4602-a28e-289ab2f58738" class="toggle"><li><details open=""><summary>PMM 모듈은 DVCC 및 VCORE를 감독[Supervised]하고 모니터링[monitoring] 할 수있는 수단을 제공합니다. 이 두 기능은 전압이 특정 임계 값 아래로 떨어질 때를 감지합니다.
+일반적으로 차이점은 Superviseion으로 인해 POR (power-on reset) 이벤트가 발생하지만 Monitoring 결과 소프트웨어가 처리 할 수있는 인터럽트 플래그가 생성된다는 것입니다.
+이와 같이 DVCC는 각각 SVSH (High-Side Supervisor) 및 SVMH (High-Side Monitor)에 의해 감시 및 모니터링됩니다. VCORE는 각각 로우 사이드 슈퍼 바이저 (SVSL) 및 로우 사이드 모니터 (SVML)에 의해 감독 및 모니터링됩니다. 따라서 언제든지 활성화 할 수있는 4 개의 개별 감독 및 모니터링 모듈이 있습니다.
+이러한 모듈에 의해 적용되는 임계 값은 VCORE를 생성하기 위해 레귤레이터가 사용하는 것과 동일한 전압 레퍼런스에서 파생됩니다.</summary><p id="492ed13e-9ffb-4712-b2de-89ca8ca8d053" class="">The PMM module provides means for DVCC and VCORE to be supervised and monitored. Both of these functions detect when a voltage falls under a specific threshold.</p><p id="19c20b16-ac7b-49b7-a94b-d12777a4803a" class="">In general, the difference is that supervision results in a power-on reset (POR) event, while monitoring results in the generation of an interrupt flag that software may then handle.</p><p id="f4e1ccf5-56e4-4def-b750-e52afc37968d" class="">As such, DVCC is supervised and monitored by the high-side supervisor (SVSH) and high-side monitor (SVMH), respectively. VCORE is supervised and monitored by the low-side supervisor (SVSL) and low-side monitor (SVML ), respectively.</p><p id="136b6839-ae18-4a7c-86d3-63e6fba9b4c2" class="">Thus, there are four separate supervision and monitoring modules that can be active at any given time.</p><p id="1cb04f79-e3cd-43c2-93f4-aef432ce8fb7" class="">The thresholds enforced by these modules are derived from the same voltage reference used by the regulator to generate VCORE.</p></details></li></ul><ul id="a13aabe1-7e32-432a-8e98-de0577026ab8" class="toggle"><li><details open=""><summary>SVSH, SVMH, SVSL 및 SVML 모듈 외에도 VCORE는 BOR (Brownout Reset) 회로에 의해 추가로 모니터링됩니다. 전원을 켤 때 DVCC가 0V에서 상승하면 BOR은 VCORE가 기본 MCLK 속도로 작동하고 SVSH 및 SVSL 메커니즘을 활성화하기에 충분한 수준이 될 때까지 장치를 Reset 상태로 유지합니다.</summary><p id="e3e18309-cb81-4bfc-9650-50f11011c285" class="">작동 중에 VCORE가 사전 설정된 임계 값 아래로 떨어지면 BOR도 Reset을 생성합니다. SVSL의 유연성이 필요하지 않은 경우 BOR을 사용하여 Supply rail을 모니터링하는 저전력 수단을 제공 할 수 있습니다.</p><ul id="05fe2996-2321-48f5-b1b4-802e1b17581b" class="bulleted-list"><li><mark class="highlight-yellow_background">Reset 상태는 무슨 의미인가?</mark></li></ul><ul id="3450e9c0-da16-499f-abbc-cffde7a9f3f2" class="bulleted-list"><li><mark class="highlight-orange_background">Supply rail의 정확한 정의는 뭐지? [공급 전압의 정도?]</mark></li></ul><p id="17105763-c53d-4e54-ab05-3fcc4a531fee" class="">In addition to the SVSH, SVMH, SVSL , and SVML modules, VCORE is further monitored by the brownout reset (BOR) circuit.</p><p id="fbd6536b-2e8f-4995-808d-fdca98220236" class="">As DVCC ramps up from 0 V at power up, the BOR keeps the device in reset until VCORE is at a sufficient level for operation at the default MCLK rate and for the SVSH and SVSL mechanisms to be activated.</p><figure id="6a010857-321c-4248-9a03-c1f93382d7c4" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%201.png"><img style="width:883px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%201.png"/></a></figure><p id="71d015a6-5ff7-4c34-adda-ade8e03647d2" class="">
+</p><p id="d65fe5b5-deb4-40a9-ae7d-1fa11e4e48fc" class="">
+</p></details></li></ul><p id="c34255b2-cf18-4018-b725-179dc310f051" class="">
+</p></div></div><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="c66e1c1f-e077-4898-8a46-43131873faa2"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:  Power Management Module (PMM)은 시스템 전체에 걸쳐 전압공급,관리 및 감시기능을 제공한다. 
+</strong>일반적으로 VCORE는 CPU, 메모리 (플래시 및 RAM) 및 디지털 모듈에 전압을 공급하고 DVCC는 I / O 및 모든 아날로그 모듈 (오실레이터 포함)에 전압을 공급합니다.<strong>
+</strong>DVCC는 각각 SVSH (High-Side Supervisor) 및 SVMH (High-Side Monitor)에 의해 감시 및 모니터링하며 VCORE는 각각 로우 사이드 슈퍼 바이저 (SVSL) 및 로우 사이드 모니터 (SVML)에 의해 감독 및 모니터링한다. BOR (Brownout Reset) 회로에 의해 추가로 모니터링됩니다. </div></figure><p id="a54790d2-18e6-4cd6-a4c9-29bd2cad940a" class="">
+</p><hr id="31496d4e-e95c-48ef-985b-d01d432b81ce"/><p id="ee925fee-81e6-4d0f-9a1e-3fb8791be7f9" class="">
+</p><h3 id="1e0345e9-341e-4d18-914d-77f6fc996dd7" class="">Date: <time>@Jan 16, 2020</time> </h3><h3 id="32d8f6eb-7889-4c9e-9927-e8dfb770be8a" class="">Topic: PMM Operation</h3><div id="a9fc2f6e-fd19-4c25-9b59-ea532fa636d7" class="column-list"><div id="a5bceaeb-70e6-4297-8b5e-32f0ef9cd350" style="width:25%" class="column"><h3 id="a57c730d-9f46-4f24-a213-aa281a2718ec" class="">Recall</h3><ol id="3fb9ff22-b7d4-490d-8a66-1c647ef192ef" class="numbered-list" start="1"><li>Vcore &amp; Regulator</li></ol><ol id="ce7c2f62-e7c4-4468-b325-de2022c47192" class="numbered-list" start="2"><li>Supply Voltage Supervisor and Monitor</li></ol><ol id="b900b7ff-bb1b-42db-8739-87c7686e59df" class="numbered-list" start="3"><li>SVS and SVM Thresholds</li></ol><ol id="421e1d33-edcb-40da-9308-285b50ca0fae" class="numbered-list" start="4"><li>Recommended SVSL Settings</li></ol><ol id="46c55358-607d-4cd4-acc7-1271789286e0" class="numbered-list" start="5"><li>Recommended SVSH Settings</li></ol><ol id="27fd256e-4509-43dd-afe2-0b5b18ddb704" class="numbered-list" start="6"><li>High-Side Supervisor (SVSH) and High-Side Monitor (SVMH)</li></ol><ol id="132911d6-acd8-412c-b0d3-69a468eff196" class="numbered-list" start="7"><li>Low-Side Supervisor (SVSL) and Low-Side Monitor (SVML)</li></ol><ol id="067be1a0-e8c0-48c3-85c0-0b45c745e842" class="numbered-list" start="8"><li>Supply Voltage Supervisor and Monitor - Power up</li></ol><ol id="42a61709-b053-4870-8e4f-4f2646cc53e1" class="numbered-list" start="9"><li>Increasing VCORE to Support Higher MCLK Frequencies</li></ol><ol id="f2209a18-7e86-484f-84ad-acd782961f45" class="numbered-list" start="10"><li>Decreasing VCORE for Power Optimization</li></ol><ol id="bcff663c-501a-4913-807a-100caf4b3ca0" class="numbered-list" start="11"><li>Transition From LPM3 and LPM4 Modes to AM</li></ol><ol id="05b86a5e-e9b5-4e90-adeb-11000fe0ee97" class="numbered-list" start="12"><li>LPM3.5 and LPM4.5</li></ol><ol id="3df2196b-927a-4b7f-9fbf-d57fcaa3912d" class="numbered-list" start="13"><li>Brownout Reset (BOR), Software BOR, Software POR</li></ol><ol id="b7cc8286-3611-4fd3-90f4-8957b7ceddff" class="numbered-list" start="14"><li>SVS and SVM Performance Modes and Wake-up Times</li></ol><p id="98e7a748-6138-4c8b-adad-6db9a3c683dd" class="">
+</p></div><div id="45d0d468-c52d-4607-9747-7f8a307f2f8b" style="width:75%" class="column"><h3 id="81bfc671-af44-4484-95ba-66be45c9d745" class="">Notes</h3><ol id="b20f4ad4-d10d-4723-91f7-f2bdd0d349ef" class="numbered-list" start="1"><li>Vcore &amp; regulator<ul id="95398af7-4963-483b-ae07-6a054521ebce" class="toggle"><li><details open=""><summary>DVCC는 넓은 입력 전압 범위에서 전원을 공급할 수 있지만 장치의 core logic은이 범위에서 허용하는 것보다 낮은 전압을 유지해야합니다. 이러한 이유로 레귤레이터가 PMM에 통합되었습니다. 이 레귤레이터는 DVCC에서 필요한 코어 전압 (VCORE)을 도출합니다.
+
+MCLK 속도가 높을수록 더 높은 레벨의 VCORE가 필요합니다. 높은 레벨의 VCORE는 더 많은 전력을 소비하므로 코어 전압은 최대 4 단계로 프로그래밍이 가능하여 주어진 MCLK 설정에 필요한만큼만 전력을 공급할 수 있습니다.
+
+레벨은 PMMCOREV 비트에 의해 제어됩니다. PMMCOREV의 가장 낮은 값인 기본 설정은 매우 넓은 주파수 범위에서 MCLK의 작동을 가능하게합니다. 따라서 많은 응용 프로그램에서 PMM 변경이 필요하지 않습니다. 지원되는 성능 특성 및 핵심 단계 수준은 장치 별 데이터 시트를 참조하십시오.
+
+MCLK를 더 높은 속도로 증가시키기 전에 소프트웨어가 VCORE 레벨이 선택한 주파수에 대해 충분히 높은지 확인해야합니다. 그렇지 않으면 CPU가 충분한 전원없이 작동을 시도하여 예측할 수없는 결과를 초래할 수 있습니다. 더 높은 MCLK 주파수를위한 VCORE를 높이는 적절한 절차에 대한 자세한 내용은 2.2.4 절을 참조하십시오.
+
+Regulator는 전력을 최적화하기 위해 두 가지 다른 부하 설정을 지원합니다. 
+
+다음과 같은 경우 고전류 모드가 필요합니다.
+• CPU가 활성, LPM0 또는 LPM1 모드에 있습니다
+• 32 kHz보다 큰 클럭 소스는 모든 모듈을 구동하는 데 사용됩니다
+• 인터럽트가 실행됩니다
+
+그렇지 않으면 저 전류 모드가 사용됩니다. 하드웨어는 위의 기준에 따라로드 설정을 자동으로 제어합니다.</summary><p id="a5208450-f81d-452a-a4d2-76051909eb65" class="">DVCC can be powered from a wide input voltage range, but the core logic of the device must be kept at a voltage lower than what this range allows. For this reason, a regulator has been integrated into the PMM. The regulator derives the necessary core voltage (VCORE) from DVCC.</p><p id="062a46b0-02db-499f-a837-ec4bc0cddda1" class="">Higher MCLK speeds require higher levels of VCORE.
+Higher levels of VCORE consume more power, and so the core voltage has been made programmable in up to four steps to allow it to provide only as much power as is required for a given MCLK setting.</p><p id="48a171e1-e257-45c3-8d37-801f67a6234f" class="">The level is controlled by the PMMCOREV bits. Note that the default setting, the lowest value of PMMCOREV, enables operation of MCLK over a very wide frequency range. As such, no PMM changes are required for many applications. See the device-specific data sheet for performance characteristics and core step levels supported.</p><p id="e15b74f0-38f3-43bb-b9a3-0f8804aef1d7" class="">Before increasing MCLK to a higher speed, it is necessary for software to ensure that the VCORE level is sufficiently high for the chosen frequency.</p><p id="69b63ab6-8592-46c4-a235-508a756a59be" class="">Failure to do so may force the CPU to attempt operation without sufficient power, which can cause unpredictable results. See Section 2.2.4 for more information on the appropriate procedure to raise VCORE for higher MCLK frequencies.</p><p id="937f062f-2727-4475-b4c0-c4f28f107c3b" class="">The regulator supports two different load settings to optimize power. The high-current mode is required
+when:
+• The CPU is in active, LPM0, or LPM1 modes
+• A clock source greater than 32 kHz is used to drive any module
+• An interrupt is executed
+Otherwise, the low-current mode is used. The hardware controls the load settings automatically, according
+to the criteria above.</p></details></li></ul><p id="e6d066e2-0170-4d92-9028-1b201076c7d9" class="">2. Supply Voltage Supervisor and Monitor</p><ul id="491f0b4b-86d7-4909-9e99-93982f49a690" class="toggle"><li><details open=""><summary>하이 사이드 수퍼바이저 및 모니터 (SVSH 및 SVMH)는 DVCC를 감독하고 로우 사이드 수퍼바이저 (SVSL) 및 로우 사이드 모니터 (SVML)는 VCORE를 감독합니다. 기본적으로 이러한 모듈은 모두 활성화되어 있지만 해당 활성화 비트 (SVSHE, SVMHE, SVSLE, SVMLE)를 사용하여 각 모듈을 비활성화 할 수있어 일부 절전이 가능합니다.
+
+공급 전압 감시기 및 모니터의 일반적인 응용 시나리오는 다음과 같습니다.
+• High-side supervisor, SVSH
+– 외부 전원 공급 장치 (DVCC) 감독
+– 배터리 부족 또는 공급 전압으로 인한 장치 재설정
+• High-side monitor SVMH
+– 외부 전원 공급 장치 (DVCC) 모니터링
+– 낮은 배터리 전압 감지 (사전 경고)
+• Low-side supervisor, SVSL
+– 디지털 코어 공급에 사용되는 내부 코어 전압 감시
+– 외부 VCORE 핀의 방해 조건[disruptive conditions]으로 인한 장치 재설정 (예 : 단락[Short]). 외부 VCORE 핀에서 기생 이벤트[Parasitic events]가 발생하지 않으면 내부 코어 전압이 임계 레벨 아래로 절대 떨어지지 않습니다.
+• Low-side monitor, SVML
+– 디지털 코어 공급에 사용되는 내부 코어 전압 모니터링
+– 예를 들어 더 높은 시스템 주파수로 변경하기 전에 코어 전압 레벨을 변경 (특히 증가) 할 때 올바른 내부 전압 레벨 감지 (섹션 2.2.4 참조).</summary><figure id="fde4a8f9-2371-40d5-99b4-2d1b055814b0"><a href="http://www.ti.com/lit/ug/slau208q/slau208q.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="http://www.ti.com/favicon.ico" class="icon bookmark-icon"/>http://www.ti.com/lit/ug/slau208q/slau208q.pdf</div></div></a></figure><p id="9ccf1229-c0aa-40da-99df-73a16aaf3b5e" class="">The high-side supervisor and monitor (SVSH and SVMH) oversee DVCC, and the low-side supervisor (SVSL ) and low-side monitor (SVML ) oversee VCORE. By default, all of these modules are active, but each can be disabled using the corresponding enable bit (SVSHE, SVMHE, SVSLE, SVMLE), resulting in some power savings.</p><p id="48194159-10a7-438b-a652-55b93d963fe2" class="">Typical application scenarios for supply voltage supervisors and monitors are:
+• High-side supervisor, SVSH
+– Supervision of external power supply (DVCC)
+– Device reset because of low battery or supply voltage
+• High-side monitor, SVMH
+– Monitoring of external power supply (DVCC)
+– Detection of low battery voltage (Pre-warning)
+• Low-side supervisor, SVSL
+– Supervision of internal core voltage used to supply digital core
+– Device reset because of disruptive conditions at external VCORE pin (for example a short). The internal core voltage never drops below a critical level if parasitic events at the external VCORE pin are avoided.
+• Low-side monitor, SVML
+– Monitoring of internal core voltage used to supply digital core
+– Detection of correct internal voltage levels when changing (especially increasing) the core voltage level before changing, for example, to higher system frequencies (also see Section 2.2.4).</p></details></li></ul><p id="c6810c1f-48e3-486f-bae1-70cd04c05559" class="">3. SVS and SVM Thresholds</p><ul id="493b8e1e-2840-4fcf-8141-6cdef6235b62" class="toggle"><li><details open=""><summary>SVS 및 SVM 모듈에 의해 시행되는 전압 임계 값을 선택할 수 있습니다. 표 2-1에는 SVS 및 SVM 임계 값 레지스터, 이들이 제어하는 전압 임계 값 및 임계 값 옵션 수가 나와 있습니다.</summary><p id="0547a014-e4f9-4d3b-acc7-f0105cb689ac" class="">The voltage thresholds enforced by the SVS and SVM modules are selectable. Table 2-1 lists the SVS
+and SVM threshold registers, the voltage threshold they control, and the number of threshold options.</p></details></li></ul><figure id="528ce849-6624-493c-b2ca-a4b2a8509550" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%202.png"><img style="width:1007px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%202.png"/></a></figure><p id="0f20ef35-e9b0-4111-a19d-fd9a413b049d" class="">4. Recommended SVSL Settings</p><ul id="05a4ddeb-d026-4984-87cc-d376d8e4d003" class="toggle"><li><details open=""><summary>각 코어 전압에 대해 두 가지 공급 전압 감시기 레벨을 사용할 수 있습니다.
+SVSLRVL 비트는 리셋이 활성화되는 VCORE의 전압 레벨을 정의합니다.
+SVSMLRRL 비트는 리셋이 해제되는 VCORE의 전압 레벨을 정의합니다.
+다양한 설정을 선택할 수 있지만, PMMCOREV에서 선택한 각 코어 전압에 적합한 SVSLRVL 및 SVSMLRRL 설정 세트가 있습니다.
+기본적으로 SVSL 이벤트는 항상 POR (SVSLPE = 1)을 생성하며 TI는 안정적인 장치 시작을 위해 항상 SVSLPE = 1을 설정하는 것이 좋습니다.
+표 2-2에는 가장 일반적으로 사용되는 권장 설정이 나와 있습니다.</summary><p id="df64d221-98c7-4437-825c-f6bca5b39928" class="">For each of the core voltages, two supply voltage supervisor levels are available.</p><p id="f9d1892d-f1c5-4c56-83f9-0d0e7c391162" class="">The SVSLRVL bits define the voltage level of VCORE below which the reset is activated.</p><p id="8e7f31c8-fd62-4c3a-978b-53a6fcf92924" class="">The SVSMLRRL bits define the voltage level of VCORE at which the reset is released.</p><p id="e6c33d34-3744-4b76-b06b-072202b651ff" class="">Although various settings can be chosen, there is one set of SVSLRVL and SVSMLRRL settings that is well suited for each core voltage selected by PMMCOREV.</p><p id="ec1227da-9a87-47cc-9de0-2a2747959368" class="">By default, an SVSL event always generates a POR (SVSLPE = 1), and TI recommends always setting SVSLPE = 1 for reliable device startup.</p><p id="45a84e4a-db7f-4173-a40a-274a737524b1" class="">Table 2-2 lists the most commonly used and recommended settings.</p><p id="0c277340-724e-4e98-a60d-1efd9a5f0bd6" class="">
+</p></details></li></ul><figure id="4829ec92-7165-4996-ab0f-7b571a6c1caa" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%203.png"><img style="width:1011px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%203.png"/></a></figure><p id="38712d5e-8739-4586-8c84-0b8a1e6e7ce8" class="">5. Recommended SVSH Settings</p><ul id="458bcaaf-cc92-452c-873c-b4ee63a85946" class="toggle"><li><details open=""><summary>하이 사이드 공급 장치의 경우 두 가지 공급 전압 감시 레벨이 있습니다. 
+SVSMHRRL 비트는 리셋이 해제되는 DVCC의 전압 레벨을 정의합니다.
+SVSHRVL 레지스터는 리셋이 켜지는 DVCC의 전압 레벨을 정의합니다.
+이러한 설정은 시스템 전원 공급 장치 특성뿐만 아니라 주어진 응용 분야에서 장치 작동에 필요한 최소 전압에 따라 선택해야합니다. 여기에 표시된 설정에 해당하는 임계 값은 장치 별 데이터 시트를 참조하십시오.
+다양한 설정을 사용할 수 있지만 가장 일반적인 것은 필요한 최대 주파수를 기준으로하며 이로 인해 감독되는 최소 DVCC 레벨이 결정됩니다. 기본적으로 SVSH 이벤트는 항상 POR (SVSHPE = 1)을 생성하며 TI는 안정적인 장치 시작을 위해 항상 SVSHPE = 1을 설정하는 것이 좋습니다. 표 4-2에는 가장 일반적으로 사용되는 권장 설정이 나와 있습니다.</summary><p id="14b641e2-ec2a-421b-9d3d-bf1b3d0f78f8" class="">For the high-side supply, there are two supply voltage supervisor levels available.</p><p id="0185baaf-3853-4ba5-a641-82aaf74e2e93" class="">The SVSMHRRL bits define the voltage level of DVCC at which the reset is released.</p><p id="fc806a23-2d1b-4ba0-8316-d6ff7ee50fba" class="">The SVSHRVL register defines the voltage level of DVCC below which the reset is turned on.</p><p id="6be6f12d-1f16-4ab1-8c65-a15ee3093564" class="">These settings should be selected according to the minimum voltages required for device operation in a given application, as well as system power supply characteristics.</p><p id="cf4478a5-ab92-4e70-8b6a-635b55f11de2" class="">See the device-specific data sheet for threshold values corresponding to the settings shown here.</p><p id="9d0ca776-855c-4a25-b8bf-f567687ad723" class="">Although various settings are available, the most common are based on the maximum frequency required which, in turn, determines the minimum DVCC level supervised.</p><p id="69641651-fc6b-40da-b752-9fb6b658731c" class="">By default, an SVSH event always generates a POR (SVSHPE = 1), and TI recommends always setting SVSHPE = 1 for reliable device startup. Table 4-2 lists the most commonly used and recommended settings.</p><p id="8f5aad4c-fe56-45ce-8e75-6e3627142327" class="">
+</p></details></li></ul><figure id="c44bec72-eeee-4b50-a456-fecb03cfb8e6" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%204.png"><img style="width:1008px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%204.png"/></a></figure><ul id="8996587e-f9c4-4c00-997d-5b8fb3a4e3af" class="toggle"><li><details open=""><summary>SVSH 및 SVMH의 사용 가능한 전압 임계 값 설정은 VCORE의 전압 레벨 설정에 따라 다릅니다. 표 2-4에는 사용 가능한 모든 설정이 요약되어 있습니다. 나열되지 않은 다른 모든 설정은 유효하지 않으므로 사용해서는 안됩니다. 또한 SVSMHRRL은 항상 SVSHRVL보다 크거나 같아야합니다. 그림 2-3은 SVMH에 사용 가능한 설정을 보여줍니다.</summary><p id="aacab916-529a-45a3-abdf-66feb30c82e0" class="">The available voltage threshold settings of SVSH and SVMH are dependent on the voltage level setting of VCORE. Table 2-4 summarizes all of the possible settings available. All other settings not listed are invalid and should not be used. Also SVSMHRRL must always be equal or larger than SVSHRVL. Figure 2-3 shows the available settings for the SVMH</p></details></li></ul><figure id="6a7010d2-a7c1-46aa-9dbb-fb803ac1c79b" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%205.png"><img style="width:1008px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%205.png"/></a></figure><figure id="a3feefbb-dbcd-43f4-83eb-91abf17eff45" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%206.png"><img style="width:617px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%206.png"/></a></figure></li></ol><ul id="120c3191-5918-4faa-a587-da9086149b69" class="toggle"><li><details open=""><summary>이러한 임계 값에 따른 SVS 및 SVM의 동작은 그래픽으로 표시하는 것이 가장 좋습니다. 그림 2-4는 수퍼바이저와 모니터가 다양한 공급 실패 조건에 어떻게 대응하는지 보여줍니다.
+그림 2-4에서 볼 수 있듯이, 감시 임계 값에는 히스테리시스가 내장되어있어 유효 임계 값은 전압 레일의 상승 또는 하강 여부에 따라 달라집니다. 모니터링 임계 값에는 히스테리시스가 없습니다.</summary><p id="057e7f67-2de2-4c69-be63-a05792ab15f2" class="">The behavior of the SVS and SVM according to these thresholds is best portrayed graphically. Figure 2-4 shows how the supervisors and monitors respond to various supply failure conditions.</p><p id="027476ec-74f3-4ed2-af4a-7254b932d5f0" class="">As Figure 2-4 shows, there is hysteresis built into the supervision thresholds, such that the thresholds in force depend on whether the voltage rail is going up or down. There is no hysteresis in the monitoring thresholds.</p><p id="629a57e4-9da6-41cc-a44a-f00f1945ee6b" class="">NOTE: SVS Hysteresis</p><p id="2f2d11b9-8f20-41b6-bd92-e336c383ecd7" class="">There is a reliable hysteresis only if the bit setting for SVSMHRRL is equal to or larger than the bit setting for SVSHRVL. Thus you must select a SVSMHRRL setting that is equal to or larger than the SVSHRVL setting.</p></details></li></ul><figure id="35fae633-76b7-48ba-9c33-d853bcca3590" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%207.png"><img style="width:799px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%207.png"/></a></figure><blockquote id="621bc58a-6a4f-45cb-9bdf-2f9574aeaa6f" class="">NOTE: SVS Hysteresis
+
+SVSMHRRL의 비트 설정이 SVSHRVL의 비트 설정보다 크거나 같은 경우에만 신뢰할 수있는 히스테리시스가 있습니다. 따라서 SVSHRVL 설정과 같거나 큰 SVSMHRRL 설정을 선택해야합니다.</blockquote><p id="6ff42f13-f80b-4f49-ad2b-0d4b410588b4" class="">
+</p><p id="efa8e34d-3efe-4be7-83ae-815603d3d21f" class="">6. High-Side Supervisor (SVSH) and High-Side Monitor (SVMH)</p><ul id="3e533259-c200-460a-8fdf-ee48db440050" class="toggle"><li><details open=""><summary>SVSH 및 SVMH 모듈은 기본적으로 활성화되어 있으며 SVSHE 및 SVMHE 비트를 각각 지워서 비활성화 할 수 있습니다. 그림 2-5는 SVSH 및 SVMH 블록 다이어그램을 보여줍니다.</summary><p id="8127af76-26fe-4069-a3bb-14c72e947d37" class="">The SVSH and SVMH modules are enabled by default and can be disabled by clearing the SVSHE and
+SVMHE bits, respectively. Figure 2-5 shows the SVSH and SVMH block diagrams.</p><p id="4cf52e2c-1f42-4b33-85cd-d0ec89b63ddd" class="">
+</p></details></li></ul><figure id="ab79c46c-ef0f-49ce-87f0-7a7733c73c4f" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%208.png"><img style="width:812px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%208.png"/></a></figure><ul id="ec77070e-2ee1-42e8-a725-09d3a52deb53" class="toggle"><li><details open=""><summary>DVCC가 SVSH 레벨 아래로 떨어지면 SVSHIFG (SVSH 인터럽트 플래그)가 설정됩니다.
+DVCC가 SVSH 레벨 아래로 유지되고 소프트웨어가 SVSHIFG를 지우려고하면 하드웨어에 의해 즉시 다시 설정됩니다.
+<mark class="highlight-yellow_background">SVSHIFG가 설정 될 때 SVSHPE (SVSH POR 활성화) 비트가 설정되면 POR이 생성됩니다.
+
+</mark>DVCC가 SVMH 레벨 아래로 떨어지면 SVMHIFG (SVMH 인터럽트 플래그)가 설정됩니다.
+DVCC가 SVMH 레벨 아래로 유지되고 소프트웨어가 SVMHIFG를 지우려고하면 하드웨어에 의해 즉시 다시 설정됩니다.
+SVMHIFG가 설정 될 때 SVMHIE (SVMH 인터럽트 활성화) 비트가 설정되면 인터럽트가 생성됩니다.
+SVMHIFG가 설정되어있을 때 POR이 필요한 경우 SVMHOVPE 비트가 해제되는 동안 SVMHVLRPE (SVMH voltage level reached POR enable) 비트를 설정하여 SVMH를 구성 할 수 있습니다.
+
+DVCC가 SVMH 레벨 이상으로 상승하면 SVMHVLRIFG (SVMH 전압 레벨 도달) 인터럽트 플래그가 설정됩니다. 이 때 SVMHVLRIE (SVMH 전압 레벨 도달 인터럽트 활성화)가 설정되면 인터럽트도 생성됩니다.
+
+또는 SVMH 모듈을 과전압 감지에 사용할 수 있지만 가장 높은 코어 전압 설정 (PMMCOREV = 11b)에서만 사용할 수 있습니다.
+이는 SVMHVLRPE 설정 외에 SVMHOVPE (SVMH 과전압 POR 활성화) 비트를 설정하여 수행됩니다. 이러한 조건에서 DVCC가 상승하면 안전한 장치 작동을 초과하면 POR이 생성됩니다.
+
+SVSH 및 SVMH 모듈에는 절전 작동을 위해 구성 가능한 성능 모드가 있습니다. (자세한 내용은 2.2.9 절을 참조하십시오.)
+이 SVSH 및 SVMH 전원 모드가 수정되거나 전압이 레벨이 수정되면 지연 요소는 SVSH 및 SVMH 회로가 안정화 될 때까지 인터럽트 및 POR 소스를 마스크합니다. SVSMHDLYST (지연 상태)가 0을 읽으면 지연이 만료 된 것입니다. 또한 SVSMHDLYIFG (SVSH 및 SVMH 지연 만료) 인터럽트 플래그가 설정됩니다. 이 때 SVSMHDLYIE (SVSH 및 SVMH 지연 만료 인터럽트 활성화)를 설정하면 인터럽트도 생성됩니다.
+
+전원 장애 조건의 경우 SVSHMD를 설정하면 SVSH 인터럽트 플래그가 LPM2, LPM3 및 LPM4에 설정됩니다. SVSHMD가 설정되지 않은 경우 SVSH 인터럽트 플래그는 LPM2, LPM3 및 LPM4에서 설정되지 않습니다.
+또한 SVSMHEVM을 설정하여 모든 SVSH 및 SVMH 이벤트를 마스킹 할 수 있습니다. 대부분의 응용 프로그램에서 SVSMHEVM을 지워야합니다. SVSH 및 SVMH의 모든 인터럽트 플래그는 BOR 또는 소프트웨어에 의해 지워질 때까지 설정된 상태로 유지됩니다.
+<mark class="highlight-yellow_background">[NOTE] POR가 뭔데?????</mark></summary><p id="eb96dabc-b265-4fde-9c86-14a7995759bb" class="">If DVCC falls below the SVSH level, SVSHIFG (SVSH interrupt flag) is set.</p><p id="57dd13ff-99df-456a-954b-b43e1b2be900" class="">If DVCC remains below the SVSH level and software attempts to clear SVSHIFG, it is immediately set again by hardware.</p><p id="e85d9528-f61c-4020-83e1-5e58951b50ee" class="">If the SVSHPE (SVSH POR enable) bit is set when SVSHIFG gets set, a POR is generated.</p><p id="a7fc95cd-f96b-4ac1-9334-cfef26843a20" class="">If DVCC falls below the SVMH level, SVMHIFG (SVMH interrupt flag) is set.</p><p id="e2cc8806-08aa-4dec-9a5a-7e176937a70a" class="">If DVCC remains below the SVMH level and software attempts to clear SVMHIFG, it is immediately set again by hardware.</p><p id="758c89c3-feff-44f0-bf82-11eaecfdce2a" class="">If the SVMHIE (SVMH interrupt enable) bit is set when SVMHIFG gets set, an interrupt is generated.</p><p id="f3e674b8-3982-42a4-86ec-53a93baac58c" class="">If a POR is desired when SVMHIFG is set, the SVMH can be configured to do so by setting the SVMHVLRPE (SVMH voltage level reached POR enable) bit while SVMHOVPE bit is cleared.</p><p id="928a1e1e-c267-4c68-862e-0c099a593f15" class="">Alternatively the SVMH module can be used for overvoltage detection, but only with the highest core voltage setting (PMMCOREV = 11b), .</p><p id="3d93af9e-dff8-48d6-b697-70e6fa58566d" class="">This is accomplished by setting the SVMHOVPE (SVMH overvoltage POR enable) bit in addition to setting SVMHVLRPE. Under these conditions, if a rising DVCC exceeds safe device operation, a POR is generated.</p><p id="4da500b3-eb5f-43ee-a7c3-fb5b4bb15613" class="">The SVSH and SVMH modules have configurable performance modes for power-saving operation. (See
+Section 2.2.9 for more information.) If these SVSH and SVMH power modes are modified, or if a voltage
+level is modified, a delay element masks the interrupts and POR sources until the SVSH and SVMH circuits
+have settled. When SVSMHDLYST (delay status) reads zero, the delay has expired. In addition, the
+SVSMHDLYIFG (SVSH and SVMH delay expired) interrupt flag is set. If the SVSMHDLYIE (SVSH and
+SVMH delay expired interrupt enable) is set when this occurs, an interrupt is also generated.</p><p id="3510bd87-26fd-4a8b-beaa-86852e727d2c" class="">In case of power-fail conditions, setting SVSHMD causes the SVSH interrupt flag to be set in LPM2, LPM3,
+and LPM4. If SVSHMD is not set, the SVSH interrupt flag is not set in LPM2, LPM3, and LPM4. In addition,
+all SVSH and SVMH events can be masked by setting SVSMHEVM. For most applications, SVSMHEVM
+should be cleared.
+All the interrupt flags of SVSH and SVMH remain set until cleared by a BOR or by software.</p></details></li></ul><blockquote id="f084b737-fd5e-4d2c-9b7b-22b6bb5dbe8a" class="">NOTE: The high-side SVS must be enabled for software to modify the RTC and LFXT registers.</blockquote><p id="f501e86d-4de6-4333-90e6-d52593c4b09a" class="">7. Low-Side Supervisor (SVSL) and Low-Side Monitor (SVML)</p><ul id="d4d5c92d-3d86-4cf7-ad24-3b0a826abbd2" class="toggle"><li><details open=""><summary>SVSL 및 SVML 모듈은 기본적으로 활성화되어 있으며 각각 SVSLE 및 SVMLE 비트를 지워 비활성화 할 수 있습니다. 그림 2-6은 SVSL 및 SVML 블록 다이어그램을 보여줍니다.</summary><p id="3f18da8d-f559-4e45-ba88-44dd7dfd101f" class="">The SVSL and SVML modules are enabled by default and can be disabled by clearing SVSLE and SVMLE bits, respectively. Figure 2-6 shows the SVSL and SVML block diagrams.</p></details></li></ul><figure id="3b1e4ee8-0a15-4da9-a564-ec0f6f767147" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%209.png"><img style="width:798px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%209.png"/></a></figure><ul id="afee7c71-ac9d-444e-8916-780da4c8dc4b" class="toggle"><li><details open=""><summary>VCORE가 SVSL 레벨 아래로 떨어지면 SVSLIFG (SVSL 인터럽트 플래그)가 설정됩니다.
+VCORE가 SVSL 레벨 아래로 유지되고 소프트웨어가 SVSLIFG를 지우려고하면 하드웨어에 의해 즉시 다시 설정됩니다.
+SVSLIFG가 설정 될 때 SVSLPE (SVSL POR 활성화) 비트가 설정되면 POR이 생성됩니다.
+
+VCORE가 SVML 레벨 아래로 떨어지면 SVMLIFG (SVML 인터럽트 플래그)가 설정됩니다.
+VCORE가 SVML 레벨 아래로 유지되고 소프트웨어가 SVMLIFG를 지우려고하면 하드웨어에 의해 즉시 다시 설정됩니다.
+SVMLIFG가 설정 될 때 SVMLIE (SVML 인터럽트 활성화) 비트가 설정되면 인터럽트가 생성됩니다.
+SVMLIFG가 설정되어있을 때 POR이 필요한 경우 SVMLOVPE 비트가 해제되는 동안 SVMLVLRPE (SVML 전압 레벨이 POR 활성화에 도달) 비트를 설정하여 SVML을 구성 할 수 있습니다.
+
+VCORE가 SVML 레벨 이상으로 상승하면 SVMLVLRIFG (SVML 전압 레벨 도달) 인터럽트 플래그가 설정됩니다. 이러한 상황이 발생했을 때 SVMLVLRIE (SVML 전압 레벨 도달 인터럽트 활성화)를 설정하면 인터럽트도 생성됩니다.
+
+SVML 모듈은 과전압 감지에도 사용할 수 있습니다.
+이는 SVMLVLRPE 설정 외에도 SVMLOVPE (SVML 과전압 POR 활성화) 비트를 설정하여 수행됩니다. 이러한 조건에서 VCORE가 안전한 장치 작동을 초과하면 POR이 생성됩니다.
+
+SVSL 및 SVML 모듈에는 절전 작동을 위해 구성 가능한 성능 모드가 있습니다. 
+(자세한 내용은 2.2.9 절을 참조하십시오.)
+
+이러한 SVSL 및 SVML 전력 모드가 수정되거나 전압 레벨이 수정되면 지연 요소는 SVSL 및 SVML 회로가 안정화 될 때까지 인터럽트 및 POR 소스를 마스킹합니다.
+SVSMLDLYST (지연 상태)가 0을 읽으면 지연이 만료 된 것입니다. 또한 SVSMLDLYIFG (SVSL / SVML 지연 만료) 인터럽트 플래그가 설정됩니다. 이 때 SVSMLDLYIE (SVSL 및 SVML 지연 만료 인터럽트 활성화)를 설정하면 인터럽트도 생성됩니다.
+
+전원 장애 조건의 경우 SVSLMD를 설정하면 SVSL 인터럽트 플래그가 LPM2, LPM3 및 LPM4에 설정됩니다.
+SVSLMD가 설정되지 않은 경우 SVSL 인터럽트 플래그는 LPM2, LPM3 및 LPM4에서 설정되지 않습니다. 또한 SVSMLEVM을 설정하여 모든 SVSL 및 SVML 이벤트를 마스킹 할 수 있습니다.
+대부분의 응용 프로그램에서 SVSMLEVM을 지워야합니다.
+SVSL 및 SVML의 모든 인터럽트 플래그는 BOR 또는 소프트웨어에 의해 지워질 때까지 설정된 상태로 유지됩니다.</summary><p id="b8e8dbc0-3bf9-4c3c-8c39-ba044a1b561d" class="">If VCORE falls below the SVSL level, SVSLIFG (SVSL interrupt flag) is set.</p><p id="7ed847b4-cbdf-46b5-9bf1-8ec1823d2ef1" class="">If VCORE remains below the SVSL level and software attempts to clear SVSLIFG, it is immediately set again by hardware.</p><p id="1f400a89-be43-4a7a-a549-3b4c28a8715a" class="">If the SVSLPE (SVSL POR enable) bit is set when SVSLIFG gets set, a POR is generated.</p><p id="475cefc1-a6df-418b-b5e2-3aa251ce349f" class="">
+</p><p id="28564059-ade4-4ab2-8f72-8e63785e4cce" class="">If VCORE falls below the SVML level, SVMLIFG (SVML interrupt flag) is set.</p><p id="f99c46e5-179e-4cff-927e-01b4189b9274" class="">If VCORE remains below the SVML level and software attempts to clear SVMLIFG, it is immediately set again by hardware.</p><p id="3a5cf0de-6624-48bd-90c2-8567a7ccc554" class="">If the SVMLIE (SVML interrupt enable) bit is set when SVMLIFG gets set, an interrupt is generated.</p><p id="8f0a3e85-028a-4f38-9231-ecd66dfeff92" class="">If a POR is desired when SVMLIFG is set, the SVML can be configured to do so by setting the SVMLVLRPE (SVML voltage level reached POR enable) bit while SVMLOVPE bit is cleared.</p><p id="a5621941-3352-4638-bca6-dd1c756010be" class="">
+</p><p id="e36b1c08-e1c3-4863-8d25-4f6f9267e48f" class="">If VCORE rises above the SVML level, the SVMLVLRIFG (SVML voltage level reached) interrupt flag is set.</p><p id="265c7aa7-bc2b-407b-ad0b-e20eea292054" class="">If SVMLVLRIE (SVML voltage level reached interrupt enable) is set when this occurs, an interrupt is also generated.</p><p id="bed3bf13-8fb8-4ef3-b608-7ba71c9d6473" class="">
+</p><p id="bd41f104-d016-40ef-b47a-f04e5321555a" class="">The SVML module can also be used for overvoltage detection.</p><p id="a67cd830-23b4-4a0c-8d52-3095f649ba25" class="">This is accomplished by setting the SVMLOVPE (SVML overvoltage POR enable) bit, in addition to setting SVMLVLRPE. Under these conditions, if VCORE exceeds safe device operation, a POR is generated.</p><p id="05d21e3d-9bd6-4534-92c4-655b03b613c0" class="">
+</p><p id="634d9d0e-4949-406b-98ed-cffd7bdc6985" class="">The SVSL and SVML modules have configurable performance modes for power-saving operation. (See Section 2.2.9 for more information.)</p><p id="f1e9655c-342c-43ce-915c-8e77f3d9d676" class="">If these SVSL and SVML power modes are modified, or if a voltage level is modified, a delay element masks the interrupts and POR sources until the SVSL and SVML circuits have settled.</p><p id="2b8c6ea7-aaea-4150-ba50-663c850bb24a" class="">When SVSMLDLYST (delay status) reads zero, the delay has expired. In addition, the SVSMLDLYIFG (SVSL /SVML delay expired) interrupt flag is set. If the SVSMLDLYIE (SVSL and SVML delay expired interrupt enable) is set when this occurs, an interrupt is also generated.</p><p id="9684600a-a349-474d-8fb9-168e7973fa86" class="">
+</p><p id="31785a02-3cf5-4082-b96b-4679bdfcd6ae" class="">In case of power-fail conditions, setting SVSLMD causes the SVSL interrupt flag to be set in LPM2, LPM3, and LPM4.</p><p id="6bbde1ac-bb3f-40c7-b1a7-cfc7c140b073" class="">If SVSLMD is not set, the SVSL interrupt flag is not set in LPM2, LPM3, and LPM4. In addition, all SVSL and SVML events can be masked by setting SVSMLEVM.</p><p id="4a0c13c5-c057-4ad4-9a34-065c6499fcd9" class="">For most applications, SVSMLEVM should be cleared.</p><p id="ef65de85-1f4f-46df-be01-31c16fb169c0" class="">All the interrupt flags of SVSL and SVML remain set until cleared by a BOR or by software.</p><p id="c82a8dcf-b933-411e-b717-9c52d5e9683c" class="">
+</p></details></li></ul><p id="7ce1e625-e7b1-4642-9532-1b6b31c96d1e" class="">8. Supply Voltage Supervisor and Monitor - Power up</p><ul id="9d56f55d-2ed6-44eb-b4aa-33cb5bf467c6" class="toggle"><li><details open=""><summary>장치의 전원을 켜면 SVSH 및 SVSL 기능이 기본적으로 활성화됩니다.
+처음에는 DVCC가 낮으므로 PMM은 장치를 POR 재설정 상태로 유지합니다. SVSH 및 SVSL 레벨이 모두 충족되면 재설정이 해제됩니다. 그림 2-7은이 프로세스를 보여줍니다.</summary><p id="c54dd51c-f1c5-449a-bea9-946f633eee4d" class="">When the device is powering up, the SVSH and SVSL functions are enabled by default.</p><p id="aaf7bfbf-816c-4554-b90a-bd0dfd842bb5" class="">Initially, DVCC is low, and therefore the PMM holds the device in POR reset. When both the SVSH and SVSL levels are met, the reset is released. Figure 2-7 shows this process.</p></details></li></ul><figure id="6eeb8961-3d9f-4b10-9300-88ca7269092d" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2010.png"><img style="width:445px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2010.png"/></a></figure><ul id="35b8db95-e25d-4e08-8a6a-0622cfd56985" class="toggle"><li><details open=""><summary>이 시점 이후에는 두 전압 도메인이 모두 감시되고 모니터링되며 각 모듈이 활성화됩니다.</summary><p id="cdb5ff03-865a-4b83-9463-35559ae149c0" class="">After this point, both voltage domains are supervised and monitored while the respective modules are enabled.</p></details></li></ul><p id="1a383700-05e1-4169-a9af-24b3c2a3ce73" class="">
+</p><p id="771e3bc3-a706-4d6e-91dd-e2ae9b5631d6" class="">9. Increasing VCORE to Support Higher MCLK Frequencies</p><ul id="8efa4f3f-4f32-4582-8908-faca9935fa0a" class="toggle"><li><details open=""><summary>재설정시 VCORE 및 모든 PMM 임계 값은 기본적으로 가능한 가장 낮은 레벨로 설정됩니다. 이러한 기본 설정은 광범위한 MCLK 작동을 허용하며 많은 응용 프로그램에서 이러한 수준을 변경할 필요가 없습니다.
+
+그러나 애플리케이션에 더 높은 MCLK 주파수가 제공하는 성능이 필요한 경우, 소프트웨어는 CPU에 충분한 전압을 공급하지 못하면 예측할 수없는 결과를 초래할 수 있으므로 MCLK를 변경하기 전에 VCORE가 충분한 전압 레벨로 상승했는지 확인해야합니다.
+
+지정된 장치에 대해 최대 MCLK 주파수에 필요한 최소 VCORE 레벨이 설정되었습니다 (특정 값은 장치 데이터 시트 참조).
+
+VCORE를 증가시키기 위해 PMMCOREV를 설정 한 후, 새로운 전압이 설정 될 때까지 시간 지연이 있습니다.
+필요한 코어 전압이 안정화 될 때까지 소프트웨어가 MCLK를 높이 지 않아야합니다.
+
+SVCL을 사용하여 MCLK를 증가시키기 전에 VCORE가 필요한 최소값을 충족하는지 확인할 수 있습니다. 그림 2-8은이 절차를 보여줍니다</summary><p id="512dc14a-c63f-4859-bdc1-103ee6aea6fd" class="">With a reset, VCORE and all the PMM thresholds, default to their lowest possible levels.</p><p id="25764906-d7fd-4b9f-b160-55493f29f524" class="">These default settings allow a wide range of MCLK operation, and in many applications no change to these levels is required.</p><p id="e0ebc0e6-04ec-4cd7-9d13-5e4785dc4347" class="">However, if the application requires the performance provided by higher MCLK frequencies, software should ensure that VCORE has been raised to a sufficient voltage level before changing MCLK, since failing to supply sufficient voltage to the CPU could produce unpredictable results.</p><p id="91d0d80f-98fa-48ff-84cc-cd1040e326c1" class="">For a given device, minimum VCORE levels required for maximum MCLK frequencies have been established (See the device data sheet for specific values).</p><p id="24d8a807-fa22-4701-917d-1741ee773402" class="">
+</p><p id="542a782a-be29-4e54-a508-0b1796b9b8c0" class="">After setting PMMCOREV to increase VCORE, there is a time delay until the new voltage has been established.</p><p id="8e5344ea-d50e-4cf0-97be-58d545842f07" class="">Software must not raise MCLK until the necessary core voltage has settled.</p><p id="c1e5eb09-0a4a-4643-818e-f8c70dc23222" class="">SVML can be used to verify that VCORE has met the required minimum value, prior to increasing MCLK. Figure 2-8 shows this procedure.</p></details></li></ul><figure id="993221c9-f40d-4a6a-8f62-b8cb4f89a771" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2011.png"><img style="width:573px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2011.png"/></a></figure><ul id="7a50287f-a91d-4c87-bee0-a0e2c13f6464" class="toggle"><li><details open=""><summary>VCORE 레벨을 한 번에 한 레벨 씩만 높이는 것이 중요합니다.
+다음 1-4 단계는 VCORE를 한 레벨 증가시키는 절차를 보여줍니다. 목표 레벨을 얻을 때까지 VCORE 레벨을 변경하기 위해이 순서를 반복합니다.
+
+• 1 단계 : 다음 단계를 계속하기 전에 DVCC가 설정되어 있는지 확인하십시오.
+• 2 단계 : SVMH 및 SVSH를 다음 레벨로 프로그래밍합니다. 이는 DVCC가 다음 VCORE 레벨에 대해 충분히 높은지 확인합니다.
+• 3 단계 : SVML을 다음 레벨로 프로그래밍하고 SVSMLDLYIFG가 1이 될 때까지 기다립니다.
+• 4 단계 : PMMCOREV를 다음 VCORE 레벨로 프로그래밍합니다.
+• 5 단계 : SVMLVLRIFG 플래그가 1이 될 때까지 기다립니다. 코어 전압이 4 단계에서 프로그래밍 한 수준에 도달했음을 나타냅니다.
+• 6 단계 : SVSL을 다음 단계로 프로그래밍합니다.
+
+다음은 VCORE를 늘리기위한 C 코드 예제입니다. 샘플 라이브러리는 VCORE를 증가 및 감소시키기위한 루틴을 제공하며 가능할 때마다 사용해야합니다.</summary><p id="3ebb2068-6996-4e4f-bac1-f5a287531db8" class="">It is critical that the VCORE level be increased by only one level at a time.</p><p id="b94f01d3-d587-4817-ad91-4e240e360805" class="">The following steps 1 through 4 show the procedure to increase VCORE by one level. This sequence is repeated to change the VCORE level until the targeted level is obtained:</p><p id="2c151748-84ca-458c-bc0f-896a2e688809" class="">• Step 1: Make sure that DVCC has settled before you continue with the next steps.
+• Step 2: Program the SVMH and SVSH to the next level. This makes sure that DVCC is high enough for the next VCORE level.
+• Step 3: Program the SVML to the next level and wait until SVSMLDLYIFG is one.
+• Step 4: Program PMMCOREV to the next VCORE level.
+• Step 5: Wait until SVMLVLRIFG flag is one. It indicates that the core voltage reached the level you programmed in Step 4.
+• Step 6: Program the SVSL to the next level.</p><p id="13b6f286-2410-4ca7-b977-287c9c98679b" class="">As a reference, the following is a C code example for increasing VCORE. The sample libraries provide routines for increasing and decreasing the VCORE and should be used whenever possible.</p><p id="e1eabf74-d848-42dd-87d8-8c3d7a60d3be" class="">
+</p></details></li></ul><figure id="dbe36f41-0681-4dbe-bfa7-910e672ea605" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2012.png"><img style="width:743px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2012.png"/></a></figure><blockquote id="c4412170-be7c-45d7-91de-67ea798b1ef8" class="">NOTE : MSP430 드라이버 라이브러리 (MSP430 F5xx / F6xx 코어 라이브러리를 대체 함)에는 PMM 모듈을 쉽게 구성하고 사용하기위한 유용하고 사용하기 쉬운 기능이 포함되어 있습니다. MSP430 드라이버 라이브러리는 MSP430Ware와 함께 다운로드 할 수 있습니다.</blockquote><p id="a6628cb7-6975-4dd6-8e26-731e995e2871" class="">
+</p><p id="5e8f7ef3-aab2-418f-8613-05c4fb763c3c" class="">10. Decreasing VCORE for Power Optimization</p><ul id="3e27adc3-0a5f-4658-9169-1f04d27158b8" class="toggle"><li><details open=""><summary>VCORE 레벨이 높을수록 여전히 MCLK 주파수를 의도 한 것보다 낮게 지원할 수 있기 때문에 현재 VCORE 또는 높은 설정에서 MCLK를 감소시킬 때 MCLK 주파수를 증가시킴으로써 야기되는 위험은 존재하지 않습니다. 
+그러나, 주어진 MCLK 주파수에 필요한 최저값으로 VCORE를 작동함으로써 상당한 전력 효율 이득을 얻을 수 있습니다. VCORE 수준을 한 번에 한 수준 씩 낮추는 것이 중요합니다. 
+다음 단계는 VCORE를 한 수준 감소시키는 절차를 보여줍니다. 목표 레벨을 얻을 때까지 VCORE 레벨을 변경하기 위해이 순서를 반복합니다.
+
+다음 단계는 VCORE를 줄이는 절차를 보여줍니다.
+• 1 단계 : SVML 및 SVSL을 새 수준으로 프로그래밍하고 (SVSMLDLYIFG)가 설정 될 때까지 기다립니다.
+• 2 단계 : PMMCOREV를 새로운 VCORE 수준으로 프로그래밍합니다. 
+새로운 VCORE 설정에 대한 최대 MCLK 주파수를 위반하지 않아야 VCORE 설정을 낮추는 것이 중요합니다 (장치 별 데이터 시트 참조).</summary><p id="64d79c71-3c51-4e46-a57b-7b5644cc3f8a" class="">The risk posed by increasing MCLK frequency does not exist when decreasing MCLK from the current VCORE or higher settings, because higher VCORE levels can still support MCLK frequencies below the ones for which they were intended.</p><p id="bf9f47ae-3feb-4611-a16e-260fb46bcfa9" class="">However, significant power efficiency gains can be made by operating VCORE at the lowest value required for a given MCLK frequency.</p><p id="0b8e589f-8dbe-4119-8f9f-c28646c8e631" class="">It is critical that the VCORE level be decreased by only one level at a time.</p><p id="bbcdda81-015c-4b2b-9a8e-39f35cbe686e" class="">The following steps show the procedure to decrease VCORE by one level.</p><p id="9572edc4-ea1b-4a73-b443-b75f8f428d16" class="">This sequence is repeated to change the VCORE level until the targeted level is obtained:</p><p id="7cc987be-f402-46e1-bb94-8125f9662483" class="">The following steps show the procedure to decrease VCORE:</p><p id="1dbb6bd9-e61d-499b-a559-0bf9224eda75" class="">• Step 1: Program the SVML and SVSL to the new level and wait for (SVSMLDLYIFG) to be set.
+• Step 2: Program PMMCOREV to the new VCORE level. It is critical when lowering the VCORE setting that the maximum MCLK frequency for the new VCORE setting is not violated (see the device-specific data sheet).</p><p id="c3a67fc4-a7a9-4add-b7c5-56ce5a7da8b3" class="">
+</p></details></li></ul><p id="360fe78b-8daf-43c7-8cac-c2ff07a8b177" class="">11. Transition From LPM3 and LPM4 Modes to AM</p><ul id="9eca27e5-da4c-4200-bd1d-0628cf2c97ad" class="toggle"><li><details open=""><summary>LDO는 애플리케이션이 저전력 모드에서 활성 모드로 전환 될 때 정착하는 데 시간이 필요합니다.
+LPM3 또는 LPM4에서 전환이 발생하고 장치가 활성 모드로 충분히 오래 머 무르지 않으면 LDO에 충분히 정착 할 시간이 없습니다. 
+LDO 내부의 회로는 LDO가 적절한 작동 전압에 정착하는 데 필요한 최소 시간을 갖도록합니다. 이 회로는 LPM3 또는 LPM4에서 8 회 전환 할 때마다 LDO가 올바르게 정착 될 수있을 정도로 오래 지속되도록합니다. 이것은 자동으로 처리되며 응용 프로그램에서 설정하지 않아도됩니다.</summary><p id="cc2f3447-697f-4f43-a36f-f4147929d577" class="">The LDO requires time to settle when the application transitions from low-power modes to active modes.</p><p id="b20623d0-48fb-4709-a193-92d95caf1986" class="">If a transition from LPM3 or LPM4 occurs and the devices does not stay in active mode long enough, the LDO does not have time to settle sufficiently.</p><p id="e3ac99f2-e3f6-4d0e-9eb7-5ec529626a56" class="">Circuitry inside the LDO ensures that the LDO has its minimum required time to settle to its proper operating voltage.</p><p id="371f387e-e486-448a-8afc-f97aa28e5e1a" class="">The circuitry ensures that every eighth transition from LPM3 or LPM4 causes the LDO to remain on long enough to properly settle.</p><p id="adc15a0b-c80c-42d9-9fb4-0c0b45ee4834" class="">This is handled automatically and requires no setting by the application.</p><p id="149ed16a-5e65-4326-b801-e611307917ab" class="">
+</p></details></li></ul><p id="fe5cf44a-f832-47be-a7df-f6e7a38fab37" class="">12. LPM3.5 and LPM4.5</p><ul id="f4d5bed2-91a6-43c0-a461-ab9bb52d717a" class="toggle"><li><details open=""><summary>LPM3.5 및 LPM4.5는 PMM의 레귤레이터가 완전히 비활성화되어 추가 절전을 제공하는 추가 저전력 모드입니다. 모든 장치가 모든 LPMx.5 모드를 지원하는 것은 아니므로 장치 별 데이터 시트를 참조하십시오.
+
+LPMx.5 동안 VCORE에 전원이 공급되지 않기 때문에 CPU 및 RAM을 포함한 모든 디지털 모듈의 전원이 꺼집니다. 이렇게하면 전체 장치가 비활성화되고 결과적으로 레지스터와 RAM의 내용이 손실됩니다.
+LPMx에 들어가기 전에 모든 필수 값을 플래시에 저장해야합니다. PMMREGOFF 비트는 레귤레이터를 비활성화하는 데 사용됩니다. LPMx의 전체 설명과 올바른 사용법은 SYS 모듈을 참조하십시오.
+
+LPMx.5를 입력하면 PMM의 레귤레이터가 비활성화되므로 모든 I / O 레지스터 구성이 손실됩니다. 따라서 I / O 핀의 구성은 LPMx로 들어오고 나갈 때 응용 프로그램의 모든 핀이 제어 된 방식으로 작동하도록 다르게 처리해야합니다.
+I / O 핀을 올바르게 설정하는 것은 LPMx.5에서 가능한 최저 전력 소비를 달성하고 응용 프로그램에서 제어되지 않은 입력 또는 출력 I / O 상태를 방지하는 데 중요합니다. 이 응용 프로그램은 I / O 핀 상태를 완벽하게 제어하여 LPMx에 출입 할 때 원하지 않는 가짜 활동이 발생할 가능성을 방지합니다.
+LPMx.5 입력 전 설정에 따라 I / O 핀 상태가 유지되고 잠깁니다. LPMx.5에 진입하면 PMM 모듈의 PM5CTL0의 LOCKLPM5 비트가 자동으로 설정됩니다. 핀 조건 만 유지됩니다. 다른 모든 포트 구성 레지스터 설정이 손실됩니다. 자세한 내용은 디지털 I / O 장을 참조하십시오</summary><p id="d67d2fce-53c3-4815-8040-320b16aed7ed" class="">LPM3.5 and LPM4.5 are additional low-power modes in which the regulator of the PMM is completely disabled, providing additional power savings.</p><p id="dfbc40e7-c3db-4c15-8c9f-72425a01e482" class="">Not all devices support all LPMx.5 modes, so see the device-specific data sheet.</p><p id="df6cccbf-9fe4-47a8-81b1-e9a9bfb0fca7" class="">Because there is no power supplied to VCORE during LPMx.5, the CPU and all digital modules including RAM are unpowered. This disables the entire device and, as a result, the contents of the registers and RAM are lost.</p><p id="0720baff-2f05-421b-ae4a-848df53929b8" class="">Any essential values should be stored to flash prior to entering LPMx.5. PMMREGOFF bit is used to disable the regulator. See the SYS module for complete descriptions and proper uses of LPMx.5.</p><p id="bcc7ef3a-c518-45dd-b169-00a73965a056" class="">Because the regulator of the PMM is disabled upon entering LPMx.5, all I/O register configurations are lost.</p><p id="9261e8a7-c67f-4aa3-a0eb-c818ab5509fa" class="">Therefore, the configuration of I/O pins must be handled differently to ensure that all pins in the application behave in a controlled manner upon entering and exiting LPMx.5.</p><p id="66caaa59-7539-4b59-9083-978d6d259b4e" class="">Properly setting the I/O pins is critical to achieving the lowest possible power consumption in LPMx.5, as well as preventing any possible uncontrolled input or output I/O state in the application. The application has complete control of the I/O pin conditions preventing the possibility of unwanted spurious activity upon entry and exit from LPMx.5.</p><p id="1ab21871-ca44-49e6-8085-652e4057238f" class="">The I/O pin state is held and locked based on the settings prior to LPMx.5 entry.</p><p id="5c9fff05-5d25-4cb4-b1a2-d50c07ff79d9" class="">Upon entry into LPMx.5, the LOCKLPM5 bit in PM5CTL0 of the PMM module is set automatically. Note that only the pin condition is retained.</p><p id="0c6836de-a868-49df-bce2-ccb98eb06328" class="">All other port configuration register settings are lost. See the Digital I/O chapter for further details</p></details></li></ul><p id="a4368660-d1c4-4d67-b451-e1d6c922cc6c" class="">
+</p><p id="48dccdc7-2a95-4499-b083-77648682f87b" class="">13. Brownout Reset (BOR), Software BOR, Software POR</p><ul id="15f5cae1-bcc8-4369-b19a-ddcbeab55f89" class="toggle"><li><details open=""><summary>BOR (Brownout Reset) 회로의 주요 기능은 장치 전원을 켤 때 발생합니다. 파워 업 램프의 초기에 작동하여 시스템을 초기화하는 POR을 생성합니다. 또한 SVS가 활성화되지 않고 브라운 아웃 조건이 발생하는 경우에도 작동합니다. 시스템의 적절한 재설정을 위해 입력 전원이 로직에 충분할 때까지이 재설정을 유지합니다.
+
+응용 프로그램에서 소프트웨어로 BOR을 발생시키는 것이 바람직 할 수 있습니다. 
+PMMSWBOR을 설정하면 소프트웨어 기반 BOR이 발생합니다. PMMBORIFG가 그에 따라 설정됩니다.
+
+BOR은 또한 POR 및 PUC를 시작합니다. 
+PMMBORIFG는 소프트웨어 또는 SYSRSTIV를 읽고 지울 수 있습니다. 마찬가지로 PMMSWPOR을 설정하여 소프트웨어로 POR을 유발할 수 있습니다.
+PMMPORIFG가 그에 따라 설정됩니다. POR은 또한 PUC를 시작합니다.
+PMMPORIFG는 소프트웨어 또는 SYSRSTIV를 읽고 지울 수 있습니다.
+PMMSWBOR과 PMMSWPOR은 모두 Self clearing입니다.
+BOR, POR 및 PUC 재설정에 대한 자세한 설명은 SYS 모듈을 참조하십시오.</summary><p id="7295e10b-d1e6-4eb4-9dc3-52d442867f27" class="">The primary function of the brownout reset (BOR) circuit occurs when the device is powering up.</p><p id="0613afc3-e643-46c3-b94d-6d13b38325fc" class="">It is functional very early in the power-up ramp, generating a POR that initializes the system.</p><p id="eca71828-8ea0-415c-89ef-0d19f42c0815" class="">It also functions when no SVS is enabled and a brownout condition occurs.</p><p id="f294cda5-b7fb-4506-98a2-84eb19bafb7b" class="">It sustains this reset until the input power is sufficient for the logic, for proper reset of the system.</p><p id="507894bf-a27d-4eb5-b8dd-83379f0fe572" class="">In an application, it may be desired to cause a BOR by software.</p><p id="e9f7884f-56bf-406d-884f-987f01f2d8cf" class="">Setting PMMSWBOR causes a softwaredriven BOR. PMMBORIFG is set accordingly.</p><p id="3bf1022a-2bd2-4f16-91ad-edccf635374f" class="">Note that a BOR also initiates a POR and PUC.</p><p id="cdeadba8-f6f0-4305-9e1c-d01590b0ed5d" class="">PMMBORIFG can be cleared by software or by reading SYSRSTIV. Similarly, it is possible to cause a POR by software by setting PMMSWPOR.</p><p id="cfc974f1-a04c-407a-b92a-a5a79f89d4ad" class="">PMMPORIFG is set accordingly. A POR also initiates a PUC.</p><p id="61f3fb3f-c822-44c9-aa8d-44546e684ee6" class="">PMMPORIFG can be cleared by software or by reading SYSRSTIV.</p><p id="7d4af046-2cf5-4927-9e98-3292f6238b80" class="">Both PMMSWBOR and PMMSWPOR are self clearing.</p><p id="d58896f0-e518-4aa7-a013-757cb4898aff" class="">See the SYS module for complete descriptions of BOR, POR, and PUC resets.</p></details></li></ul><p id="7593e184-0810-46e8-8981-5b921ac26c74" class="">14. SVS and SVM Performance Modes and Wake-up Times</p><ul id="080739f4-02e8-4f0d-b472-ad88ff3174f0" class="toggle"><li><details open=""><summary>수퍼바이저 / 모니터는 Normal 및 최대 성능의 두 가지 모드 중 하나로 작동 할 수 있습니다.
+차이점은 응답 시간과 소비 전력의 균형입니다. 최대 성능 모드는 응답 시간이 빠르지 만 일반 모드보다 훨씬 더 많은 전력을 소비합니다.
+외부 전원 공급 장치의 디커플링으로 인해 DVCC에서 빠른 스파이크가 발생하지 못하거나 응용 프로그램에 장애에 대한 특정 불내성이있는 경우 응용 프로그램에서 최대 성능 모드를 고려할 수 있습니다.
+이러한 경우 Full-Performance 모드는 추가 보호 계층을 제공합니다.
+
+성능 모드를 제어하는 방법에는 수동과 자동의 두 가지가 있습니다.
+수동 모드에서 LPMx.5를 제외한 모든 작동 모드에 대해 정상 / 최대 성능 선택은 동일합니다 (SVS 및 SVM은 LPMx.5에서 항상 비활성화 됨).
+이 경우 표준 또는 전체 성능 선택은 해당 모듈에 대해 SVSHFP, SVMHFP, SVSLFP 또는 SVMLFP 비트를 사용하여 수행됩니다.
+
+자동 모드에서 하드웨어는 실제 작동 모드에 따라 정상 또는 전체 성능 선택을 변경합니다
+
+저전력 모드에서 장치의 웨이크 업 시간은 표 2-6, 표 2-7, 표 2-8 및 표 2-9에 나열된 SVSL 및 SVML 성능 모드 설정의 영향을받습니다.
+저전력 모드에서 웨이크 업 시간은 SVSH 및 SVMH 설정의 영향을받지 않습니다.
+LPMx.5 (LPM3.5 또는 LPM4.5)의 모든 웨이크 업은 SVPM 또는 SVML의 성능 모드에 관계없이 데이터 시트 매개 변수 tWAKE-UP-LPM5에 의해 정의됩니다. LPMx에서는 비활성화되어 있기 때문입니다.
+
+2.2.9.1 및 2.2.9.2 단원의 표는 SVSL, SVML, SVSH 및 SVMH에 대한 제어 및 성능 모드를 선택하는 데 필요한 설정을 보여줍니다.</summary><p id="8730714e-9d1f-45a8-b501-67b049bd6a0e" class="">The supervisors/monitors can function in one of two modes: normal and full performance.</p><p id="4cab8b63-e748-43aa-a0fe-67f76b23ddc4" class="">The difference is a tradeoff in response time versus the power consumed; full-performance mode has a faster response time but consumes considerably more power than normal mode.</p><p id="6cf92c5e-e1d6-460b-9cf0-c88e27c5d2cd" class="">Full-performance mode might be considered in applications in which the decoupling of the external power supply cannot adequately prevent fast spikes on DVCC from occurring, or when the application has a particular intolerance to failure.</p><p id="84a1c565-4968-43eb-9910-d77040e118ee" class="">In such cases, full-performance mode provides an additional layer of protection.</p><p id="9f7cfd59-2006-4d02-8950-2d15583c3af6" class="">There are two ways to control the performance mode: manual and automatic. In manual mode, the
+normal/full-performance selection is the same for every operational mode except LPMx.5 (the SVS and
+SVM are always disabled in LPMx.5). In this case, the normal or full-performance selection is made with
+the SVSHFP, SVMHFP, SVSLFP, or SVMLFP bit, for their respective modules.</p><p id="a98d34c5-c828-435f-ac88-8ff17c0787ec" class="">In automatic mode, hardware changes the normal or full-performance selection depending on the
+operational mode in effect.</p><p id="27de774f-990f-497d-a5a5-06655a886594" class="">The wake-up time of the device from low-power modes is affected by the settings of the SVSL and SVML
+performance modes as listed in Table 2-6, Table 2-7, Table 2-8, and Table 2-9. The wake-up time from
+low-power modes is not affected by the settings of the SVSH and SVMH. All wake-ups from LPMx.5
+(LPM3.5 or LPM4.5), are defined by the data sheet parametric, tWAKE-UP-LPM5, regardless of the performance modes for SVSL or SVML, because these are disabled in LPMx.5.</p><p id="43da968e-8207-4970-9c22-a983d007e612" class="">The tables in Section 2.2.9.1 and Section 2.2.9.2 show the required settings to select the control and performance modes for SVSL, SVML , SVSH, and SVMH.</p></details></li></ul><figure id="523afa02-bcdf-4b0b-a340-ec1f88183bb2" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2013.png"><img style="width:1010px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2013.png"/></a></figure><figure id="1aa0c206-d3c0-445c-9d4e-cef2aee65557" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2014.png"><img style="width:1007px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2014.png"/></a></figure><figure id="ecf0c131-5f44-4c75-9abd-22320ee4b0b7" class="image"><a href="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2015.png"><img style="width:1007px" src="Power%20Management%20Module%20and%20Supply%20Voltage%20Supervi%20426efd0e60d248839484017f6bb77fbe/Untitled%2015.png"/></a></figure><blockquote id="a752ebed-2f46-442f-a14e-db49c99d125f" class="">NOTE :  저전력 모드
+CPU가 특정 저전력 모드를 요청하더라도, 스위치를 끄거나 더 높은 주파수를 가져야하는 클럭을 요청하는 모듈 또는 LDO의 더 높은 드라이브 기능을 요청하는 모듈로 인해 장치가 해당 상태로 전환되지 않을 수 있습니다. 표에 언급 된 저전력 모드는 장치가 실제로 요청 된 상태에 있다고 가정합니다. 즉, 편차 클록 설정 또는 드라이브 기능을 요청하는 모듈이 없습니다.
+NOTE : Low-Power Modes
+Even if the CPU requests a specific low-power mode, the device might not go into that state because of modules requesting clocks that should be switched off or have higher frequencies or because of modules requesting a higher drive capability of the LDO.
+The lowpower modes mentioned in the tables assume that the device is actually in the requested state; that is, no module is requesting a deviating clock setting or drive capability.</blockquote><p id="5706ad08-48a0-41ef-b7d1-39a98876bc76" class="">
+</p><p id="2d7a3ace-ac89-4e48-b9c0-41e29e5777ad" class="">
+</p></div></div><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="82a50b08-27fd-49d2-a33c-57beeb31dcf6"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY: PMM 사용법
+SVSH[High-side supervisor], SVMH[High-side monitor], SVSL[Low-side supervisor], SVML[Low-side monitor] 사용법 및 TI 권장사항이 주 내용.
+Vcore Level 변경 주의점, </strong></div></figure><p id="94e004aa-c880-4575-b563-f09ab0779c0e" class="">
+</p><hr id="f4c55e93-9dfc-4a9a-bc86-fadfa6d23452"/><p id="d88f13c7-f6cd-4795-b066-836db018b269" class="">
+</p></div></article></body></html>
