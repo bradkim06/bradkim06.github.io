@@ -5,6 +5,10 @@
 <url> <loc>https://bradkim06.github.io/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/React/JSX/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/React/React-Intro/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/React/RenderHTML/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/React/ES6/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/books/react-programming/chap1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/mdx-full-test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/mdx-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -26,10 +30,6 @@
 <url> <loc>https://bradkim06.github.io/javascript/w3schools/WhereTo.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/study_adsp/chap3-2-1.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/study_adsp/chap3-2-2.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/React/ES6.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/React/JSX.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/React/React-Intro.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/React/RenderHTML.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/gatsby/troubleShooting.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/gatsby/withoutGraphQL.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/gatsby/dataInGatsby.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -51,9 +51,9 @@
 <url> <loc>https://bradkim06.github.io/tags/jekyll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/java-script-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/study-adsp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/tags/react-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/book-html-5-for-masterminds/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/tags/react-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/book-react-programming/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/tests/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/author/ghost/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
