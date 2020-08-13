@@ -6,8 +6,8 @@
 <url> <loc>https://bradkim06.github.io/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/books/react-programming/chap1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/mdx-full-test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/mdx-tutorial/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://bradkim06.github.io/books/react-programming/mdx-full-test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/a-full-style-test.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/vim/Regular-Expressions.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/vim/vim_grep.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -45,6 +45,7 @@
 <url> <loc>https://bradkim06.github.io/vim/vim-buffer.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/vim/vim-mapping.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/vim/vim-tips.md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://bradkim06.github.io/tags/test-md/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/vim-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/embedded/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://bradkim06.github.io/tags/jekyll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
