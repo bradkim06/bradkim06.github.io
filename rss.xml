@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Aug 2020 13:08:59 GMT</lastBuildDate><item><title><![CDATA[Vim Abbreviations]]></title><description><![CDATA[Insert Mode Abbreviations Vim에는 매핑과 비슷하지만 삽입, 교체 및 명령 모드에서 사용하기위한 약어라는 기능이 있다. Example 입력 Well, I do not know waht we should do tehn…]]></description><link>https://bradkim06.github.io/vim/vim-Abbreviations.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/vim-Abbreviations.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Insert Mode Abbreviations&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[bradkim06]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://bradkim06.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 22 Aug 2020 13:10:39 GMT</lastBuildDate><item><title><![CDATA[Vim Setting Options]]></title><description><![CDATA[Bool Options :set name: true :set noname: false Toggling Boolean Options using  Checking Options using  Options with Values 일부 옵션은 Value…]]></description><link>https://bradkim06.github.io/vim/setting-options.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/setting-options.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Bool Options&lt;/h2&gt;
+&lt;p&gt;:set [name]: true&lt;br&gt;
+:set no[name]: false&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;nonumber&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Toggling Boolean Options&lt;/h3&gt;
+&lt;p&gt;using &lt;code class=&quot;language-text&quot;&gt;!&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Checking Options&lt;/h3&gt;
+&lt;p&gt;using &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Options with Values&lt;/h2&gt;
+&lt;p&gt;일부 옵션은 Value Range가 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;numberwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;부울 옵션과  마찬가지로 &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt; 명령으로 확인 가능.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Setting Multiple Options at Once&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;:set&lt;/strong&gt;명령에 둘 이상의 옵션 가능.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;numberwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vim은 :help 명령을 지원한다. 특정 도움말을 보고싶으면&lt;br&gt;
+:help [name] or :help ’[name]’&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Vim Abbreviations]]></title><description><![CDATA[Insert Mode Abbreviations Vim에는 매핑과 비슷하지만 삽입, 교체 및 명령 모드에서 사용하기위한 약어라는 기능이 있다. Example 입력 Well, I do not know waht we should do tehn…]]></description><link>https://bradkim06.github.io/vim/vim-Abbreviations.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/vim-Abbreviations.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Insert Mode Abbreviations&lt;/h2&gt;
 &lt;p&gt;Vim에는 매핑과 비슷하지만 삽입, 교체 및 명령 모드에서 사용하기위한 &lt;strong&gt;약어&lt;/strong&gt;라는 기능이 있다.&lt;/p&gt;
 &lt;h3&gt;Example&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;iabbrev&lt;/span&gt; waht what
@@ -80,75 +102,7 @@ Abbreviations은 앞뒤에 오는 문자를 고려하여 ssig에서만 동작한
 &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;localleader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;d&lt;/span&gt; dd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;A More Complicated Mapping&lt;/h2&gt;
 &lt;h3&gt;단어 앞뒤에 &lt;strong&gt;”&lt;/strong&gt;삽입 Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;:nnoremap &amp;lt;leader&amp;gt;&amp;quot; viw&amp;lt;esc&amp;gt;a&amp;quot;&amp;lt;esc&amp;gt;bi&amp;quot;&amp;lt;esc&amp;gt;lel&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Vim Setting Options]]></title><description><![CDATA[Bool Options :set name: true :set noname: false Toggling Boolean Options using  Checking Options using  Options with Values 일부 옵션은 Value…]]></description><link>https://bradkim06.github.io/vim/setting-options.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/setting-options.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Bool Options&lt;/h2&gt;
-&lt;p&gt;:set [name]: true&lt;br&gt;
-:set no[name]: false&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;nonumber&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Toggling Boolean Options&lt;/h3&gt;
-&lt;p&gt;using &lt;code class=&quot;language-text&quot;&gt;!&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Checking Options&lt;/h3&gt;
-&lt;p&gt;using &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Options with Values&lt;/h2&gt;
-&lt;p&gt;일부 옵션은 Value Range가 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;numberwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;부울 옵션과  마찬가지로 &lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt; 명령으로 확인 가능.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Setting Multiple Options at Once&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;:set&lt;/strong&gt;명령에 둘 이상의 옵션 가능.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;numberwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Vim은 :help 명령을 지원한다. 특정 도움말을 보고싶으면&lt;br&gt;
-:help [name] or :help ’[name]’&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[2-3. 유연한 박스 모델]]></title><description><![CDATA[Templete Code display box-orient box-direction]]></description><link>https://bradkim06.github.io/books/html5+Css3+JavaScript/css-flexible-box-model.md/</link><guid isPermaLink="false">https://bradkim06.github.io/books/html5+Css3+JavaScript/css-flexible-box-model.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Templete Code&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;section&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;parentbox&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 1&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 2&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 3&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 4&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;section&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;section id=&quot;parentbox&quot;&gt;
-  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
-  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
-  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
-  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
-&lt;/section&gt;
-&lt;hr&gt;
-&lt;h4&gt;display&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;section&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;parentbox&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; box&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 1&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 2&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 3&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 4&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;section&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;section id=&quot;parentbox&quot; style=&quot;display: box;&quot;&gt;
-  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
-  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
-  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
-  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
-&lt;/section&gt;
-&lt;hr&gt;
-&lt;h4&gt;box-orient&lt;/h4&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&amp;lt;section id=&lt;span class=&quot;token string&quot;&gt;&quot;parentbox&quot;&lt;/span&gt; 
-  style= &quot;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; box&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;box-orient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; horizontal&lt;/span&gt;  &quot;&gt;
-  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-1&quot;&lt;/span&gt;&gt;Box 1&amp;lt;/div&gt;
-  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-2&quot;&lt;/span&gt;&gt;Box 2&amp;lt;/div&gt;
-  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-3&quot;&lt;/span&gt;&gt;Box 3&amp;lt;/div&gt;
-  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-4&quot;&lt;/span&gt;&gt;Box 4&amp;lt;/div&gt;
-&amp;lt;/section&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;section id=&quot;parentbox&quot; 
-  style= &quot;display: box;
-  box-orient: horizontal
-  &quot;&gt;
-  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
-  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
-  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
-  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
-&lt;/section&gt;
-&lt;hr&gt;
-&lt;h4&gt;box-direction&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Vim Buffer]]></title><description><![CDATA[Buffer Vim에서 Buffer란 현재 열려있는 창을 의미한다. Vim에서 두 개의 파일을 연다. foo 파일에서 다음 명령을 입력한다. x , d가 기대한대로 작동한다. bar 파일로 옮겨서 단축키를 쓰면 x…]]></description><link>https://bradkim06.github.io/vim/vim-buffer.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/vim-buffer.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Buffer&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;:nnoremap &amp;lt;leader&amp;gt;&amp;quot; viw&amp;lt;esc&amp;gt;a&amp;quot;&amp;lt;esc&amp;gt;bi&amp;quot;&amp;lt;esc&amp;gt;lel&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Vim Buffer]]></title><description><![CDATA[Buffer Vim에서 Buffer란 현재 열려있는 창을 의미한다. Vim에서 두 개의 파일을 연다. foo 파일에서 다음 명령을 입력한다. x , d가 기대한대로 작동한다. bar 파일로 옮겨서 단축키를 쓰면 x…]]></description><link>https://bradkim06.github.io/vim/vim-buffer.md/</link><guid isPermaLink="false">https://bradkim06.github.io/vim/vim-buffer.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Buffer&lt;/h2&gt;
 &lt;p&gt;Vim에서 Buffer란 현재 열려있는 창을 의미한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;vim&quot;&gt;&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;$ &lt;span class=&quot;token keyword&quot;&gt;vim&lt;/span&gt; foo bar
 &lt;span class=&quot;token string&quot;&gt;&quot; 버퍼 간 이동 Vim에서 다음 명령을 실행 &quot;&lt;/span&gt;
@@ -307,175 +261,53 @@ Vim은 좀 더 구채적인 명령은 우선순위로 둔다.&lt;/p&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B018T6ZVPK/ref=as_li_tl?ie=UTF8&amp;#x26;camp=1789&amp;#x26;creative=9325&amp;#x26;creativeASIN=B018T6ZVPK&amp;#x26;linkCode=as2&amp;#x26;tag=nolbookim-20&amp;#x26;linkId=45b16dbe20fb6e3a35a594a85f9ba1a6&quot;&gt;Practical Vim&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Source Plugin & Rendering Queried Data]]></title><description><![CDATA[Source Plugins This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4 before continuing here…]]></description><link>https://bradkim06.github.io/gatsby/tutorial5.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial5.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Source Plugins&lt;/h1&gt;
-&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt; before continuing here.&lt;/p&gt;
-&lt;h2&gt;Introducing GraphiQL&lt;/h2&gt;
-&lt;p&gt;GraphiQL is the GraphQL integrated development environment (IDE). It’s a powerful (and all-around awesome) tool you’ll use often while building Gatsby websites.&lt;/p&gt;
-&lt;p&gt;You can access it when your site’s development server is running—normally at &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/___graphql&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Press &lt;code class=&quot;language-text&quot;&gt;Ctrl + Space&lt;/code&gt; (or use &lt;code class=&quot;language-text&quot;&gt;Shift + Space&lt;/code&gt; as an alternate keyboard shortcut) to bring up the autocomplete window and &lt;code class=&quot;language-text&quot;&gt;Ctrl + Enter&lt;/code&gt; to run the GraphQL query.&lt;/p&gt;
-&lt;h2&gt;Source plugins&lt;/h2&gt;
-&lt;p&gt;Data in Gatsby sites can come from anywhere: APIs, databases, CMSs, local files, etc.&lt;/p&gt;
-&lt;p&gt;Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The WordPress plugin knows how to fetch data from the WordPress API.&lt;/p&gt;
-&lt;p&gt;Add &lt;code class=&quot;language-text&quot;&gt;gatsby-source-filesystem&lt;/code&gt; and explore how it works.&lt;/p&gt;
-&lt;p&gt;First, install the plugin at the root of the project:&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save gatsby-source-filesystem&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;gatsby-config.js&lt;/strong&gt; &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  siteMetadata&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Pandas Eating Lots&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-source-filesystem&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;        name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;        path&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;__dirname&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/src/&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-emotion&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-typography&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        pathToConfigModule&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;src/utils/typography&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In the explorer pane, you’ll see &lt;code class=&quot;language-text&quot;&gt;allFile&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;file&lt;/code&gt; available as selections:&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1572px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAACLElEQVQoz11SW2sTQRTO/yhFa4WKsdo+CD74pPjzFMFaFVFBbE3R4rPvtoWsosSmuWyTTZM0kyZ7ye7MnLntZj3ZbST68c3hMHO+c2MKRuvWqd207dPTVrNpNxrNRmbr9UZ9hsYia7U6slqttlrtdJoWMHb91o3ixubde/eLdzbXirdvrm+srK4tLa8sLV/9j8tXVvHp2vW1hw8eUcoKbcfZ3fu0Uyq9eftuf//L7sfSy1evHz95+mxre2v7xT98PrPvP+yU9j6Xdku+5xXIYKhApybFNnIYY7TR0wz5TWzi2CRJPI0zGJP4QeCh+Lw7qH0lncPQ+6mBGNY3wYCFPmUBZxGXBqZpDIqDBmEESMEFKK3GY/dS3Drwej8gODbQS/hZMvrFzr9F5JANj+DiCIYHMKow9wS8uqCuZIGAQI2I6/leYdAjbcvz2zr206lKE0gjl4cupQGnAYSEhwM+GTKvDr4tJl056YjQURdd1w9wZkJCHlLJKESUU6EEZZQDV0qC4CpWSWpAgjRCxVJqKbTQsXa9rG0yIIwyAAjDiDEmhIwiijvDJaFNkgQXhpfAxWximDlKajefGSsrpdI5cMEozlZqMGMullICCEwxywJCKe2688qL4rxOrvkLrTW2EscJEh0sEASTy8qEDMfj8WgO/HrV6gnStm3H6XQ6Z47jdLu9Xq+fs98/b7cd3/cL2Ful8tuyrO9zoFsuW2U8lpU51uJrFmDh58e5/gA6rJbrTavM2gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;graphiql-filesystem&quot;
-        title=&quot;graphiql-filesystem&quot;
-        src=&quot;/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png&quot;
-        srcset=&quot;/static/336219e2720a853e46efecf8980b68be/0eb09/graphiql-filesystem.png 500w,
-/static/336219e2720a853e46efecf8980b68be/1263b/graphiql-filesystem.png 1000w,
-/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png 1572w&quot;
-        sizes=&quot;(max-width: 1572px) 100vw, 1572px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;get array of File “nodes” (node is a fancy name for an object in a “graph”).
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1572px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAACLElEQVQoz31S227TQBD1p0BCVKAKBSpVqIgXPhH1B4AHqjYNSAVEIWlrJ6XigX4CDUl82117Y+/ddhxmnbaPjI52feyZOXOxUxbFz/FoMBy63vj03D09OwcMhqfffwz+g+PPX64nEycMwle7O4+edHdfvt7eefG4+2xz6/lm92mrvdHuPGw/aNC5wb1W5357o7u13Wp19t7sOWEUfoNkg+HBYQ/0IetR/+Pbd+8Pej1A76hv0e8f9o7g/Yf9A3j+enLS/3R8efnLQRgpxldlvarrVWNlWeqMVUxURQnUaGOUgu6KojTGnoUptCmDIHQwwdO/YYr5sq6XjUkpcyYjkgGHYKAoSvw4FUIqpWUDrc187js4wThOJSusaKMtpYIUlBvKNFClFGcCJdkizSVlMuMizRWTfhA4hGBEUpKr+iZ2BQrLqmLSCGVsLiEFWqQRDWOaxZQHqUhyrYzvB9Az5pwTyqOYlYWtk3MBdd1OwAaDYIrzIKQ0XoCstN/XwQhJYEynM7ZsgqHOsqxWtwaOQtliGVxN28rYIa6VkRBWmcti7Q0jrarlXTCMQCQZQQtKc5XkoMzR4qZnKFsK6EIl3Ky9YVr1XdGQS2qdsJywCGUZylSc6ZQXurCrAuUkSaYhnoaEN0YI8X1/7vtRFMEiozAmMZ7Poz/X/nwS4FkENKV0Op06sMbfV1ee511cXIzGY4DreWf2D4cDzHVdbzQeeSMwe3nuyPMsnc1m/wCt7ZYZlpOp1gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;allfile-query&quot;
-        title=&quot;allfile-query&quot;
-        src=&quot;/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png&quot;
-        srcset=&quot;/static/baf7562093f459dffde42c0d069ca8c3/0eb09/allfile-query.png 500w,
-/static/baf7562093f459dffde42c0d069ca8c3/1263b/allfile-query.png 1000w,
-/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png 1572w&quot;
-        sizes=&quot;(max-width: 1572px) 100vw, 1572px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Build a page with a GraphQL query&lt;/h2&gt;
-&lt;p&gt;Create a new file at &lt;code class=&quot;language-text&quot;&gt;src/pages/my-files.js&lt;/code&gt; with the &lt;code class=&quot;language-text&quot;&gt;allFile&lt;/code&gt; GraphQL query you just created:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; graphql &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby&quot;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Layout &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;../components/layout&quot;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;MyFiles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; data &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Layout&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;My Site&apos;s Files&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;thead&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;relativePath&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;prettySize&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;extension&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;birthTime&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;thead&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tbody&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;allFile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;edges&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; node &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-              &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;relativePath&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prettySize&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;extension&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;birthTime&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tbody&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Layout&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; graphql&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
-  query {
-    allFile {
-      edges {
-        node {
-          relativePath
-          prettySize
-          extension
-          birthTime(fromNow: true)
-        }
-      }
-    }
-  }
-&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And now visit &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/my-files/&lt;/code&gt; 😲&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 2000px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/bbe68/my-files-page.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0klEQVQoz31Se0vCUBz1SxSVKT4yBkkP6qtE0EerjxDl1GxERAbeTS0FQbL/xPce6uZjPqZune2SoEmHy497z875vZjr++uLkFRayBLCp1I8Yiad/fjM2efjM53JCEKaEOH3QEOSyfeWKFqW5bq+uvT6PQxzFjxkvL4Dt8cXDB2Fjy/Cp+dM+MQfYva9ga0d9/bu/s6e1+3xB0JMwBe8vbm1zdzzy2OCS3Dc4xMXjcfZWOzu/gHngY1G2Cgbs5loLI7DRiKJJ+71Lfn+lszncrZZ0zTLwUjXu91uv9/XVHWxWFh/YRiWaTo3U1Hk2Wzmarfb9ss0kaXZbDYajVarVS6XJ5MJSGRZRnoB5vM5NIguVKN56/V6Pp8vFouVSqVQKMiyDLVhGMgCw3g8hpoqwYuiuGLWdR35IMIdanQxHA4xBVqDHx0NBoP/zKgmSRL8mIfuYjqdIkKnqupyOxvMSAwzSlH10gwpnp1Op9frrZvBUgpNKoqCCmgSHk3rQUQHRiOQ0XR0besLG41GcCI92sZnTAESNroC8BtmrtVqWAlqYtvYc7ValR2AF0UJIllWJEmuOgCvOIDYNpdKpRT+V/y1PC84IA7wQiC/WP3Eo2208APqKZu6avcZMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;my-files-page&quot;
-        title=&quot;my-files-page&quot;
-        src=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/f97d7/my-files-page.png&quot;
-        srcset=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/0eb09/my-files-page.png 500w,
-/static/7d11167de2d9f1b7ec724df4a3d4befa/1263b/my-files-page.png 1000w,
-/static/7d11167de2d9f1b7ec724df4a3d4befa/f97d7/my-files-page.png 2000w,
-/static/7d11167de2d9f1b7ec724df4a3d4befa/bbe68/my-files-page.png 2108w&quot;
-        sizes=&quot;(max-width: 2000px) 100vw, 2000px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Data in Gatsby]]></title><description><![CDATA[Data in Gatsby A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn…]]></description><link>https://bradkim06.github.io/gatsby/dataInGatsby.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/dataInGatsby.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Data in Gatsby&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/B018T6ZVPK/ref=as_li_tl?ie=UTF8&amp;#x26;camp=1789&amp;#x26;creative=9325&amp;#x26;creativeASIN=B018T6ZVPK&amp;#x26;linkCode=as2&amp;#x26;tag=nolbookim-20&amp;#x26;linkId=45b16dbe20fb6e3a35a594a85f9ba1a6&quot;&gt;Practical Vim&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2-3. 유연한 박스 모델]]></title><description><![CDATA[Templete Code display box-orient box-direction]]></description><link>https://bradkim06.github.io/books/html5+Css3+JavaScript/css-flexible-box-model.md/</link><guid isPermaLink="false">https://bradkim06.github.io/books/html5+Css3+JavaScript/css-flexible-box-model.md/</guid><pubDate>Tue, 11 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Templete Code&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;section&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;parentbox&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 1&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 2&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 3&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 4&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;section&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;section id=&quot;parentbox&quot;&gt;
+  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
+  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
+  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
+  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+&lt;h4&gt;display&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;section&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;parentbox&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token style-attr language-css&quot;&gt;&lt;span class=&quot;token attr-name&quot;&gt; &lt;span class=&quot;token attr-name&quot;&gt;style&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&quot;&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; box&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 1&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 2&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-3&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 3&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Box 4&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;section&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;section id=&quot;parentbox&quot; style=&quot;display: box;&quot;&gt;
+  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
+  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
+  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
+  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+&lt;h4&gt;box-orient&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&amp;lt;section id=&lt;span class=&quot;token string&quot;&gt;&quot;parentbox&quot;&lt;/span&gt; 
+  style= &quot;&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; box&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;box-orient&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; horizontal&lt;/span&gt;  &quot;&gt;
+  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-1&quot;&lt;/span&gt;&gt;Box 1&amp;lt;/div&gt;
+  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-2&quot;&lt;/span&gt;&gt;Box 2&amp;lt;/div&gt;
+  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-3&quot;&lt;/span&gt;&gt;Box 3&amp;lt;/div&gt;
+  &amp;lt;div id=&lt;span class=&quot;token string&quot;&gt;&quot;box-4&quot;&lt;/span&gt;&gt;Box 4&amp;lt;/div&gt;
+&amp;lt;/section&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;section id=&quot;parentbox&quot; 
+  style= &quot;display: box;
+  box-orient: horizontal
+  &quot;&gt;
+  &lt;div id=&quot;box-1&quot;&gt;Box 1&lt;/div&gt;
+  &lt;div id=&quot;box-2&quot;&gt;Box 2&lt;/div&gt;
+  &lt;div id=&quot;box-3&quot;&gt;Box 3&lt;/div&gt;
+  &lt;div id=&quot;box-4&quot;&gt;Box 4&lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+&lt;h4&gt;box-direction&lt;/h4&gt;</content:encoded></item><item><title><![CDATA[Data in Gatsby]]></title><description><![CDATA[Data in Gatsby A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn…]]></description><link>https://bradkim06.github.io/gatsby/dataInGatsby.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/dataInGatsby.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Data in Gatsby&lt;/h1&gt;
 &lt;p&gt;A website has four parts: HTML, CSS, JS, and data. The first half of the tutorial focused on the first three. Now let’s learn how to use data in Gatsby sites.&lt;/p&gt;
 &lt;h2&gt;What is Data?&lt;/h2&gt;
 &lt;p&gt;For the purpose of working in Gatsby, answer is “everything that lives outside a React component”.&lt;/p&gt;
@@ -651,7 +483,175 @@ npm install --save gatsby-plugin-typography typography react-typography typograp
     &lt;/span&gt;&lt;/p&gt;
 &lt;h1&gt;Reference&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/tutorial/part-four/&quot;&gt;Data in Gatsby&lt;/a&gt;
-&lt;a href=&quot;https://www.howtographql.com/&quot;&gt;How To GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Transformer plugins]]></title><description><![CDATA[This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4 and part 5 before continuing here. Add a…]]></description><link>https://bradkim06.github.io/gatsby/tutorial6.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial6.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt; and &lt;a href=&quot;/gatsby/tutorial5&quot;&gt;part 5&lt;/a&gt; before continuing here.&lt;/p&gt;
+&lt;a href=&quot;https://www.howtographql.com/&quot;&gt;How To GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Source Plugin & Rendering Queried Data]]></title><description><![CDATA[Source Plugins This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4 before continuing here…]]></description><link>https://bradkim06.github.io/gatsby/tutorial5.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial5.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Source Plugins&lt;/h1&gt;
+&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt; before continuing here.&lt;/p&gt;
+&lt;h2&gt;Introducing GraphiQL&lt;/h2&gt;
+&lt;p&gt;GraphiQL is the GraphQL integrated development environment (IDE). It’s a powerful (and all-around awesome) tool you’ll use often while building Gatsby websites.&lt;/p&gt;
+&lt;p&gt;You can access it when your site’s development server is running—normally at &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/___graphql&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Press &lt;code class=&quot;language-text&quot;&gt;Ctrl + Space&lt;/code&gt; (or use &lt;code class=&quot;language-text&quot;&gt;Shift + Space&lt;/code&gt; as an alternate keyboard shortcut) to bring up the autocomplete window and &lt;code class=&quot;language-text&quot;&gt;Ctrl + Enter&lt;/code&gt; to run the GraphQL query.&lt;/p&gt;
+&lt;h2&gt;Source plugins&lt;/h2&gt;
+&lt;p&gt;Data in Gatsby sites can come from anywhere: APIs, databases, CMSs, local files, etc.&lt;/p&gt;
+&lt;p&gt;Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The WordPress plugin knows how to fetch data from the WordPress API.&lt;/p&gt;
+&lt;p&gt;Add &lt;code class=&quot;language-text&quot;&gt;gatsby-source-filesystem&lt;/code&gt; and explore how it works.&lt;/p&gt;
+&lt;p&gt;First, install the plugin at the root of the project:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm install --save gatsby-source-filesystem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gatsby-config.js&lt;/strong&gt; &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  siteMetadata&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Pandas Eating Lots&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-source-filesystem&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;        name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;        path&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;__dirname&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/src/&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;gatsby-highlight-code-line&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/span&gt;    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-emotion&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-typography&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        pathToConfigModule&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;src/utils/typography&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In the explorer pane, you’ll see &lt;code class=&quot;language-text&quot;&gt;allFile&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;file&lt;/code&gt; available as selections:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1572px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAACLElEQVQoz11SW2sTQRTO/yhFa4WKsdo+CD74pPjzFMFaFVFBbE3R4rPvtoWsosSmuWyTTZM0kyZ7ye7MnLntZj3ZbST68c3hMHO+c2MKRuvWqd207dPTVrNpNxrNRmbr9UZ9hsYia7U6slqttlrtdJoWMHb91o3ixubde/eLdzbXirdvrm+srK4tLa8sLV/9j8tXVvHp2vW1hw8eUcoKbcfZ3fu0Uyq9eftuf//L7sfSy1evHz95+mxre2v7xT98PrPvP+yU9j6Xdku+5xXIYKhApybFNnIYY7TR0wz5TWzi2CRJPI0zGJP4QeCh+Lw7qH0lncPQ+6mBGNY3wYCFPmUBZxGXBqZpDIqDBmEESMEFKK3GY/dS3Drwej8gODbQS/hZMvrFzr9F5JANj+DiCIYHMKow9wS8uqCuZIGAQI2I6/leYdAjbcvz2zr206lKE0gjl4cupQGnAYSEhwM+GTKvDr4tJl056YjQURdd1w9wZkJCHlLJKESUU6EEZZQDV0qC4CpWSWpAgjRCxVJqKbTQsXa9rG0yIIwyAAjDiDEmhIwiijvDJaFNkgQXhpfAxWximDlKajefGSsrpdI5cMEozlZqMGMullICCEwxywJCKe2688qL4rxOrvkLrTW2EscJEh0sEASTy8qEDMfj8WgO/HrV6gnStm3H6XQ6Z47jdLu9Xq+fs98/b7cd3/cL2Ful8tuyrO9zoFsuW2U8lpU51uJrFmDh58e5/gA6rJbrTavM2gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;graphiql-filesystem&quot;
+        title=&quot;graphiql-filesystem&quot;
+        src=&quot;/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png&quot;
+        srcset=&quot;/static/336219e2720a853e46efecf8980b68be/0eb09/graphiql-filesystem.png 500w,
+/static/336219e2720a853e46efecf8980b68be/1263b/graphiql-filesystem.png 1000w,
+/static/336219e2720a853e46efecf8980b68be/dc8ac/graphiql-filesystem.png 1572w&quot;
+        sizes=&quot;(max-width: 1572px) 100vw, 1572px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;get array of File “nodes” (node is a fancy name for an object in a “graph”).
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1572px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAACLElEQVQoz31S227TQBD1p0BCVKAKBSpVqIgXPhH1B4AHqjYNSAVEIWlrJ6XigX4CDUl82117Y+/ddhxmnbaPjI52feyZOXOxUxbFz/FoMBy63vj03D09OwcMhqfffwz+g+PPX64nEycMwle7O4+edHdfvt7eefG4+2xz6/lm92mrvdHuPGw/aNC5wb1W5357o7u13Wp19t7sOWEUfoNkg+HBYQ/0IetR/+Pbd+8Pej1A76hv0e8f9o7g/Yf9A3j+enLS/3R8efnLQRgpxldlvarrVWNlWeqMVUxURQnUaGOUgu6KojTGnoUptCmDIHQwwdO/YYr5sq6XjUkpcyYjkgGHYKAoSvw4FUIqpWUDrc187js4wThOJSusaKMtpYIUlBvKNFClFGcCJdkizSVlMuMizRWTfhA4hGBEUpKr+iZ2BQrLqmLSCGVsLiEFWqQRDWOaxZQHqUhyrYzvB9Az5pwTyqOYlYWtk3MBdd1OwAaDYIrzIKQ0XoCstN/XwQhJYEynM7ZsgqHOsqxWtwaOQtliGVxN28rYIa6VkRBWmcti7Q0jrarlXTCMQCQZQQtKc5XkoMzR4qZnKFsK6EIl3Ky9YVr1XdGQS2qdsJywCGUZylSc6ZQXurCrAuUkSaYhnoaEN0YI8X1/7vtRFMEiozAmMZ7Poz/X/nwS4FkENKV0Op06sMbfV1ee511cXIzGY4DreWf2D4cDzHVdbzQeeSMwe3nuyPMsnc1m/wCt7ZYZlpOp1gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;allfile-query&quot;
+        title=&quot;allfile-query&quot;
+        src=&quot;/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png&quot;
+        srcset=&quot;/static/baf7562093f459dffde42c0d069ca8c3/0eb09/allfile-query.png 500w,
+/static/baf7562093f459dffde42c0d069ca8c3/1263b/allfile-query.png 1000w,
+/static/baf7562093f459dffde42c0d069ca8c3/dc8ac/allfile-query.png 1572w&quot;
+        sizes=&quot;(max-width: 1572px) 100vw, 1572px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Build a page with a GraphQL query&lt;/h2&gt;
+&lt;p&gt;Create a new file at &lt;code class=&quot;language-text&quot;&gt;src/pages/my-files.js&lt;/code&gt; with the &lt;code class=&quot;language-text&quot;&gt;allFile&lt;/code&gt; GraphQL query you just created:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; graphql &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Layout &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;../components/layout&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;MyFiles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; data &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Layout&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;My Site&apos;s Files&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;thead&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;relativePath&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;prettySize&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;extension&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;birthTime&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;th&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;thead&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tbody&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;allFile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;edges&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; node &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;relativePath&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prettySize&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;extension&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;birthTime&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tbody&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;table&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Layout&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; query &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; graphql&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+  query {
+    allFile {
+      edges {
+        node {
+          relativePath
+          prettySize
+          extension
+          birthTime(fromNow: true)
+        }
+      }
+    }
+  }
+&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And now visit &lt;code class=&quot;language-text&quot;&gt;http://localhost:8000/my-files/&lt;/code&gt; 😲&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 2000px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/bbe68/my-files-page.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0klEQVQoz31Se0vCUBz1SxSVKT4yBkkP6qtE0EerjxDl1GxERAbeTS0FQbL/xPce6uZjPqZune2SoEmHy497z875vZjr++uLkFRayBLCp1I8Yiad/fjM2efjM53JCEKaEOH3QEOSyfeWKFqW5bq+uvT6PQxzFjxkvL4Dt8cXDB2Fjy/Cp+dM+MQfYva9ga0d9/bu/s6e1+3xB0JMwBe8vbm1zdzzy2OCS3Dc4xMXjcfZWOzu/gHngY1G2Cgbs5loLI7DRiKJJ+71Lfn+lszncrZZ0zTLwUjXu91uv9/XVHWxWFh/YRiWaTo3U1Hk2Wzmarfb9ss0kaXZbDYajVarVS6XJ5MJSGRZRnoB5vM5NIguVKN56/V6Pp8vFouVSqVQKMiyDLVhGMgCw3g8hpoqwYuiuGLWdR35IMIdanQxHA4xBVqDHx0NBoP/zKgmSRL8mIfuYjqdIkKnqupyOxvMSAwzSlH10gwpnp1Op9frrZvBUgpNKoqCCmgSHk3rQUQHRiOQ0XR0besLG41GcCI92sZnTAESNroC8BtmrtVqWAlqYtvYc7ValR2AF0UJIllWJEmuOgCvOIDYNpdKpRT+V/y1PC84IA7wQiC/WP3Eo2208APqKZu6avcZMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;my-files-page&quot;
+        title=&quot;my-files-page&quot;
+        src=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/f97d7/my-files-page.png&quot;
+        srcset=&quot;/static/7d11167de2d9f1b7ec724df4a3d4befa/0eb09/my-files-page.png 500w,
+/static/7d11167de2d9f1b7ec724df4a3d4befa/1263b/my-files-page.png 1000w,
+/static/7d11167de2d9f1b7ec724df4a3d4befa/f97d7/my-files-page.png 2000w,
+/static/7d11167de2d9f1b7ec724df4a3d4befa/bbe68/my-files-page.png 2108w&quot;
+        sizes=&quot;(max-width: 2000px) 100vw, 2000px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Transformer plugins]]></title><description><![CDATA[This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4 and part 5 before continuing here. Add a…]]></description><link>https://bradkim06.github.io/gatsby/tutorial6.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial6.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt; and &lt;a href=&quot;/gatsby/tutorial5&quot;&gt;part 5&lt;/a&gt; before continuing here.&lt;/p&gt;
 &lt;p&gt;Add a markdown file to your site at&lt;br&gt;
 &lt;code class=&quot;language-text&quot;&gt;src/pages/sweet-pandas-eating-sweets.md&lt;/code&gt;  &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
@@ -849,7 +849,76 @@ Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Programmiatically Create Pages from Data]]></title><description><![CDATA[This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4, part 5 and part 6 before continuing here…]]></description><link>https://bradkim06.github.io/gatsby/tutorial7.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial7.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt;, &lt;a href=&quot;/gatsby/tutorial5&quot;&gt;part 5&lt;/a&gt; and &lt;a href=&quot;/gatsby/tutorial6/&quot;&gt;part 6&lt;/a&gt; before continuing here.&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Preparing a Site to Go Live]]></title><description><![CDATA[Audit with Lighthouse Quoting from the Lighthouse website: ✋ Create a production build Stop the development server (if it’s still running…]]></description><link>https://bradkim06.github.io/gatsby/tutorial8.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial8.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Audit with Lighthouse&lt;/h2&gt;
+&lt;p&gt;Quoting from the &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;Lighthouse website&lt;/a&gt;:&lt;/p&gt;
+&lt;h3&gt;✋ Create a production build&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Stop the development server (if it’s still running) and run the following command:
+&lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;View the production site locally. Run:
+&lt;code class=&quot;language-text&quot;&gt;gatsby serve&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once this starts, you can view your site at &lt;code class=&quot;language-text&quot;&gt;http://localhost:9000&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Run a Lighthouse audit&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;localhost
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 677px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHsaUxFB//EABkQAAEFAAAAAAAAAAAAAAAAAAEAEBEjQf/aAAgBAQABBQImzVD/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAQADAAAAAAAAAAAAAAAAAAERICH/2gAIAQEABj8CCMt//8QAGxAAAgEFAAAAAAAAAAAAAAAAAAERECExUXH/2gAIAQEAAT8hYkW2scCRlJFP/9oADAMBAAIAAwAAABDID//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQADAAIDAAAAAAAAAAAAAAEAESEQMUGBkf/aAAgBAQABPxB0JmruvVPUAUeLBrQ9RCbRC3v3j//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;local_lighthouse&quot;
+        title=&quot;local_lighthouse&quot;
+        src=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg&quot;
+        srcset=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/953fe/local_lighthouse.jpg 500w,
+/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg 677w&quot;
+        sizes=&quot;(max-width: 677px) 100vw, 677px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;site
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 346px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 116.1849710982659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAXABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAMBAgQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAH3evWOpRZm8dDQf//EABwQAAICAgMAAAAAAAAAAAAAAAECAAMREhMgMf/aAAgBAQABBQI+VvyQnEcbKlTBun//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAWEQADAAAAAAAAAAAAAAAAAAABESD/2gAIAQIBAT8BCj//xAAcEAACAQUBAAAAAAAAAAAAAAAAARECEhMgIaH/2gAIAQEABj8CGo9OohVWk5Hr/8QAHRAAAwACAgMAAAAAAAAAAAAAAAERIVEQcTFhkf/aAAgBAQABPyGLb0LZkRJ4opmT0x1C18oSq1bNjJ2Jd/eP/9oADAMBAAIAAwAAABDE+AD/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBGB/9oACAEDAQE/EMK//8QAGBEAAgMAAAAAAAAAAAAAAAAAASEAEBH/2gAIAQIBAT8QDDMV/wD/xAAcEAEBAQADAAMAAAAAAAAAAAABEQAhMXFRkbH/2gAIAQEAAT8QIAUEw7cJWFWEeufnHzJVK9XjvTTYal8ybLpJPeAvIfWbV/RodmGEm//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;site-lighthouse&quot;
+        title=&quot;site-lighthouse&quot;
+        src=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg&quot;
+        srcset=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg 346w&quot;
+        sizes=&quot;(max-width: 346px) 100vw, 346px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Programmiatically Create Pages from Data]]></title><description><![CDATA[This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through part 4, part 5 and part 6 before continuing here…]]></description><link>https://bradkim06.github.io/gatsby/tutorial7.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial7.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through &lt;a href=&quot;/gatsby/dataInGatsby/&quot;&gt;part 4&lt;/a&gt;, &lt;a href=&quot;/gatsby/tutorial5&quot;&gt;part 5&lt;/a&gt; and &lt;a href=&quot;/gatsby/tutorial6/&quot;&gt;part 6&lt;/a&gt; before continuing here.&lt;/p&gt;
 &lt;h2&gt;Creating slugs for pages&lt;/h2&gt;
 &lt;p&gt;We do our best to make Gatsby APIs simple to implement. To implement an API, you export a function with the name of the API from &lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -1015,76 +1084,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Preparing a Site to Go Live]]></title><description><![CDATA[Audit with Lighthouse Quoting from the Lighthouse website: ✋ Create a production build Stop the development server (if it’s still running…]]></description><link>https://bradkim06.github.io/gatsby/tutorial8.md/</link><guid isPermaLink="false">https://bradkim06.github.io/gatsby/tutorial8.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Audit with Lighthouse&lt;/h2&gt;
-&lt;p&gt;Quoting from the &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;Lighthouse website&lt;/a&gt;:&lt;/p&gt;
-&lt;h3&gt;✋ Create a production build&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Stop the development server (if it’s still running) and run the following command:
-&lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;View the production site locally. Run:
-&lt;code class=&quot;language-text&quot;&gt;gatsby serve&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Once this starts, you can view your site at &lt;code class=&quot;language-text&quot;&gt;http://localhost:9000&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Run a Lighthouse audit&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;localhost
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 677px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHsaUxFB//EABkQAAEFAAAAAAAAAAAAAAAAAAEAEBEjQf/aAAgBAQABBQImzVD/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAQADAAAAAAAAAAAAAAAAAAERICH/2gAIAQEABj8CCMt//8QAGxAAAgEFAAAAAAAAAAAAAAAAAAERECExUXH/2gAIAQEAAT8hYkW2scCRlJFP/9oADAMBAAIAAwAAABDID//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQADAAIDAAAAAAAAAAAAAAEAESEQMUGBkf/aAAgBAQABPxB0JmruvVPUAUeLBrQ9RCbRC3v3j//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;local_lighthouse&quot;
-        title=&quot;local_lighthouse&quot;
-        src=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg&quot;
-        srcset=&quot;/static/d6b82c4cb1150730fd088fbd9c114e83/953fe/local_lighthouse.jpg 500w,
-/static/d6b82c4cb1150730fd088fbd9c114e83/d1584/local_lighthouse.jpg 677w&quot;
-        sizes=&quot;(max-width: 677px) 100vw, 677px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;site
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 346px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 116.1849710982659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAXABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAMBAgQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAH3evWOpRZm8dDQf//EABwQAAICAgMAAAAAAAAAAAAAAAECAAMREhMgMf/aAAgBAQABBQI+VvyQnEcbKlTBun//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAWEQADAAAAAAAAAAAAAAAAAAABESD/2gAIAQIBAT8BCj//xAAcEAACAQUBAAAAAAAAAAAAAAAAARECEhMgIaH/2gAIAQEABj8CGo9OohVWk5Hr/8QAHRAAAwACAgMAAAAAAAAAAAAAAAERIVEQcTFhkf/aAAgBAQABPyGLb0LZkRJ4opmT0x1C18oSq1bNjJ2Jd/eP/9oADAMBAAIAAwAAABDE+AD/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBGB/9oACAEDAQE/EMK//8QAGBEAAgMAAAAAAAAAAAAAAAAAASEAEBH/2gAIAQIBAT8QDDMV/wD/xAAcEAEBAQADAAMAAAAAAAAAAAABEQAhMXFRkbH/2gAIAQEAAT8QIAUEw7cJWFWEeufnHzJVK9XjvTTYal8ybLpJPeAvIfWbV/RodmGEm//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;site-lighthouse&quot;
-        title=&quot;site-lighthouse&quot;
-        src=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg&quot;
-        srcset=&quot;/static/121177b588abd57ef5a44b6b37b76300/1b082/site_lighthouse.jpg 346w&quot;
-        sizes=&quot;(max-width: 346px) 100vw, 346px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[2-2장. 전통적 박스모델]]></title><description><![CDATA[전통적 박스 모델(Traditional Box Model) 초기의 HTML은 테이블과 함께 시작되었다. 하지만 웹사이트가 더 커지고 복잡해질 경우 table 방식은 유지보수와 크기와 관련된 심각한 문제를 일으킨다. 이러한 문제들로 div태그와 css…]]></description><link>https://bradkim06.github.io/books/html5+Css3+JavaScript/css-traditional-box-model.md/</link><guid isPermaLink="false">https://bradkim06.github.io/books/html5+Css3+JavaScript/css-traditional-box-model.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;전통적 박스 모델(Traditional Box Model)&lt;/h3&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2-2장. 전통적 박스모델]]></title><description><![CDATA[전통적 박스 모델(Traditional Box Model) 초기의 HTML은 테이블과 함께 시작되었다. 하지만 웹사이트가 더 커지고 복잡해질 경우 table 방식은 유지보수와 크기와 관련된 심각한 문제를 일으킨다. 이러한 문제들로 div태그와 css…]]></description><link>https://bradkim06.github.io/books/html5+Css3+JavaScript/css-traditional-box-model.md/</link><guid isPermaLink="false">https://bradkim06.github.io/books/html5+Css3+JavaScript/css-traditional-box-model.md/</guid><pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;전통적 박스 모델(Traditional Box Model)&lt;/h3&gt;
 &lt;p&gt;초기의 HTML은 테이블과 함께 시작되었다. 하지만 웹사이트가 더 커지고 복잡해질 경우 table 방식은 유지보수와 크기와 관련된 심각한 문제를 일으킨다.&lt;/p&gt;
 &lt;p&gt;이러한 문제들로 div태그와 css스타일의 사용으로 table 기능을 대체하였고, 표현으로부터 HTML 구조를 효과적으로 분리시켰다. div요소와 css로 화면에 박스를 생성하고, 특정 크기, 테두리, 색상 등을 제공할 수 있게 됐다. css는 원하는 대로 박스를 구성할 수 있도록 특정 프로퍼티를 제공했고 오늘날 전통적 박스 모델로 알려진 박스 모델을 탄생시켰다.&lt;/p&gt;
 &lt;p&gt;이 모델의 일부 단점은 테이블을 한동안 존속하게 했지만 Ajax의 성공과 수많은 신규 대화형 어플리케이션의 영향을 받아 대세는 점차 div와 css 스타일이 표준이 됐으며 폭넓게 채택됐다.&lt;/p&gt;
@@ -1839,7 +1839,67 @@ ActionOptions&lt;/li&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/#the-approach-fetch-data-and-use-gatsbys-createpages-api&quot;&gt;Using Gatsby Without GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-2. 입력과 출력]]></title><description><![CDATA[입력과 출력  입력(Import), 출력(Export)이해 다양한 구조(고정자리수, 구분자)와 형식(txt, csv등)의 외부데이터를 읽는다. 웹(web)에서 데이터 테이블의 데이터를 읽는다. 복잡한 구조의 데이터 파일을 읽는다. R…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-2.md/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;입력과 출력&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/#the-approach-fetch-data-and-use-gatsbys-createpages-api&quot;&gt;Using Gatsby Without GraphQL&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-1. R 프로그래밍 기초]]></title><description><![CDATA[R 기초  데이터 분석 도구 R의 특성 이해 변수 값 할당, 삭제 연산자 확인, 우선순위 함수 생성 방법 R 기초 중에 기초 | 기능 | R 코드 | 비고 |
+| 출력하기 | print(a), cat(“a”,“b”,“c) | print() 출력형식 X…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-1.md/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;R 기초&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 분석 도구 R의 특성 이해&lt;/li&gt;
+&lt;li&gt;변수 값 할당, 삭제&lt;/li&gt;
+&lt;li&gt;연산자 확인, 우선순위&lt;/li&gt;
+&lt;li&gt;함수 생성 방법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;R 기초 중에 기초&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; | &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+| &lt;strong&gt;출력하기&lt;/strong&gt; | print(a), cat(“a”,“b”,“c) | print() 출력형식 X 한번에 하나&lt;br&gt;cat() 여러 항목을 묶어서 연결된 결과로 출력 |
+| &lt;strong&gt;대입연산자&lt;/strong&gt; | &amp;#x3C;-, &amp;#x3C;&amp;#x3C;-, =, -&gt; | |
+| &lt;strong&gt;변수 목록보기&lt;/strong&gt; | ls(), ls, str() | |
+|  &lt;strong&gt;변수 삭제&lt;/strong&gt; | rm() | rm(list=ls()): 모든 변수 삭제 |
+|  &lt;strong&gt;벡터 생성&lt;/strong&gt; | c() | |
+|  &lt;strong&gt;R 함수 정의&lt;/strong&gt; | function(param1, param2) {expr 1, expr 2} | |
+|  &lt;strong&gt;데이터 할당&lt;/strong&gt; | a&amp;#x3C;-1, a=1 | |
+|  &lt;strong&gt;화면 프린트&lt;/strong&gt; | a, print(a) | |
+| &lt;strong&gt;결합&lt;/strong&gt; | x&amp;#x3C;-c(1,2,3,4) | C함수는 문자,숫자,논리값,변수 모두 결합 가능 |
+| &lt;strong&gt;수열&lt;/strong&gt; | 1:5, seq(from=0, to=20, by=2) | 숫자 생성 |
+| &lt;strong&gt;반복&lt;/strong&gt; | rep(1, time=5), rep(1:4, each=2) | 변수의 값을 time인자만큼 반복 |
+|  &lt;strong&gt;문자 붙이기&lt;/strong&gt; | A&amp;#x3C;-paste(“a”,“b”,“c”, sep=”-”) | |
+|  &lt;strong&gt;문자열 추출&lt;/strong&gt; | substr(“Bigdataanalysis”,1,4) | substr(문자열,시작,끝) |
+| &lt;strong&gt;논리값&lt;/strong&gt; | a&amp;#x3C;-True, a&amp;#x3C;-T | |
+|  &lt;strong&gt;논리 연산자&lt;/strong&gt; | ==, !=, &amp;#x3C;=, &gt;= | |
+|  &lt;strong&gt;벡터 원소 선택&lt;/strong&gt; | V[n], V[-n] | |&lt;/p&gt;
+&lt;h3&gt;벡터의 연산&lt;/h3&gt;
+&lt;p&gt;|  &lt;strong&gt;연산자 우선순위&lt;/strong&gt; | &lt;strong&gt;뜻&lt;/strong&gt; | &lt;strong&gt;표현방법&lt;/strong&gt; |
+| &lt;strong&gt;[ ]&lt;/strong&gt; | 인덱스 | a[1] |
+| &lt;strong&gt;$&lt;/strong&gt; | 요소 뽑아내기 | a$coef |
+| &lt;strong&gt;^&lt;/strong&gt; | 지수 | 5^2 |
+| &lt;strong&gt;+-&lt;/strong&gt; | 단항 마이너스, 플러스 | -3, +5 |
+| &lt;strong&gt;:&lt;/strong&gt; | 수열 생성 | 1:10 |
+| &lt;strong&gt;%any%&lt;/strong&gt; | 특수 연산자 | %/%나눗셈 몫, %% 나머지&lt;br&gt;, %&lt;em&gt;% 행렬의 곱 |
+| &lt;strong&gt;&lt;/em&gt; /&lt;/strong&gt; | 곱하기 나누기 | 3*5, 3/5 |
+| &lt;strong&gt;+ -&lt;/strong&gt; | 더하기 빼기 | 3+5, 3-5 |
+| &lt;strong&gt;!&lt;/strong&gt; | Not | !(3==5) |
+| &lt;strong&gt;&amp;#x26;&lt;/strong&gt; | and | TRUE &amp;#x26; TRUE |
+| &lt;code style=&quot;color:black&quot;&gt;&lt;strong&gt;|&lt;/strong&gt;&lt;/code&gt; | OR | |
+| &lt;strong&gt;~&lt;/strong&gt; | 식(formula) | |
+| &lt;strong&gt;-&gt; -&gt;&gt;&lt;/strong&gt; | 오른쪽 대입 | 3-&gt;a |
+| &lt;strong&gt;=&lt;/strong&gt;, &lt;strong&gt;&amp;#x3C;- &amp;#x3C;&amp;#x3C;-&lt;/strong&gt; | 왼쪽 대입 | |
+| &lt;strong&gt;?&lt;/strong&gt; | 도움말 |&lt;/p&gt;
+&lt;h3&gt;벡터의 기초통계&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드(var=변수)&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+| &lt;strong&gt;평균&lt;/strong&gt; | mean(var) | |
+| &lt;strong&gt;합계&lt;/strong&gt; | sum(var) | |
+| &lt;strong&gt;중앙값&lt;/strong&gt; | median(var) | |
+| &lt;strong&gt;로그&lt;/strong&gt; | log(var) | |
+| &lt;strong&gt;표준편차&lt;/strong&gt; | sd(var) | |
+| &lt;strong&gt;분산&lt;/strong&gt; | var(변수) | |
+| &lt;strong&gt;공분산&lt;/strong&gt; | cov(변수1, 변수2) | |
+| &lt;strong&gt;상관계수&lt;/strong&gt; | cor(변수1, 변수2) | |
+|  &lt;strong&gt;변수의 길이 값&lt;/strong&gt; | length(var) | |&lt;/p&gt;
+&lt;h3&gt;R 프로그래밍시 자주하는 실수&lt;/h3&gt;
+&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
+|  &lt;strong&gt;경로 역슬래시 두번&lt;/strong&gt; | f:\dataedu\r\test.csv&lt;br&gt;(f: dataedurtest.csv) | \\ or / |
+|  &lt;strong&gt;&amp;#x3C;-붙여쓰기&lt;/strong&gt; | x&amp;#x3C;-pi | Error: object “x” not found |
+|  &lt;strong&gt;여러줄 식&lt;/strong&gt; | &gt; sum&amp;#x3C;-1+2+3&lt;br&gt;&gt; +4+5&lt;br&gt;[1]9&lt;br&gt;&gt;sum&lt;br&gt;[1]6|
+|  &lt;strong&gt;1:n+1, 1:(n+1) 차이&lt;/strong&gt; | &gt; n&amp;#x3C;-5;&lt;br&gt;&gt; 1:n+1;&lt;br&gt;[1] 2 3 4 5 6&lt;br&gt;&gt; 1:(n+1);&lt;br&gt;[1] 1 2 3 4 5 6 | |&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-2. 입력과 출력]]></title><description><![CDATA[입력과 출력  입력(Import), 출력(Export)이해 다양한 구조(고정자리수, 구분자)와 형식(txt, csv등)의 외부데이터를 읽는다. 웹(web)에서 데이터 테이블의 데이터를 읽는다. 복잡한 구조의 데이터 파일을 읽는다. R…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-2.md/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;입력과 출력&lt;/strong&gt;&lt;/h1&gt;
 &lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;입력(Import), 출력(Export)이해&lt;/li&gt;
@@ -1903,67 +1963,7 @@ Larry&lt;br&gt;
 &lt;li&gt;L[[“Moe”]]와 L$Moe는 둘다 같은 원소.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap3-2-1. R 프로그래밍 기초]]></title><description><![CDATA[R 기초  데이터 분석 도구 R의 특성 이해 변수 값 할당, 삭제 연산자 확인, 우선순위 함수 생성 방법 R 기초 중에 기초 | 기능 | R 코드 | 비고 |
-| 출력하기 | print(a), cat(“a”,“b”,“c) | print() 출력형식 X…]]></description><link>https://bradkim06.github.io/study_adsp/chap3-2-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap3-2-1.md/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;R 기초&lt;/strong&gt;&lt;/h1&gt;
-&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;데이터 분석 도구 R의 특성 이해&lt;/li&gt;
-&lt;li&gt;변수 값 할당, 삭제&lt;/li&gt;
-&lt;li&gt;연산자 확인, 우선순위&lt;/li&gt;
-&lt;li&gt;함수 생성 방법&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;R 기초 중에 기초&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; | &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-| &lt;strong&gt;출력하기&lt;/strong&gt; | print(a), cat(“a”,“b”,“c) | print() 출력형식 X 한번에 하나&lt;br&gt;cat() 여러 항목을 묶어서 연결된 결과로 출력 |
-| &lt;strong&gt;대입연산자&lt;/strong&gt; | &amp;#x3C;-, &amp;#x3C;&amp;#x3C;-, =, -&gt; | |
-| &lt;strong&gt;변수 목록보기&lt;/strong&gt; | ls(), ls, str() | |
-|  &lt;strong&gt;변수 삭제&lt;/strong&gt; | rm() | rm(list=ls()): 모든 변수 삭제 |
-|  &lt;strong&gt;벡터 생성&lt;/strong&gt; | c() | |
-|  &lt;strong&gt;R 함수 정의&lt;/strong&gt; | function(param1, param2) {expr 1, expr 2} | |
-|  &lt;strong&gt;데이터 할당&lt;/strong&gt; | a&amp;#x3C;-1, a=1 | |
-|  &lt;strong&gt;화면 프린트&lt;/strong&gt; | a, print(a) | |
-| &lt;strong&gt;결합&lt;/strong&gt; | x&amp;#x3C;-c(1,2,3,4) | C함수는 문자,숫자,논리값,변수 모두 결합 가능 |
-| &lt;strong&gt;수열&lt;/strong&gt; | 1:5, seq(from=0, to=20, by=2) | 숫자 생성 |
-| &lt;strong&gt;반복&lt;/strong&gt; | rep(1, time=5), rep(1:4, each=2) | 변수의 값을 time인자만큼 반복 |
-|  &lt;strong&gt;문자 붙이기&lt;/strong&gt; | A&amp;#x3C;-paste(“a”,“b”,“c”, sep=”-”) | |
-|  &lt;strong&gt;문자열 추출&lt;/strong&gt; | substr(“Bigdataanalysis”,1,4) | substr(문자열,시작,끝) |
-| &lt;strong&gt;논리값&lt;/strong&gt; | a&amp;#x3C;-True, a&amp;#x3C;-T | |
-|  &lt;strong&gt;논리 연산자&lt;/strong&gt; | ==, !=, &amp;#x3C;=, &gt;= | |
-|  &lt;strong&gt;벡터 원소 선택&lt;/strong&gt; | V[n], V[-n] | |&lt;/p&gt;
-&lt;h3&gt;벡터의 연산&lt;/h3&gt;
-&lt;p&gt;|  &lt;strong&gt;연산자 우선순위&lt;/strong&gt; | &lt;strong&gt;뜻&lt;/strong&gt; | &lt;strong&gt;표현방법&lt;/strong&gt; |
-| &lt;strong&gt;[ ]&lt;/strong&gt; | 인덱스 | a[1] |
-| &lt;strong&gt;$&lt;/strong&gt; | 요소 뽑아내기 | a$coef |
-| &lt;strong&gt;^&lt;/strong&gt; | 지수 | 5^2 |
-| &lt;strong&gt;+-&lt;/strong&gt; | 단항 마이너스, 플러스 | -3, +5 |
-| &lt;strong&gt;:&lt;/strong&gt; | 수열 생성 | 1:10 |
-| &lt;strong&gt;%any%&lt;/strong&gt; | 특수 연산자 | %/%나눗셈 몫, %% 나머지&lt;br&gt;, %&lt;em&gt;% 행렬의 곱 |
-| &lt;strong&gt;&lt;/em&gt; /&lt;/strong&gt; | 곱하기 나누기 | 3*5, 3/5 |
-| &lt;strong&gt;+ -&lt;/strong&gt; | 더하기 빼기 | 3+5, 3-5 |
-| &lt;strong&gt;!&lt;/strong&gt; | Not | !(3==5) |
-| &lt;strong&gt;&amp;#x26;&lt;/strong&gt; | and | TRUE &amp;#x26; TRUE |
-| &lt;code style=&quot;color:black&quot;&gt;&lt;strong&gt;|&lt;/strong&gt;&lt;/code&gt; | OR | |
-| &lt;strong&gt;~&lt;/strong&gt; | 식(formula) | |
-| &lt;strong&gt;-&gt; -&gt;&gt;&lt;/strong&gt; | 오른쪽 대입 | 3-&gt;a |
-| &lt;strong&gt;=&lt;/strong&gt;, &lt;strong&gt;&amp;#x3C;- &amp;#x3C;&amp;#x3C;-&lt;/strong&gt; | 왼쪽 대입 | |
-| &lt;strong&gt;?&lt;/strong&gt; | 도움말 |&lt;/p&gt;
-&lt;h3&gt;벡터의 기초통계&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드(var=변수)&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-| &lt;strong&gt;평균&lt;/strong&gt; | mean(var) | |
-| &lt;strong&gt;합계&lt;/strong&gt; | sum(var) | |
-| &lt;strong&gt;중앙값&lt;/strong&gt; | median(var) | |
-| &lt;strong&gt;로그&lt;/strong&gt; | log(var) | |
-| &lt;strong&gt;표준편차&lt;/strong&gt; | sd(var) | |
-| &lt;strong&gt;분산&lt;/strong&gt; | var(변수) | |
-| &lt;strong&gt;공분산&lt;/strong&gt; | cov(변수1, 변수2) | |
-| &lt;strong&gt;상관계수&lt;/strong&gt; | cor(변수1, 변수2) | |
-|  &lt;strong&gt;변수의 길이 값&lt;/strong&gt; | length(var) | |&lt;/p&gt;
-&lt;h3&gt;R 프로그래밍시 자주하는 실수&lt;/h3&gt;
-&lt;p&gt;| &lt;strong&gt;기능&lt;/strong&gt; |  &lt;strong&gt;R 코드&lt;/strong&gt; | &lt;strong&gt;비고&lt;/strong&gt; |
-|  &lt;strong&gt;경로 역슬래시 두번&lt;/strong&gt; | f:\dataedu\r\test.csv&lt;br&gt;(f: dataedurtest.csv) | \\ or / |
-|  &lt;strong&gt;&amp;#x3C;-붙여쓰기&lt;/strong&gt; | x&amp;#x3C;-pi | Error: object “x” not found |
-|  &lt;strong&gt;여러줄 식&lt;/strong&gt; | &gt; sum&amp;#x3C;-1+2+3&lt;br&gt;&gt; +4+5&lt;br&gt;[1]9&lt;br&gt;&gt;sum&lt;br&gt;[1]6|
-|  &lt;strong&gt;1:n+1, 1:(n+1) 차이&lt;/strong&gt; | &gt; n&amp;#x3C;-5;&lt;br&gt;&gt; 1:n+1;&lt;br&gt;[1] 2 3 4 5 6&lt;br&gt;&gt; 1:(n+1);&lt;br&gt;[1] 1 2 3 4 5 6 | |&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implement Jekyll Search]]></title><description><![CDATA[Create search.json Search Script 1. without installing anything 2. Download Search Script Search Box Setting & Usage See more option Simple…]]></description><link>https://bradkim06.github.io/Jekyll/Jekyll-Search.md/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Jekyll-Search.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;Create search.json&lt;/strong&gt;&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Implement Jekyll Search]]></title><description><![CDATA[Create search.json Search Script 1. without installing anything 2. Download Search Script Search Box Setting & Usage See more option Simple…]]></description><link>https://bradkim06.github.io/Jekyll/Jekyll-Search.md/</link><guid isPermaLink="false">https://bradkim06.github.io/Jekyll/Jekyll-Search.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;strong&gt;Create search.json&lt;/strong&gt;&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;liquid&quot;&gt;&lt;pre class=&quot;language-liquid&quot;&gt;&lt;code class=&quot;language-liquid&quot;&gt;{&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;raw&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt;}
 &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;
@@ -2006,33 +2006,7 @@ Larry&lt;br&gt;
 &lt;p&gt;See more option &lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search/wiki&quot;&gt;Simple-Jekyll-Search Wiki&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Referece&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search&quot;&gt;christian-fei/Simple-Jekyll-Search&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;https://blog.webjeda.com/instant-jekyll-search/&quot;&gt;Jekyll Instant Search in 3 simple steps!&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JavaScript Where To?]]></title><description><![CDATA[In HTML, JavaScript code is inserted between  and  tags. Example JavaScript Functions and Events JavaScript in  or  JavaScript in  Example]]></description><link>https://bradkim06.github.io/javascript/w3schools/WhereTo.md/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/WhereTo.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In HTML, JavaScript code is inserted between &lt;code class=&quot;language-text&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;&amp;lt;/script&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;
-document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;demo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;innerHTML &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;My First JavaScript&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;JavaScript Functions and Events&lt;/li&gt;
-&lt;li&gt;JavaScript in &lt;code class=&quot;language-text&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript in &lt;head&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;demo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;innerHTML &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Paragraph changed.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;A Web Page&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;demo&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;A Paragraph&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;myFunction()&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Try it&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[JavaScript Output]]></title><description><![CDATA[JavaScript Display Possibilities JavaScript can “display” data in different ways: Writing into an HTML element, using innerHTML. Writing…]]></description><link>https://bradkim06.github.io/javascript/w3schools/Output.md/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/Output.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;JavaScript Display Possibilities&lt;/h2&gt;
+&lt;a href=&quot;https://blog.webjeda.com/instant-jekyll-search/&quot;&gt;Jekyll Instant Search in 3 simple steps!&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JavaScript Output]]></title><description><![CDATA[JavaScript Display Possibilities JavaScript can “display” data in different ways: Writing into an HTML element, using innerHTML. Writing…]]></description><link>https://bradkim06.github.io/javascript/w3schools/Output.md/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/Output.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;JavaScript Display Possibilities&lt;/h2&gt;
 &lt;p&gt;JavaScript can “display” data in different ways:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Writing into an HTML element, using innerHTML.&lt;/li&gt;
@@ -2075,7 +2049,33 @@ Then click Run again.  &lt;/p&gt;
 &lt;p&gt;You cannot access output devices from JavaScript.&lt;/p&gt;
 &lt;p&gt;The only exception is that you can call the &lt;code class=&quot;language-text&quot;&gt;window.print()&lt;/code&gt; method in the browser to print the content of the current window.&lt;/p&gt;
 &lt;h3&gt;Example&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;window.print()&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Print this page&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Chap1-1. 데이터의 이해]]></title><description><![CDATA[The category summarizes the study for (Advanced Data Analytics Semi-Professional) National Technical Certificate personally…]]></description><link>https://bradkim06.github.io/study_adsp/Chap1-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/Chap1-1.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The category summarizes the study for &lt;code class=&quot;language-text&quot;&gt;ADsP&lt;/code&gt;(Advanced Data Analytics Semi-Professional) National Technical Certificate personally.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;window.print()&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Print this page&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[JavaScript Where To?]]></title><description><![CDATA[In HTML, JavaScript code is inserted between  and  tags. Example JavaScript Functions and Events JavaScript in  or  JavaScript in  Example]]></description><link>https://bradkim06.github.io/javascript/w3schools/WhereTo.md/</link><guid isPermaLink="false">https://bradkim06.github.io/javascript/w3schools/WhereTo.md/</guid><pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In HTML, JavaScript code is inserted between &lt;code class=&quot;language-text&quot;&gt;&amp;lt;script&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;&amp;lt;/script&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;demo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;innerHTML &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;My First JavaScript&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript Functions and Events&lt;/li&gt;
+&lt;li&gt;JavaScript in &lt;code class=&quot;language-text&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript in &lt;head&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token script&quot;&gt;&lt;span class=&quot;token language-javascript&quot;&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;demo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;innerHTML &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Paragraph changed.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;A Web Page&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;demo&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;A Paragraph&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;button&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onclick&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;myFunction()&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Try it&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Chap1-1. 데이터의 이해]]></title><description><![CDATA[The category summarizes the study for (Advanced Data Analytics Semi-Professional) National Technical Certificate personally…]]></description><link>https://bradkim06.github.io/study_adsp/Chap1-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/Chap1-1.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The category summarizes the study for &lt;code class=&quot;language-text&quot;&gt;ADsP&lt;/code&gt;(Advanced Data Analytics Semi-Professional) National Technical Certificate personally.&lt;/p&gt;
 &lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터 정의에 대해 이해한다.&lt;/li&gt;
@@ -2203,68 +2203,7 @@ Then click Run again.  &lt;/p&gt;
 &lt;li&gt;대용량의 정형 및 비정형 데이터 저장, 접근이 가능한 저장소.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap1-2. 빅데이터의 이해]]></title><description><![CDATA[빅데이터의 정의와 출현배경 빅데이터의 기능과 빅데이터가 만들어 내는 본질적 변화 빅데이터의 가치와 영향 빅데이터를 통한 위기 요인과 통제 방안 빅데이터의 미래 예상 1절 빅데이터의 이해 빅데이터의 관점에 따른…]]></description><link>https://bradkim06.github.io/study_adsp/chap1-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap1-2.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;빅데이터의 정의와 출현배경&lt;/li&gt;
-&lt;li&gt;빅데이터의 기능과 빅데이터가 만들어 내는 본질적 변화&lt;/li&gt;
-&lt;li&gt;빅데이터의 가치와 영향&lt;/li&gt;
-&lt;li&gt;빅데이터를 통한 위기 요인과 통제 방안&lt;/li&gt;
-&lt;li&gt;빅데이터의 미래 예상&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;strong&gt;1절 빅데이터의 이해&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;빅데이터의 관점에 따른 3가지 정의&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;좁은 범위&lt;/strong&gt;: 데이터 자체의 특성 4V(Volume, Variety, Velocity, Value)의 변화.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;중간 범위&lt;/strong&gt;: 데이터 처리,분석 기술 변화.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;넓은 관점&lt;/strong&gt;: 인재, 조직의 변화.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;빅데이터에 거는 기대를 표현한 비유&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;산업혁명의 석탄, 철&lt;/strong&gt;: 제조업 뿐 아니라 서비스 분야의 생산성을 획기적으로 끌어올려 사회,경제,문화,생활 전반에 혁명적 변화를 가져올 것으로 기대.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;21세기의 원유&lt;/strong&gt;: 경제 성장에 필요한 정보를 제공, 산업 전반의 생산성을 한 단계 향상, 기존에 없던 새로운 범주의 산업을 만들어낼 것으로 전망.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;렌즈&lt;/strong&gt;: 렌즈를 통해 현미경이 생물학 발전에 미쳤던 영향만큼 데이터 역시 기대된다. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Ngram Viewer&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;플랫폼&lt;/strong&gt;: 공동 활용의 목적으로 구축된 유무형의 구조물 &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;카카오톡, 페이스북&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;빅데이터 과거에서 현재로의 변화&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;사전처리&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;사후처리&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;표본조사&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;전수조사&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;질&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;양&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;인과관계&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;상관관계&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;strong&gt;비즈니스 모델&lt;/strong&gt;&lt;/h1&gt;
-&lt;h2&gt;빅데이터 활용사례&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;구글: 실시간 자동 번역시스템,검색엔진 등&lt;/li&gt;
-&lt;li&gt;넷플리스: 새로운 영화 추천 &lt;code class=&quot;language-text&quot;&gt;Cinematch&lt;/code&gt; 시스템.&lt;/li&gt;
-&lt;li&gt;월마트: 소셜미디어를 통해 고객 소비 패턴 분석하는 &lt;code class=&quot;language-text&quot;&gt;Wallmart Labs&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;빅데이터 활용 기본 테크닉&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;연관규칙학습&lt;/strong&gt;: 변인들 간에 주목할 만한 &lt;code class=&quot;language-text&quot;&gt;상관관계&lt;/code&gt;가 있는지 찾는 방법.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;유형분석&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;에 따라 분류할 때 사용.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;유전자 알고리즘&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;최적화&lt;/code&gt;가 필요한 문제의 해결책을 자연선택.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;기계학습&lt;/strong&gt;: 훈련 데이터로부터 학습한 알려진 특성을 활용해 &lt;code class=&quot;language-text&quot;&gt;예측&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;회귀분석&lt;/strong&gt;: 두 변인의 &lt;code class=&quot;language-text&quot;&gt;관계&lt;/code&gt;를 파악할 때 사용.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;감정분석&lt;/strong&gt;: 글,음성의 &lt;code class=&quot;language-text&quot;&gt;감정&lt;/code&gt;을 분석.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;소셜네트워크분석&lt;/strong&gt;: 특정인과 다른사람의 &lt;code class=&quot;language-text&quot;&gt;관계&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;영향력&lt;/code&gt; 파악.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;strong&gt;위기 요인과 통제 방안&lt;/strong&gt;&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;사생활 침해 -&gt; 동의에서 책임으로&lt;/li&gt;
-&lt;li&gt;책임 원칙 훼손 -&gt; 결과 기반 책임 원칙 고수&lt;/li&gt;
-&lt;li&gt;데이터 오용 -&gt; 알고리즘 접근 허용&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap2-1. 데이터 분석 기획의 이해]]></title><description><![CDATA[분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해. KDD분석 방법론 CRISP-DM분석 방법론 빅데이터 분석 방법론…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-1.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap2-1. 데이터 분석 기획의 이해]]></title><description><![CDATA[분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해. KDD분석 방법론 CRISP-DM분석 방법론 빅데이터 분석 방법론…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-1.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-1.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;분석 기획 방향성 도출을 위한 분석 기획의 특징과 고려사항을 이해.&lt;/li&gt;
 &lt;li&gt;KDD분석 방법론&lt;/li&gt;
@@ -2499,7 +2438,68 @@ Then click Run again.  &lt;/p&gt;
 &lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;KSA ISO 21500&lt;/code&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;범위, 시간, 원가, 품질, 통합, 조달(Procurement), 자원, 리스크, 의사소통, 이해관계자(Stakeholder)&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap2-2. 분석 마스터 플랜]]></title><description><![CDATA[데이터 분석을 위한 마스터 플랜 수립 이해. 분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정. 데이터 분석 거버넌스 체계. 데이터 분석 조직구조와 교육내용.…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-2.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Chap1-2. 빅데이터의 이해]]></title><description><![CDATA[빅데이터의 정의와 출현배경 빅데이터의 기능과 빅데이터가 만들어 내는 본질적 변화 빅데이터의 가치와 영향 빅데이터를 통한 위기 요인과 통제 방안 빅데이터의 미래 예상 1절 빅데이터의 이해 빅데이터의 관점에 따른…]]></description><link>https://bradkim06.github.io/study_adsp/chap1-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap1-2.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;빅데이터의 정의와 출현배경&lt;/li&gt;
+&lt;li&gt;빅데이터의 기능과 빅데이터가 만들어 내는 본질적 변화&lt;/li&gt;
+&lt;li&gt;빅데이터의 가치와 영향&lt;/li&gt;
+&lt;li&gt;빅데이터를 통한 위기 요인과 통제 방안&lt;/li&gt;
+&lt;li&gt;빅데이터의 미래 예상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;strong&gt;1절 빅데이터의 이해&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;빅데이터의 관점에 따른 3가지 정의&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;좁은 범위&lt;/strong&gt;: 데이터 자체의 특성 4V(Volume, Variety, Velocity, Value)의 변화.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;중간 범위&lt;/strong&gt;: 데이터 처리,분석 기술 변화.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;넓은 관점&lt;/strong&gt;: 인재, 조직의 변화.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;빅데이터에 거는 기대를 표현한 비유&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;산업혁명의 석탄, 철&lt;/strong&gt;: 제조업 뿐 아니라 서비스 분야의 생산성을 획기적으로 끌어올려 사회,경제,문화,생활 전반에 혁명적 변화를 가져올 것으로 기대.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;21세기의 원유&lt;/strong&gt;: 경제 성장에 필요한 정보를 제공, 산업 전반의 생산성을 한 단계 향상, 기존에 없던 새로운 범주의 산업을 만들어낼 것으로 전망.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;렌즈&lt;/strong&gt;: 렌즈를 통해 현미경이 생물학 발전에 미쳤던 영향만큼 데이터 역시 기대된다. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Ngram Viewer&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;플랫폼&lt;/strong&gt;: 공동 활용의 목적으로 구축된 유무형의 구조물 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;카카오톡, 페이스북&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;빅데이터 과거에서 현재로의 변화&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;사전처리&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;사후처리&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;표본조사&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;전수조사&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;질&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;양&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;인과관계&lt;/strong&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;상관관계&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;strong&gt;비즈니스 모델&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;빅데이터 활용사례&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;구글: 실시간 자동 번역시스템,검색엔진 등&lt;/li&gt;
+&lt;li&gt;넷플리스: 새로운 영화 추천 &lt;code class=&quot;language-text&quot;&gt;Cinematch&lt;/code&gt; 시스템.&lt;/li&gt;
+&lt;li&gt;월마트: 소셜미디어를 통해 고객 소비 패턴 분석하는 &lt;code class=&quot;language-text&quot;&gt;Wallmart Labs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;빅데이터 활용 기본 테크닉&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;연관규칙학습&lt;/strong&gt;: 변인들 간에 주목할 만한 &lt;code class=&quot;language-text&quot;&gt;상관관계&lt;/code&gt;가 있는지 찾는 방법.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;유형분석&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;에 따라 분류할 때 사용.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;유전자 알고리즘&lt;/strong&gt;: &lt;code class=&quot;language-text&quot;&gt;최적화&lt;/code&gt;가 필요한 문제의 해결책을 자연선택.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;기계학습&lt;/strong&gt;: 훈련 데이터로부터 학습한 알려진 특성을 활용해 &lt;code class=&quot;language-text&quot;&gt;예측&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;회귀분석&lt;/strong&gt;: 두 변인의 &lt;code class=&quot;language-text&quot;&gt;관계&lt;/code&gt;를 파악할 때 사용.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;감정분석&lt;/strong&gt;: 글,음성의 &lt;code class=&quot;language-text&quot;&gt;감정&lt;/code&gt;을 분석.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;소셜네트워크분석&lt;/strong&gt;: 특정인과 다른사람의 &lt;code class=&quot;language-text&quot;&gt;관계&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;영향력&lt;/code&gt; 파악.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;strong&gt;위기 요인과 통제 방안&lt;/strong&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;사생활 침해 -&gt; 동의에서 책임으로&lt;/li&gt;
+&lt;li&gt;책임 원칙 훼손 -&gt; 결과 기반 책임 원칙 고수&lt;/li&gt;
+&lt;li&gt;데이터 오용 -&gt; 알고리즘 접근 허용&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Chap2-2. 분석 마스터 플랜]]></title><description><![CDATA[데이터 분석을 위한 마스터 플랜 수립 이해. 분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정. 데이터 분석 거버넌스 체계. 데이터 분석 조직구조와 교육내용.…]]></description><link>https://bradkim06.github.io/study_adsp/chap2-2.md/</link><guid isPermaLink="false">https://bradkim06.github.io/study_adsp/chap2-2.md/</guid><pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;학습 목표&lt;/code&gt;&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터 분석을 위한 마스터 플랜 수립 이해.&lt;/li&gt;
 &lt;li&gt;분석과제의 시급성과 난이도에 따른 분석과제 우선순위 선정.&lt;/li&gt;
