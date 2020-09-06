@@ -723,10 +723,10 @@ function featureNavigator(e) {
     }
   }
 }
-function moveNavigatorAside(e) {
+function moveNavigatorAside(event) {
   var _this2 = this;
 
-  var target = e ? e.currentTarget : null;
+  var target = event ? event.currentTarget : null;
   var dataShape = target ? target.getAttribute("data-shape") : null;
   var navigatorShape = dataShape ? dataShape : "open";
 
@@ -748,11 +748,12 @@ function moveNavigatorAside(e) {
           }
         }
       }, 1000);
-    } else {
-      setTimeout(function () {
-        _this2.props.setNavigatorPosition("is-aside");
-      }, 100);
-    }
+    } // else {
+    //   setTimeout(() => {
+    //     this.props.setNavigatorPosition("is-aside");
+    //   }, 100);
+    // }
+
   }
 }
 
