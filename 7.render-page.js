@@ -207,8 +207,8 @@ var Group = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templ
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_core_ClickAwayListener__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/ClickAwayListener */ "./node_modules/@material-ui/core/esm/ClickAwayListener/index.js");
@@ -220,7 +220,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
 /* harmony import */ var _material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/FilterList */ "./node_modules/@material-ui/icons/FilterList.js");
 /* harmony import */ var _material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  @media (min-width: ", "px) {\n  }\n  .categoryOpen {\n    color: ", ";\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 
 
@@ -234,15 +247,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function FontSetter(_ref) {
+function CategoryFilter(_ref) {
   var categories = _ref.categories,
       filterCategory = _ref.filterCategory;
 
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
-      open = _React$useState[0],
-      setOpen = _React$useState[1];
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      open = _useState[0],
+      setOpen = _useState[1];
 
-  var anchorRef = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef(null);
+  var anchorRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(null);
 
   var handleToggle = function handleToggle() {
     setOpen(function (prevOpen) {
@@ -258,18 +271,11 @@ function FontSetter(_ref) {
     setOpen(false);
   };
 
-  function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    }
-  }
-
-  var handleSetting = function handleSetting(e) {
-    var category = e.target.innerText.trim();
+  var handleSetting = function handleSetting(event) {
+    var category = event.target.innerText.trim();
     filterCategory(category);
 
-    if (anchorRef.current && anchorRef.current.contains(e.target)) {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
 
@@ -277,7 +283,7 @@ function FontSetter(_ref) {
   }; // return focus to the button when we transitioned from !open -> open
 
 
-  var prevOpen = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef(open);
+  var prevOpen = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(open);
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     if (prevOpen.current === true && open === false) {
       anchorRef.current.focus();
@@ -285,14 +291,14 @@ function FontSetter(_ref) {
 
     prevOpen.current = open;
   }, [open]);
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(FilterWrapper, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(FilterWrapper, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__["default"], {
     ref: anchorRef,
     "aria-controls": open ? "menu-list-grow" : undefined,
     "aria-haspopup": "true",
     onClick: handleToggle,
     "aria-label": "categoryOpen",
     className: "categoryOpen"
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_10___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_Popper__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_FilterList__WEBPACK_IMPORTED_MODULE_10___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_Popper__WEBPACK_IMPORTED_MODULE_6__["default"], {
     open: open,
     anchorEl: anchorRef.current,
     role: undefined,
@@ -301,21 +307,20 @@ function FontSetter(_ref) {
   }, function (_ref2) {
     var TransitionProps = _ref2.TransitionProps,
         placement = _ref2.placement;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, TransitionProps, {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, TransitionProps, {
       style: {
         transformOrigin: placement === "bottom" ? "center top" : "center bottom"
       }
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_5__["default"], null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_ClickAwayListener__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_5__["default"], null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_ClickAwayListener__WEBPACK_IMPORTED_MODULE_3__["default"], {
       onClickAway: handleClose
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_MenuList__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_MenuList__WEBPACK_IMPORTED_MODULE_8__["default"], {
       autoFocusItem: open,
-      id: "menu-list-grow",
-      onKeyDown: handleListKeyDown
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      id: "menu-list-grow"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__["default"], {
       key: "all",
       onClick: handleSetting
-    }, "all posts"), categories.map(function (category, index) {
-      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }, "all posts"), categories.map(function (category) {
+      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__["default"], {
         key: category,
         onClick: handleSetting
       }, category);
@@ -323,16 +328,12 @@ function FontSetter(_ref) {
   }));
 }
 
-var FilterWrapper = Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_1__["default"])("nav", {
-  target: "e1qsy02o0",
-  label: "FilterWrapper"
-})("@media (min-width:", function (props) {
+var FilterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].nav(_templateObject(), function (props) {
   return props.theme.mediaQueryTresholds.M;
-}, "px){}.categoryOpen{color:", function (props) {
+}, function (props) {
   return props.theme.bars.colors.icon;
-}, ";}" + ( false ? undefined : "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2JyYWRraW0wNi9wZXJzb25hbC9ibG9nL2dhdHNieS9jbG9uZS1nYXRzYnkvc3JjL2NvbXBvbmVudHMvQWN0aW9uc0Jhci9DYXRlZ29yeUZpbHRlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBNEdnQyIsImZpbGUiOiIvaG9tZS9icmFka2ltMDYvcGVyc29uYWwvYmxvZy9nYXRzYnkvY2xvbmUtZ2F0c2J5L3NyYy9jb21wb25lbnRzL0FjdGlvbnNCYXIvQ2F0ZWdvcnlGaWx0ZXIudHN4Iiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IENsaWNrQXdheUxpc3RlbmVyIGZyb20gXCJAbWF0ZXJpYWwtdWkvY29yZS9DbGlja0F3YXlMaXN0ZW5lclwiO1xuaW1wb3J0IEdyb3cgZnJvbSBcIkBtYXRlcmlhbC11aS9jb3JlL0dyb3dcIjtcbmltcG9ydCBQYXBlciBmcm9tIFwiQG1hdGVyaWFsLXVpL2NvcmUvUGFwZXJcIjtcbmltcG9ydCBQb3BwZXIgZnJvbSBcIkBtYXRlcmlhbC11aS9jb3JlL1BvcHBlclwiO1xuaW1wb3J0IE1lbnVJdGVtIGZyb20gXCJAbWF0ZXJpYWwtdWkvY29yZS9NZW51SXRlbVwiO1xuaW1wb3J0IE1lbnVMaXN0IGZyb20gXCJAbWF0ZXJpYWwtdWkvY29yZS9NZW51TGlzdFwiO1xuaW1wb3J0IEljb25CdXR0b24gZnJvbSBcIkBtYXRlcmlhbC11aS9jb3JlL0ljb25CdXR0b25cIjtcbmltcG9ydCBGaWx0ZXJMaXN0SWNvbiBmcm9tIFwiQG1hdGVyaWFsLXVpL2ljb25zL0ZpbHRlckxpc3RcIjtcbmltcG9ydCBzdHlsZWQgZnJvbSBcIkBlbW90aW9uL3N0eWxlZFwiO1xuXG5mdW5jdGlvbiBGb250U2V0dGVyKHsgY2F0ZWdvcmllcywgZmlsdGVyQ2F0ZWdvcnkgfSkge1xuICBjb25zdCBbb3Blbiwgc2V0T3Blbl0gPSBSZWFjdC51c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IGFuY2hvclJlZiA9IFJlYWN0LnVzZVJlZihudWxsKTtcblxuICBjb25zdCBoYW5kbGVUb2dnbGUgPSAoKSA9PiB7XG4gICAgc2V0T3BlbigocHJldk9wZW4pID0+ICFwcmV2T3Blbik7XG4gIH07XG5cbiAgY29uc3QgaGFuZGxlQ2xvc2UgPSAoZXZlbnQpID0+IHtcbiAgICBpZiAoYW5jaG9yUmVmLmN1cnJlbnQgJiYgYW5jaG9yUmVmLmN1cnJlbnQuY29udGFpbnMoZXZlbnQudGFyZ2V0KSkge1xuICAgICAgcmV0dXJuO1xuICAgIH1cblxuICAgIHNldE9wZW4oZmFsc2UpO1xuICB9O1xuXG4gIGZ1bmN0aW9uIGhhbmRsZUxpc3RLZXlEb3duKGV2ZW50KSB7XG4gICAgaWYgKGV2ZW50LmtleSA9PT0gXCJUYWJcIikge1xuICAgICAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgICAgIHNldE9wZW4oZmFsc2UpO1xuICAgIH1cbiAgfVxuXG4gIGNvbnN0IGhhbmRsZVNldHRpbmcgPSAoZSkgPT4ge1xuICAgIGNvbnN0IGNhdGVnb3J5ID0gZS50YXJnZXQuaW5uZXJUZXh0LnRyaW0oKTtcbiAgICBmaWx0ZXJDYXRlZ29yeShjYXRlZ29yeSk7XG5cbiAgICBpZiAoYW5jaG9yUmVmLmN1cnJlbnQgJiYgYW5jaG9yUmVmLmN1cnJlbnQuY29udGFpbnMoZS50YXJnZXQpKSB7XG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgc2V0T3BlbihmYWxzZSk7XG4gIH07XG5cbiAgLy8gcmV0dXJuIGZvY3VzIHRvIHRoZSBidXR0b24gd2hlbiB3ZSB0cmFuc2l0aW9uZWQgZnJvbSAhb3BlbiAtPiBvcGVuXG4gIGNvbnN0IHByZXZPcGVuID0gUmVhY3QudXNlUmVmKG9wZW4pO1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKHByZXZPcGVuLmN1cnJlbnQgPT09IHRydWUgJiYgb3BlbiA9PT0gZmFsc2UpIHtcbiAgICAgIGFuY2hvclJlZi5jdXJyZW50LmZvY3VzKCk7XG4gICAgfVxuXG4gICAgcHJldk9wZW4uY3VycmVudCA9IG9wZW47XG4gIH0sIFtvcGVuXSk7XG5cbiAgcmV0dXJuIChcbiAgICA8RmlsdGVyV3JhcHBlcj5cbiAgICAgIDxJY29uQnV0dG9uXG4gICAgICAgIHJlZj17YW5jaG9yUmVmfVxuICAgICAgICBhcmlhLWNvbnRyb2xzPXtvcGVuID8gXCJtZW51LWxpc3QtZ3Jvd1wiIDogdW5kZWZpbmVkfVxuICAgICAgICBhcmlhLWhhc3BvcHVwPVwidHJ1ZVwiXG4gICAgICAgIG9uQ2xpY2s9e2hhbmRsZVRvZ2dsZX1cbiAgICAgICAgYXJpYS1sYWJlbD1cImNhdGVnb3J5T3BlblwiXG4gICAgICAgIGNsYXNzTmFtZT1cImNhdGVnb3J5T3BlblwiXG4gICAgICA+XG4gICAgICAgIDxGaWx0ZXJMaXN0SWNvbiAvPlxuICAgICAgPC9JY29uQnV0dG9uPlxuICAgICAgPFBvcHBlclxuICAgICAgICBvcGVuPXtvcGVufVxuICAgICAgICBhbmNob3JFbD17YW5jaG9yUmVmLmN1cnJlbnR9XG4gICAgICAgIHJvbGU9e3VuZGVmaW5lZH1cbiAgICAgICAgdHJhbnNpdGlvblxuICAgICAgICBkaXNhYmxlUG9ydGFsXG4gICAgICA+XG4gICAgICAgIHsoeyBUcmFuc2l0aW9uUHJvcHMsIHBsYWNlbWVudCB9KSA9PiAoXG4gICAgICAgICAgPEdyb3dcbiAgICAgICAgICAgIHsuLi5UcmFuc2l0aW9uUHJvcHN9XG4gICAgICAgICAgICBzdHlsZT17e1xuICAgICAgICAgICAgICB0cmFuc2Zvcm1PcmlnaW46XG4gICAgICAgICAgICAgICAgcGxhY2VtZW50ID09PSBcImJvdHRvbVwiID8gXCJjZW50ZXIgdG9wXCIgOiBcImNlbnRlciBib3R0b21cIixcbiAgICAgICAgICAgIH19XG4gICAgICAgICAgPlxuICAgICAgICAgICAgPFBhcGVyPlxuICAgICAgICAgICAgICA8Q2xpY2tBd2F5TGlzdGVuZXIgb25DbGlja0F3YXk9e2hhbmRsZUNsb3NlfT5cbiAgICAgICAgICAgICAgICA8TWVudUxpc3RcbiAgICAgICAgICAgICAgICAgIGF1dG9Gb2N1c0l0ZW09e29wZW59XG4gICAgICAgICAgICAgICAgICBpZD1cIm1lbnUtbGlzdC1ncm93XCJcbiAgICAgICAgICAgICAgICAgIG9uS2V5RG93bj17aGFuZGxlTGlzdEtleURvd259XG4gICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgPE1lbnVJdGVtIGtleT1cImFsbFwiIG9uQ2xpY2s9e2hhbmRsZVNldHRpbmd9PlxuICAgICAgICAgICAgICAgICAgICBhbGwgcG9zdHNcbiAgICAgICAgICAgICAgICAgIDwvTWVudUl0ZW0+XG4gICAgICAgICAgICAgICAgICB7Y2F0ZWdvcmllcy5tYXAoKGNhdGVnb3J5LCBpbmRleCkgPT4gKFxuICAgICAgICAgICAgICAgICAgICA8TWVudUl0ZW0ga2V5PXtjYXRlZ29yeX0gb25DbGljaz17aGFuZGxlU2V0dGluZ30+XG4gICAgICAgICAgICAgICAgICAgICAge2NhdGVnb3J5fVxuICAgICAgICAgICAgICAgICAgICA8L01lbnVJdGVtPlxuICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgPC9NZW51TGlzdD5cbiAgICAgICAgICAgICAgPC9DbGlja0F3YXlMaXN0ZW5lcj5cbiAgICAgICAgICAgIDwvUGFwZXI+XG4gICAgICAgICAgPC9Hcm93PlxuICAgICAgICApfVxuICAgICAgPC9Qb3BwZXI+XG4gICAgPC9GaWx0ZXJXcmFwcGVyPlxuICApO1xufVxuXG5jb25zdCBGaWx0ZXJXcmFwcGVyID0gc3R5bGVkLm5hdmBcbiAgQG1lZGlhIChtaW4td2lkdGg6ICR7KHByb3BzKSA9PiBwcm9wcy50aGVtZS5tZWRpYVF1ZXJ5VHJlc2hvbGRzLk19cHgpIHtcbiAgfVxuICAuY2F0ZWdvcnlPcGVuIHtcbiAgICBjb2xvcjogJHsocHJvcHMpID0+IHByb3BzLnRoZW1lLmJhcnMuY29sb3JzLmljb259O1xuICB9XG5gO1xuXG5leHBvcnQgZGVmYXVsdCBGb250U2V0dGVyO1xuIl19 */"));
-
-/* harmony default export */ __webpack_exports__["default"] = (FontSetter);
+});
+/* harmony default export */ __webpack_exports__["default"] = (CategoryFilter);
 
 /***/ }),
 
@@ -710,7 +711,7 @@ function featureNavigator(e) {
 
           setTimeout(function () {
             Object(_reach_router__WEBPACK_IMPORTED_MODULE_1__["navigate"])("/");
-          }, 300);
+          }, 600);
         });
       }, 300);
     } else {
