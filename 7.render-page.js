@@ -711,9 +711,9 @@ function featureNavigator(e) {
 
           setTimeout(function () {
             Object(_reach_router__WEBPACK_IMPORTED_MODULE_1__["navigate"])("/");
-          }, 600);
+          }, 400);
         });
-      }, 300);
+      }, 200);
     } else {
       setTimeout(function () {
         _this.props.setNavigatorPosition("is-featured");
@@ -739,7 +739,7 @@ function moveNavigatorAside(e) {
           setTimeout(function () {
             _this2.props.setNavigatorPosition("is-aside");
 
-            setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 600);
+            setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 300);
           });
         }
       }
