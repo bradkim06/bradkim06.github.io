@@ -40,24 +40,21 @@ module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fiel
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Home */ "./node_modules/@material-ui/icons/Home.js");
-/* harmony import */ var _material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/ArrowUpward */ "./node_modules/@material-ui/icons/ArrowUpward.js");
-/* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.js");
-/* harmony import */ var _styles_theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../styles/theme */ "./src/styles/theme.js");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.js");
-/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.js");
-/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Home */ "./node_modules/@material-ui/icons/Home.js");
+/* harmony import */ var _material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ArrowUpward */ "./node_modules/@material-ui/icons/ArrowUpward.js");
+/* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.js");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.js");
+/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.js");
+/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
 
 
 
@@ -71,15 +68,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(...args) {
     super(...args);
     this.state = {
       fullscreen: false
     };
-    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigator"].bind(this);
+    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_8__["featureNavigator"].bind(this);
 
     this.arrowUpOnClick = () => {
       this.props.setScrollToTop(true);
@@ -101,38 +96,27 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
       isWideScreen,
       categories
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to list",
       onClick: this.homeOnClick,
       title: "Back to the list",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_5___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_10__["default"], {
       categories: categories,
       filterCategory: this.categoryFilterOnClick
-    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_9__["default"], {
       increaseFont: this.fontSetterOnClick
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to top",
       onClick: this.arrowUpOnClick,
       title: "Scroll to top",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_6___default.a, null))));
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
   }
 
 }
 
-ActionsBar.propTypes = {
-  navigatorPosition: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  navigatorShape: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,
-  isWideScreen: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
-  setScrollToTop: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  setFontSizeIncrease: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  categories: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array.isRequired,
-  setCategoryFilter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  categoryFilter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired
-};
-
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
   return {
     navigatorPosition: state.navigatorPosition,
     navigatorShape: state.navigatorShape,
@@ -142,22 +126,72 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorShape"],
-  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"],
-  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"]
+  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorPosition"],
+  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"],
+  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_7__["setScrollToTop"],
+  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_7__["setFontSizeIncrease"],
+  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_7__["setCategoryFilter"]
 };
+const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: absolute;
+  background: ${props => props.theme.bars.colors.background};
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0 ${props => props.theme.bars.sizes.actionsBar}px;
+  justify-content: space-between;
+  height: ${props => props.theme.bars.sizes.actionsBar}px;
+  width: 100%;
 
-const StyleActionsBar = Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div", {
-  target: "e9nal1p0"
-})("position:absolute;background:", props => props.theme.bars.colors.background, ";left:0;bottom:0;display:flex;flex-direction:row;padding:0 ", props => props.theme.bars.sizes.actionsBar, "px;justify-content:space-between;height:", props => props.theme.bars.sizes.actionsBar, "px;width:100%;&::before{content:\"\";position:absolute;left:", props => props.theme.base.sizes.linesMargin, ";right:", props => props.theme.base.sizes.linesMargin, ";height:0;top:0;border-top:1px solid ", props => props.theme.base.colors.lines, ";}@media (min-width:", props => props.theme.mediaQueryTresholds.M, "px){padding:0 calc(", props => props.theme.base.sizes.linesMargin, " * 1.5);}@media (min-width:", props => props.theme.mediaQueryTresholds.L, "px){flex-direction:column;top:0;right:0;left:auto;height:100%;padding:", props => props.theme.base.sizes.linesMargin, " 0;width:", props => props.theme.bars.sizes.actionsBar, "px;&::before{top:", props => props.theme.base.sizes.linesMargin, ";bottom:", props => props.theme.base.sizes.linesMargin, ";left:0;right:auto;width:0;height:auto;border-left:1px solid ", props => props.theme.base.colors.lines, ";}}");
+  &::before {
+    content: "";
+    position: absolute;
+    left: ${props => props.theme.base.sizes.linesMargin};
+    right: ${props => props.theme.base.sizes.linesMargin};
+    height: 0;
+    top: 0;
+    border-top: 1px solid ${props => props.theme.base.colors.lines};
+  }
 
-const Group = Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div", {
-  target: "e9nal1p1"
-})("display:flex;flex-direction:row;align-items:center;@media (min-width:", props => props.theme.mediaQueryTresholds.L, "px){flex-direction:column;}.iconButton{color:", _styles_theme__WEBPACK_IMPORTED_MODULE_8__["default"].bars.colors.icon, ";}");
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
+    padding: 0 calc(${props => props.theme.base.sizes.linesMargin} * 1.5);
+  }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(ActionsBar));
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    padding: ${props => props.theme.base.sizes.linesMargin} 0;
+    width: ${props => props.theme.bars.sizes.actionsBar}px;
+
+    &::before {
+      top: ${props => props.theme.base.sizes.linesMargin};
+      bottom: ${props => props.theme.base.sizes.linesMargin};
+      left: 0;
+      right: auto;
+      width: 0;
+      height: auto;
+      border-left: 1px solid ${props => props.theme.base.colors.lines};
+    }
+  }
+`;
+const Group = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    flex-direction: column;
+  }
+
+  .iconButton {
+    color: ${props => props.theme.bars.colors.icon};
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(ActionsBar));
 
 /***/ }),
 
