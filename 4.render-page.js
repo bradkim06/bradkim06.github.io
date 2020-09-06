@@ -78,50 +78,210 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 
 /***/ }),
 
-/***/ "./src/components/Navigator/List.js":
-/*!******************************************!*\
-  !*** ./src/components/Navigator/List.js ***!
-  \******************************************/
+/***/ "./src/components/Navigator/List.tsx":
+/*!*******************************************!*\
+  !*** ./src/components/Navigator/List.tsx ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ListHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ListHeader */ "./src/components/Navigator/ListHeader.js");
-/* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ListItem */ "./src/components/Navigator/ListItem.js");
-/* harmony import */ var _SpringScrollbars__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SpringScrollbars */ "./src/components/SpringScrollbars/index.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-// import { forceCheck } from "react-lazyload";
-class List extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component{render(){const{posts,linkOnClick,expandOnClick,categoryFilter,navigatorShape,removeFilter}=this.props;return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Posts,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_5__["default"],{forceCheckOnScroll:true,isNavigator:true},Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Inner,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_3__["default"],{expandOnClick:expandOnClick,categoryFilter:categoryFilter,navigatorShape:navigatorShape,removeFilter:removeFilter}),Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(PostList,null,posts&&posts.map((post,i)=>Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_ListItem__WEBPACK_IMPORTED_MODULE_4__["default"],{key:i,post:post,linkOnClick:linkOnClick,categoryFilter:categoryFilter}))))));}}List.propTypes={posts:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array.isRequired,linkOnClick:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,expandOnClick:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,navigatorPosition:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,navigatorShape:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,categoryFilter:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,removeFilter:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired};const Posts=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e2m2o6o0"})({name:"1p9tt5m",styles:"position:absolute;left:0;top:0;bottom:0;width:100%;"});const Inner=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e2m2o6o1"})("padding:calc(",props=>props.theme.bars.sizes.infoBar,"px + 1.3rem) 1.3rem calc(",props=>props.theme.bars.sizes.actionsBar,"px + 1.3rem) 1.3rem;@media (min-width:",props=>props.theme.mediaQueryTresholds.M,"px){padding:calc(",props=>props.theme.bars.sizes.infoBar,"px + 2rem) 2rem calc(",props=>props.theme.bars.sizes.actionsBar,"px + 2rem) 2rem;}@media (min-width:",props=>props.theme.mediaQueryTresholds.L,"px){padding:2rem calc(1rem + 17px) calc(2rem + 17px) 2rem;left:",props=>props.theme.info.sizes.width,"px;.moving-featured &,.is-aside &{padding:1rem 0.5rem 1rem 0.5rem;}}");const PostList=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("ul",{target:"e2m2o6o2"})({name:"101beid",styles:"list-style:none;margin:0;padding:0;.is-aside.closed &,.moving-featured.closed &{display:none;}"});/* harmony default export */ __webpack_exports__["default"] = (List);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _ListHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ListHeader */ "./src/components/Navigator/ListHeader.tsx");
+/* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ListItem */ "./src/components/Navigator/ListItem.js");
+/* harmony import */ var _SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SpringScrollbars */ "./src/components/SpringScrollbars/index.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+
+
+
+class List extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    const {
+      posts,
+      linkOnClick,
+      expandOnClick,
+      removeFilter,
+      categoryFilter,
+      navigatorShape
+    } = this.props;
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Posts, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      forceCheckOnScroll: true,
+      isNavigator: true
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Inner, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      expandOnClick: expandOnClick,
+      categoryFilter: categoryFilter,
+      navigatorShape: navigatorShape,
+      removeFilter: removeFilter
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(PostList, null, posts && posts.map((post, i) => Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: i,
+      post: post,
+      linkOnClick: linkOnClick,
+      categoryFilter: categoryFilter
+    }))))));
+  }
+
+}
+
+const Posts = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+`;
+const Inner = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  padding: calc(${props => props.theme.bars.sizes.infoBar}px + 1.3rem) 1.3rem
+    calc(${props => props.theme.bars.sizes.actionsBar}px + 1.3rem) 1.3rem;
+
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
+    padding: calc(${props => props.theme.bars.sizes.infoBar}px + 2rem) 2rem
+      calc(${props => props.theme.bars.sizes.actionsBar}px + 2rem) 2rem;
+  }
+
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    padding: 2rem calc(1rem + 17px) calc(2rem + 17px) 2rem;
+    left: ${props => props.theme.info.sizes.width}px;
+    .moving-featured &,
+    .is-aside & {
+      padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+  }
+`;
+const PostList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .is-aside.closed &,
+  .moving-featured.closed & {
+    display: none;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (List);
 
 /***/ }),
 
-/***/ "./src/components/Navigator/ListHeader.js":
-/*!************************************************!*\
-  !*** ./src/components/Navigator/ListHeader.js ***!
-  \************************************************/
+/***/ "./src/components/Navigator/ListHeader.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/Navigator/ListHeader.tsx ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
-/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
-/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ExpandLess */ "./node_modules/@material-ui/icons/ExpandLess.js");
-/* harmony import */ var _material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-const propTypes={expandOnClick:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,categoryFilter:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,navigatorShape:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired,removeFilter:prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired};function ListHeader({expandOnClick,categoryFilter,navigatorShape,removeFilter}){return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("header",null,navigatorShape==="closed"&&Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Closed,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("h3",null,"List of posts"),Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"],{"aria-label":"Expand the list",onClick:expandOnClick,title:"Expand the list",className:"expandButton"},Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_5___default.a,null))),navigatorShape==="open"&&categoryFilter!=="all posts"&&Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Filter,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("small",null,"Category Filter:"),Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("strong",null,categoryFilter),Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"],{"aria-label":"Remove filtering",onClick:removeFilter,title:"Clear filtering",className:"removeButton"},Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_4___default.a,null))));}const Closed=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e1g22rl0"})("display:none;.is-aside.closed &,.moving-featured.closed &{display:flex;flex-direction:row;justify-content:space-between;align-items:center;position:absolute;top:0;left:0;width:100%;margin:0;height:",props=>props.theme.navigator.sizes.closedHeight,"px;padding:0 30px 0 40px;}& h3{font-size:1.1em;color:",props=>props.theme.navigator.colors.postsHeader,";font-weight:600;margin:-0.2em 0 0 0;text-transform:uppercase;& small{font-size:0.6em;display:block;margin:0 0 0.1em;font-weight:300;letter-spacing:0.2em;}}.expandButton{color:",props=>props.theme.navigator.colors.postsHeader,";}");const Filter=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e1g22rl1"})("margin:0 calc(-0.5rem + ",props=>props.theme.base.sizes.linesMargin,") 1em calc(-0.5rem + ",props=>props.theme.base.sizes.linesMargin,");position:relative;font-size:1.2em;line-height:1;color:",props=>props.theme.base.colors.accent,";border-bottom:1px solid ",props=>props.theme.base.colors.lines,";padding:0 1em 1em;font-weight:300;.removeButton{position:absolute;top:0;right:0;}& strong{font-weight:600;display:block;}& small{display:block;margin:0 0 0.3em 0;}@media (min-width:",props=>props.theme.mediaQueryTresholds.L,"px){margin:0 0 1em 0;padding:0 1em 1.5em;.is-aside &{padding:0 0 1em 0.5em;margin:0 calc(-0.5rem + ",props=>props.theme.base.sizes.linesMargin,") 1em calc(-0.5rem + ",props=>props.theme.base.sizes.linesMargin,");}}");ListHeader.propTypes=propTypes;/* harmony default export */ __webpack_exports__["default"] = (ListHeader);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/ExpandLess */ "./node_modules/@material-ui/icons/ExpandLess.js");
+/* harmony import */ var _material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+
+
+
+function ListHeader({
+  expandOnClick,
+  categoryFilter,
+  navigatorShape,
+  removeFilter
+}) {
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("header", null, navigatorShape === "closed" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Closed, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("h3", null, "List of posts"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    "aria-label": "Expand the list",
+    onClick: expandOnClick,
+    title: "Expand the list",
+    className: "expandButton"
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4___default.a, null))), navigatorShape === "open" && categoryFilter !== "all posts" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Filter, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("small", null, "Category Filter:"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])("strong", null, categoryFilter), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    "aria-label": "Remove filtering",
+    onClick: removeFilter,
+    title: "Clear filtering",
+    className: "removeButton"
+  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_3___default.a, null))));
+}
+
+const Closed = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  display: none;
+
+  .is-aside.closed &,
+  .moving-featured.closed & {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: ${props => props.theme.navigator.sizes.closedHeight}px;
+    padding: 0 30px 0 40px;
+  }
+
+  & h3 {
+    font-size: 1.1em;
+    color: ${props => props.theme.navigator.colors.postsHeader};
+    font-weight: 600;
+    margin: -0.2em 0 0 0;
+    text-transform: uppercase;
+    & small {
+      font-size: 0.6em;
+      display: block;
+      margin: 0 0 0.1em;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  .expandButton {
+    color: ${props => props.theme.navigator.colors.postsHeader};
+  }
+`;
+const Filter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+  margin: 0 calc(-0.5rem + ${props => props.theme.base.sizes.linesMargin}) 1em
+    calc(-0.5rem + ${props => props.theme.base.sizes.linesMargin});
+  position: relative;
+  font-size: 1.2em;
+  line-height: 1;
+  color: ${props => props.theme.base.colors.accent};
+  border-bottom: 1px solid ${props => props.theme.base.colors.lines};
+  padding: 0 1em 1em;
+  font-weight: 300;
+  .removeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  & strong {
+    font-weight: 600;
+    display: block;
+  }
+  & small {
+    display: block;
+    margin: 0 0 0.3em 0;
+  }
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    margin: 0 0 1em 0;
+    padding: 0 1em 1.5em;
+    .is-aside & {
+      padding: 0 0 1em 0.5em;
+      margin: 0 calc(-0.5rem + ${props => props.theme.base.sizes.linesMargin})
+        1em calc(-0.5rem + ${props => props.theme.base.sizes.linesMargin});
+    }
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (ListHeader);
 
 /***/ }),
 
@@ -183,28 +343,193 @@ const ListItemText=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_1__["def
 
 /***/ }),
 
-/***/ "./src/components/Navigator/Navigator.js":
-/*!***********************************************!*\
-  !*** ./src/components/Navigator/Navigator.js ***!
-  \***********************************************/
+/***/ "./src/components/Navigator/Navigator.tsx":
+/*!************************************************!*\
+  !*** ./src/components/Navigator/Navigator.tsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-lazyload */ "./node_modules/react-lazyload/lib/index.js");
-/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_lazyload__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.js");
-/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./List */ "./src/components/Navigator/List.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-class Navigator extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component{constructor(...args){super(...args);this.linkOnClick=_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAside"].bind(this);this.expandOnClick=()=>{this.props.setNavigatorShape("open");setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_4__["forceCheck"],600);};this.removefilterOnClick=()=>{this.props.setCategoryFilter("all posts");};}render(){const{posts,navigatorPosition,navigatorShape,categoryFilter}=this.props;return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyleNavigator,{className:`${navigatorPosition?navigatorPosition:""} ${navigatorShape?navigatorShape:""} `},this.props.posts.totalCount&&Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_List__WEBPACK_IMPORTED_MODULE_7__["default"],{posts:posts.edges,navigatorPosition:navigatorPosition,navigatorShape:navigatorShape,linkOnClick:this.linkOnClick,expandOnClick:this.expandOnClick,categoryFilter:categoryFilter,removeFilter:this.removefilterOnClick}));}}Navigator.propTypes={posts:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,navigatorPosition:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,navigatorShape:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,setNavigatorPosition:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,setNavigatorShape:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,categoryFilter:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,setCategoryFilter:prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired};const mapStateToProps=(state,ownProps)=>{return{navigatorPosition:state.navigatorPosition,navigatorShape:state.navigatorShape,categoryFilter:state.categoryFilter};};const mapDispatchToProps={setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_5__["setNavigatorPosition"],setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_5__["setNavigatorShape"],setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_5__["setCategoryFilter"]};const StyleNavigator=/*#__PURE__*/Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])(`nav`,{target:"ep9k9bn0"})("transform:translate3d(0,0,0);will-change:left,top,bottom,width;background:",props=>props.theme.navigator.colors.background,";position:absolute;top:0;left:0;height:100vh;transition-timing-function:ease;transition:left 0.9s;width:100%;@media (max-width:",props=>props.theme.mediaQueryTresholds.L-1,"px){&.is-aside{left:-100%;}&.is-featured{left:0;}}@media (min-width:",props=>props.theme.mediaQueryTresholds.L,"px){&.is-featured{transition:left 0.9s;width:calc( 100vw - ",props=>props.theme.info.sizes.width,"px - ",props=>props.theme.bars.sizes.actionsBar,"px );left:",props=>props.theme.info.sizes.width,"px;top:0;}&.is-aside{transition:bottom 0.5s;left:0;width:",props=>props.theme.info.sizes.width-1,"px;z-index:1;top:auto;&.closed{bottom:calc( -100% + 100px + ",props=>props.theme.navigator.sizes.closedHeight,"px );height:calc(100% - 100px);}&.open{bottom:0;height:calc(100% - 100px);}&::after{content:\"\";position:absolute;top:0;left:",props=>props.theme.base.sizes.linesMargin,";right:",props=>props.theme.base.sizes.linesMargin,";height:0;border-top:1px solid ",props=>props.theme.base.colors.lines,";}}&.moving-aside{transition:left 0.9s;left:calc(-100vw + ",props=>props.theme.info.sizes.width,"*2px + 2px);width:calc(100vw - ",props=>props.theme.info.sizes.width,"px - 60px);top:0;}&.resizing-aside{transition:none;width:",props=>props.theme.info.sizes.width,"px;top:auto;left:0;&.closed{bottom:calc(-100% + 100px);height:calc(100% - 100px);}&.open{bottom:calc(-100% + 100px);height:calc(100% - 100px);}}&.moving-featured{transition:bottom 0.3s;bottom:-100%;top:auto;left:0;z-index:1;width:",props=>props.theme.info.sizes.width-1,"px;}&.resizing-featured{transition:none;top:0;bottom:auto;left:calc( -100vw + ",props=>props.theme.info.sizes.width,"*2px + 60px );width:calc(100vw - ",props=>props.theme.info.sizes.width,"px - 60px);}}");/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps,mapDispatchToProps)(Navigator));
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-lazyload */ "./node_modules/react-lazyload/lib/index.js");
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_lazyload__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.js");
+/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./List */ "./src/components/Navigator/List.tsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+
+
+
+
+
+class Navigator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(...args) {
+    super(...args);
+    this.linkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_5__["moveNavigatorAside"].bind(this);
+
+    this.expandOnClick = () => {
+      this.props.setNavigatorShape("open");
+      setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_3__["forceCheck"], 600);
+    };
+
+    this.removefilterOnClick = () => {
+      this.props.setCategoryFilter("all posts");
+    };
+  }
+
+  render() {
+    const {
+      navigatorPosition,
+      navigatorShape,
+      categoryFilter
+    } = this.props;
+    const {
+      totalCount,
+      edges
+    } = this.props.posts;
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyleNavigator, {
+      className: `${navigatorPosition ? navigatorPosition : ""} ${navigatorShape ? navigatorShape : ""} `
+    }, totalCount && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_List__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      posts: edges,
+      navigatorPosition: navigatorPosition,
+      navigatorShape: navigatorShape,
+      linkOnClick: this.linkOnClick,
+      expandOnClick: this.expandOnClick,
+      categoryFilter: categoryFilter,
+      removeFilter: this.removefilterOnClick
+    }));
+  }
+
+}
+
+const mapStateToProps = state => {
+  return {
+    navigatorPosition: state.navigatorPosition,
+    navigatorShape: state.navigatorShape,
+    categoryFilter: state.categoryFilter
+  };
+};
+
+const mapDispatchToProps = {
+  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_4__["setNavigatorPosition"],
+  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_4__["setNavigatorShape"],
+  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_4__["setCategoryFilter"]
+};
+const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
+  transform: translate3d(0, 0, 0);
+  will-change: left, top, bottom, width;
+  background: ${props => props.theme.navigator.colors.background};
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition-timing-function: ease;
+  transition: left 0.9s;
+  width: 100%;
+
+  @media (max-width: ${props => props.theme.mediaQueryTresholds.L - 1}px) {
+    &.is-aside {
+      left: -100%;
+    }
+
+    &.is-featured {
+      left: 0;
+    }
+  }
+
+  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    &.is-featured {
+      transition: left 0.9s;
+      width: calc(
+        100vw - ${props => props.theme.info.sizes.width}px -
+          ${props => props.theme.bars.sizes.actionsBar}px
+      );
+      left: ${props => props.theme.info.sizes.width}px;
+      top: 0;
+    }
+
+    &.is-aside {
+      transition: bottom 0.5s;
+      left: 0;
+      width: ${props => props.theme.info.sizes.width - 1}px;
+      z-index: 1;
+      top: auto;
+
+      &.closed {
+        bottom: calc(
+          -100% + 100px + ${props => props.theme.navigator.sizes.closedHeight}px
+        );
+        height: calc(100% - 100px);
+      }
+
+      &.open {
+        bottom: 0;
+        height: calc(100% - 100px);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: ${props => props.theme.base.sizes.linesMargin};
+        right: ${props => props.theme.base.sizes.linesMargin};
+        height: 0;
+        border-top: 1px solid ${props => props.theme.base.colors.lines};
+      }
+    }
+
+    &.moving-aside {
+      transition: left 0.9s;
+      left: calc(-100vw + ${props => props.theme.info.sizes.width}*2px + 2px);
+      width: calc(100vw - ${props => props.theme.info.sizes.width}px - 60px);
+      top: 0;
+    }
+
+    &.resizing-aside {
+      transition: none;
+      width: ${props => props.theme.info.sizes.width}px;
+      top: auto;
+      left: 0;
+
+      &.closed {
+        bottom: calc(-100% + 100px);
+        height: calc(100% - 100px);
+      }
+
+      &.open {
+        bottom: calc(-100% + 100px);
+        height: calc(100% - 100px);
+      }
+    }
+
+    &.moving-featured {
+      transition: bottom 0.3s;
+      bottom: -100%;
+      top: auto;
+      left: 0;
+      z-index: 1;
+      width: ${props => props.theme.info.sizes.width - 1}px;
+    }
+
+    &.resizing-featured {
+      transition: none;
+      top: 0;
+      bottom: auto;
+      left: calc(-100vw + ${props => props.theme.info.sizes.width}*2px + 60px);
+      width: calc(100vw - ${props => props.theme.info.sizes.width}px - 60px);
+    }
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Navigator));
 
 /***/ })
 
