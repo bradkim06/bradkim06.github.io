@@ -161,9 +161,9 @@ const InfoContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].di
     bottom: 0;
   }
 
-  // .is-aside.open & {
-  //   display: none;
-  // }
+  .is-aside.open & {
+    display: none;
+  }
 `;
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(InfoBox));
 
