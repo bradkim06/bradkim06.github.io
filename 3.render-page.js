@@ -92,9 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _ListHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ListHeader */ "./src/components/Navigator/ListHeader.tsx");
 /* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ListItem */ "./src/components/Navigator/ListItem.tsx");
-/* harmony import */ var _SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SpringScrollbars */ "./src/components/SpringScrollbars/index.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
 
 
 
@@ -111,20 +109,17 @@ class List extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       categoryFilter,
       navigatorShape
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Posts, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      forceCheckOnScroll: true,
-      isNavigator: true
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Inner, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(Posts, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(Inner, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
       expandOnClick: expandOnClick,
       categoryFilter: categoryFilter,
       navigatorShape: navigatorShape,
       removeFilter: removeFilter
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(PostList, null, posts.edges && posts.edges.map((post, i) => Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }), "Testing!", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(PostList, null, posts.edges && posts.edges.map((post, i) => Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(_ListItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: i,
       post: post,
       linkOnClick: linkOnClick,
       categoryFilter: categoryFilter
-    }))))));
+    })))));
   }
 
 }
@@ -498,10 +493,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
-/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./List */ "./src/components/Navigator/List.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-lazyload */ "./node_modules/react-lazyload/lib/index.js");
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_lazyload__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./List */ "./src/components/Navigator/List.tsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
 
 
 
@@ -513,10 +511,11 @@ __webpack_require__.r(__webpack_exports__);
 class Navigator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   constructor(...args) {
     super(...args);
-    this.linkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavigatorAside"].bind(this);
+    this.linkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_5__["moveNavigatorAside"].bind(this);
 
     this.expandOnClick = () => {
-      this.props.setNavigatorShape("open"); // setTimeout(forceCheck, 600);
+      this.props.setNavigatorShape("open");
+      setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_3__["forceCheck"], 600);
     };
 
     this.removefilterOnClick = () => {
@@ -531,9 +530,9 @@ class Navigator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       navigatorShape,
       categoryFilter
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyleNavigator, {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyleNavigator, {
       className: `${navigatorPosition ? navigatorPosition : ""} ${navigatorShape ? navigatorShape : ""} `
-    }, posts.totalCount && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_List__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, posts.totalCount && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_List__WEBPACK_IMPORTED_MODULE_6__["default"], {
       posts: posts,
       navigatorPosition: navigatorPosition,
       navigatorShape: navigatorShape,
@@ -555,9 +554,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_3__["setCategoryFilter"]
+  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_4__["setNavigatorPosition"],
+  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_4__["setNavigatorShape"],
+  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_4__["setCategoryFilter"]
 };
 const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
   transform: translate3d(0, 0, 0);
