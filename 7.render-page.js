@@ -693,9 +693,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "moveNavigatorAside", function() { return moveNavigatorAside; });
 /* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-lazyload */ "./node_modules/react-lazyload/lib/index.js");
 /* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_lazyload__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reach/router */ "@reach/router");
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
-
+ // import { navigateTo } from 'gatsby-link';
 
 function featureNavigator(e) {
   var _this = this;
@@ -711,20 +709,22 @@ function featureNavigator(e) {
         setTimeout(function () {
           _this.props.setNavigatorPosition("is-featured");
 
-          _this.props.setNavigatorShape("open");
+          _this.props.setNavigatorShape("open"); // uncomment following lines if you want to count featuring Navigator as a visit
+          // to index page ('/'), you have to also uncomment import { navigateTo }...
+
+          /*
+          setTimeout(() => {
+            navigateTo("/");
+          }, 1000);
+          */
+
         });
       }, 300);
     } else {
       setTimeout(function () {
         _this.props.setNavigatorPosition("is-featured");
       }, 0);
-    } // uncomment following lines if you want to count featuring Navigator as a visit
-    // to index page ('/'), you have to also uncomment import { navigateTo }...
-
-
-    setTimeout(function () {
-      Object(_reach_router__WEBPACK_IMPORTED_MODULE_1__["navigate"])("/");
-    }, 500);
+    }
   }
 }
 function moveNavigatorAside(e) {
@@ -737,18 +737,21 @@ function moveNavigatorAside(e) {
   if (this.props.navigatorPosition === "is-featured") {
     if (this.props.isWideScreen) {
       this.props.setNavigatorPosition("moving-aside");
+      setTimeout(function () {
+        if (typeof window !== "undefined") {
+          if (window.location.pathname !== "/") {
+            _this2.props.setNavigatorPosition("resizing-aside");
 
-      if (typeof window !== "undefined") {
-        if (window.location.pathname !== "/") {
-          this.props.setNavigatorPosition("resizing-aside");
-          this.props.setNavigatorShape(navigatorShape);
-          setTimeout(function () {
-            _this2.props.setNavigatorPosition("is-aside");
+            _this2.props.setNavigatorShape(navigatorShape);
 
-            setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 600);
-          });
+            setTimeout(function () {
+              _this2.props.setNavigatorPosition("is-aside");
+
+              setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 600);
+            });
+          }
         }
-      }
+      }, 1000);
     } else {
       setTimeout(function () {
         _this2.props.setNavigatorPosition("is-aside");
