@@ -65,7 +65,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _InfoHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InfoHeader */ "./src/components/InfoBox/InfoHeader.tsx");
 /* harmony import */ var _InfoText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoText */ "./src/components/InfoBox/InfoText.tsx");
 /* harmony import */ var _InfoMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoMenu */ "./src/components/InfoBox/InfoMenu.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.js");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
 /* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
 
