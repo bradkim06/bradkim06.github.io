@@ -111,7 +111,10 @@ class List extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       categoryFilter,
       navigatorShape
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Posts, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Inner, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Posts, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      forceCheckOnScroll: true,
+      isNavigator: true
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(Inner, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
       expandOnClick: expandOnClick,
       categoryFilter: categoryFilter,
       navigatorShape: navigatorShape,
