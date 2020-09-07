@@ -20,106 +20,27 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoBar.tsx":
-/*!********************************************!*\
-  !*** ./src/components/InfoBox/InfoBar.tsx ***!
-  \********************************************/
+/***/ "./src/components/InfoBox/InfoBar.js":
+/*!*******************************************!*\
+  !*** ./src/components/InfoBox/InfoBar.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Avatar */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ "./node_modules/@emotion/styled-base/dist/styled-base.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Avatar */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../images/jpg/test.png */ "./src/images/jpg/test.png");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.js");
 /* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
-
-
-
-
-
-
-
-
-
-class InfoBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.homeLinkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigator"].bind(this);
-    this.pageLinkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAside"].bind(this);
-  }
-
-  render() {
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(InfoBarStyle, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(AvatarLinkBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/",
-      onClick: this.homeLinkOnClick,
-      title: "back to Home"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
-      alt: "infoBar avatar"
-    }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(BarTitle, null, "bradkim06 ", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("small", null, "Hello small Title!")));
-  }
-
-}
-
-const InfoBarStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].aside`
-  position: absolute;
-  background: ${props => props.theme.bars.colors.background};
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: ${props => props.theme.bars.sizes.infoBar}px;
-  &::before {
-    content: "";
-    position: absolute;
-    left: ${props => props.theme.base.sizes.linesMargin};
-    right: ${props => props.theme.base.sizes.linesMargin};
-    height: 0;
-    bottom: 0;
-    border-top: 1px solid ${props => props.theme.base.colors.lines};
-  }
-
-  @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
-    display: none;
-  }
-`;
-const AvatarLinkBar = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
-  display: block;
-  float: left;
-  margin: 13px 0 0 30px;
-`;
-const BarTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
-  float: left;
-  margin: 10px 0 0 15px;
-  font-size: 1.1em;
-  color: ${props => props.theme.bars.colors.text};
-
-  & small {
-    display: block;
-    font-size: 0.65em;
-    margin: 2px 0 0 0;
-  }
-`;
-
-const mapStateToProps = state => {
-  return {
-    navigatorPosition: state.navigatorPosition,
-    navigatorShape: state.navigatorShape
-  };
-};
-
-const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_6__["setNavigatorPosition"]
-};
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(InfoBar));
+class InfoBar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component{constructor(...args){super(...args);this.homeLinkOnClick=_utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigator"].bind(this);this.pageLinkOnClick=_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAside"].bind(this);}render(){return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(InfoBarStyle,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(AvatarLinkBar,null,Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(gatsby__WEBPACK_IMPORTED_MODULE_3__["Link"],{to:"/",onClick:this.homeLinkOnClick,title:"back to Home"},Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_2__["default"],{src:_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,alt:"avatar"}))),Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(BarTitle,null,"bradkim06 ",Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("small",null,"Hello small Title!")));}}const InfoBarStyle=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("aside",{target:"e1bdnpr50"})("position:absolute;background:",props=>props.theme.bars.colors.background,";top:0;left:0;width:100%;height:",props=>props.theme.bars.sizes.infoBar,"px;&::before{content:\"\";position:absolute;left:",props=>props.theme.base.sizes.linesMargin,";right:",props=>props.theme.base.sizes.linesMargin,";height:0;bottom:0;border-top:1px solid ",props=>props.theme.base.colors.lines,";}@media (min-width:",props=>props.theme.mediaQueryTresholds.L,"px){display:none;}");const AvatarLinkBar=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e1bdnpr51"})({name:"ksjpl5",styles:"display:block;float:left;margin:13px 0 0 30px;"});const BarTitle=Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("div",{target:"e1bdnpr52"})("float:left;margin:10px 0 0 15px;font-size:1.1em;color:",props=>props.theme.bars.colors.text,";& small{display:block;font-size:0.65em;margin:2px 0 0 0;}");const mapStateToProps=(state,ownProps)=>{return{navigatorPosition:state.navigatorPosition,navigatorShape:state.navigatorShape};};const mapDispatchToProps={setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_6__["setNavigatorPosition"]};/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps,mapDispatchToProps)(InfoBar));
 
 /***/ }),
 

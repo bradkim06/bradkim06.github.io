@@ -50,8 +50,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ArrowUpward */ "./node_modules/@material-ui/icons/ArrowUpward.js");
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.tsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.js");
 /* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
 /* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
 /* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
@@ -632,12 +632,13 @@ const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["defau
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 const useSearchData = () => {
   let searchData = _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0__.data;
   return searchData;
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 /***/ })
 
