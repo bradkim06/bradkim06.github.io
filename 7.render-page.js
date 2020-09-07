@@ -42,7 +42,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/ArrowUpward */ "./node_modules/@material-ui/icons/ArrowUpward.js");
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.tsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.js");
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
 /* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.js");
 /* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
 /* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
@@ -671,13 +671,12 @@ var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_14__["default
 }, function (props) {
   return props.theme.base.colors.lines;
 });
+/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 var useSearchData = function useSearchData() {
   var searchData = Object(gatsby__WEBPACK_IMPORTED_MODULE_2__["useStaticQuery"])("2806038986");
   return searchData;
 };
-
-/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 /***/ }),
 
@@ -714,7 +713,7 @@ function featureNavigator(e) {
 
           _this.props.setNavigatorShape("open");
         });
-      }, 200);
+      }, 300);
     } else {
       setTimeout(function () {
         _this.props.setNavigatorPosition("is-featured");
@@ -744,7 +743,7 @@ function moveNavigatorAside(e) {
           setTimeout(function () {
             _this2.props.setNavigatorPosition("is-aside");
 
-            setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 300);
+            setTimeout(react_lazyload__WEBPACK_IMPORTED_MODULE_0__["forceCheck"], 600);
           });
         }
       }
