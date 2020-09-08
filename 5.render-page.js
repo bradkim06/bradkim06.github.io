@@ -52,11 +52,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.tsx");
 /* harmony import */ var _material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/WbSunny */ "./node_modules/@material-ui/icons/WbSunny.js");
 /* harmony import */ var _material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
-/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
-/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var _material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Brightness2 */ "./node_modules/@material-ui/icons/Brightness2.js");
+/* harmony import */ var _material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
+/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
 
 
 
@@ -77,7 +80,7 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     this.state = {
       fullscreen: false
     };
-    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_9__["featureNavigator"].bind(this);
+    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigator"].bind(this);
 
     this.arrowUpOnClick = () => {
       this.props.setScrollToTop(true);
@@ -103,27 +106,27 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
       isWideScreen,
       categories
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to list",
       onClick: this.homeOnClick,
       title: "Back to the list",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_12__["default"], {
       categories: categories,
       filterCategory: this.categoryFilterOnClick
-    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
       increaseFont: this.fontSetterOnClick
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to top",
       onClick: this.arrowUpOnClick,
       title: "Scroll to top",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Theme Toggle",
       onClick: this.themeToggleClick,
       title: "Theme Change",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null))));
+    }, this.props.themeToggle ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null) : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null))));
   }
 
 }
@@ -139,12 +142,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorShape"],
-  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_8__["setScrollToTop"],
-  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_8__["setFontSizeIncrease"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_8__["setCategoryFilter"],
-  setThemeToggle: _state_store__WEBPACK_IMPORTED_MODULE_8__["setThemeToggle"]
+  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorPosition"],
+  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorShape"],
+  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"],
+  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"],
+  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"],
+  setThemeToggle: _state_store__WEBPACK_IMPORTED_MODULE_9__["setThemeToggle"]
 };
 const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
