@@ -67,8 +67,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _InfoMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoMenu */ "./src/components/InfoBox/InfoMenu.tsx");
 /* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
 
 
 
@@ -94,13 +92,13 @@ class InfoBox extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       navigatorPosition,
       navigatorShape
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyleInfoBox, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
       className: `${navigatorPosition ? navigatorPosition : ""} 
          ${navigatorShape ? navigatorShape : ""}`
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_InfoHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
       avatarOnClick: this.avatarOnClick,
       expandOnClick: this.expandOnClick
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(InfoContent, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
       linkOnClick: this.menulinkOnClick
     })));
   }
@@ -187,8 +185,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../images/jpg/test.png */ "./src/images/jpg/test.png");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
 
 
 
@@ -200,19 +196,19 @@ function InfoHeader({
   avatarOnClick,
   expandOnClick
 }) {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Header, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(HeaderAvatarLink, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderAvatarLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     onClick: avatarOnClick,
     title: "back to Home"
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(HeaderAvatar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderAvatar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "avatar"
-  })))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(HeaderTitle, null, "bradkim06", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("small", null, "Personal Blog")), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderTitle, null, "bradkim06", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Personal Blog")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     "aria-label": "Expand the box",
     className: "expand",
     onClick: expandOnClick,
     title: "Expand the box"
-  }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
 }
 
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header`
@@ -342,8 +338,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
 
 
 
@@ -355,7 +349,7 @@ InfoMenu.propTypes = {
 function InfoMenu({
   linkOnClick
 }) {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(StyleInfoMenu, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_4__["jsx"])(StyledLink, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
     key: "/about/",
     to: "/about/",
     onClick: linkOnClick,
@@ -398,12 +392,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
 
 
 function InfoHeader() {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])(Text, null, "software developer.");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, null, "software developer.");
 }
 const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: block;

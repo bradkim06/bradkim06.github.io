@@ -39,8 +39,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
 /* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
-
 
 
 
@@ -58,14 +56,14 @@ class InfoBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   render() {
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(InfoBarStyle, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(AvatarLinkBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoBarStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AvatarLinkBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/",
       onClick: this.homeLinkOnClick,
       title: "back to Home"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
       src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
       alt: "infoBar avatar"
-    }))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(BarTitle, null, "bradkim06 ", Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("small", null, "Hello small Title!")));
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, "bradkim06 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Hello small Title!")));
   }
 
 }
