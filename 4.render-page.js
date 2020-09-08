@@ -185,6 +185,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../images/jpg/test.png */ "./src/images/jpg/test.png");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../content/meta/config */ "./content/meta/config.js");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_content_meta_config__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -203,7 +206,7 @@ function InfoHeader({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderAvatar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "avatar"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderTitle, null, "bradkim06", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Personal Blog")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_6___default.a.infoTitle.replace(/ /g, "\u00a0"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_6___default.a.infoTitleNote)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
     "aria-label": "Expand the box",
     className: "expand",
     onClick: expandOnClick,

@@ -39,6 +39,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
 /* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../content/meta/config */ "./content/meta/config.js");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_content_meta_config__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -63,7 +66,7 @@ class InfoBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
       src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
       alt: "infoBar avatar"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, "bradkim06 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Hello small Title!")));
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitleNote)));
   }
 
 }
