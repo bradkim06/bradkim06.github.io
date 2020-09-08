@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
@@ -104,26 +104,23 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
       isWideScreen,
       categories
     } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
       "aria-label": "Back to list",
       onClick: this.homeOnClick,
-      title: "Back to the list",
-      className: "iconButton"
+      title: "Back to the list"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CategoryFilter__WEBPACK_IMPORTED_MODULE_12__["default"], {
       categories: categories,
       filterCategory: this.categoryFilterOnClick
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, navigatorPosition === "is-aside" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
       increaseFont: this.fontSetterOnClick
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
       "aria-label": "Theme Toggle",
       onClick: this.themeToggleClick,
-      title: "Theme Change",
-      className: "iconButton"
-    }, this.props.themeToggle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "Theme Change"
+    }, this.props.themeToggle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
       "aria-label": "Back to top",
       onClick: this.arrowUpOnClick,
-      title: "Scroll to top",
-      className: "iconButton"
+      title: "Scroll to top"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
   }
 
@@ -201,10 +198,9 @@ const Group = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
     flex-direction: column;
   }
-
-  .iconButton {
-    color: ${props => props.theme.bars.colors.icon};
-  }
+`;
+const StyledIconButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"])`
+  color: ${props => props.theme.bars.colors.icon};
 `;
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(ActionsBar));
 
@@ -469,10 +465,7 @@ var _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0___namespac
 /* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
 /* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
 /* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! fuse.js */ "./node_modules/fuse.js/dist/fuse.esm.js");
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
-/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-
+/* harmony import */ var _SearchListItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SearchListItem */ "./src/components/ActionsBar/SearchListItem.tsx");
 
 
 
@@ -542,7 +535,7 @@ function SearchDialog() {
     scroll: scroll,
     "aria-labelledby": "scroll-dialog-title",
     "aria-describedby": "scroll-dialog-description",
-    maxWidth: "md",
+    maxWidth: "lg",
     fullWidth: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
     id: "scroll-dialog-title"
@@ -563,7 +556,7 @@ function SearchDialog() {
     value: query,
     onChange: onSearch,
     autoComplete: "off"
-  }), results && results.map(post => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SearchResult, {
+  }), results && results.map(post => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SearchListItem__WEBPACK_IMPORTED_MODULE_12__["default"], {
     title: post.item.node.frontmatter.title,
     subTitle: post.item.node.frontmatter.subTitle,
     slug: post.item.node.fields.slug,
@@ -573,26 +566,6 @@ function SearchDialog() {
     color: "primary"
   }, "Cancel"))));
 }
-
-const SearchResult = ({
-  title,
-  subTitle,
-  slug,
-  linkOnClick
-}) => {
-  const titleName = JSON.stringify(title, null, 4);
-  const subTitleName = JSON.stringify(subTitle, null, 4);
-  const path = JSON.stringify(slug, null, 4);
-
-  const movePage = () => {
-    linkOnClick();
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledLink, {
-    onClick: movePage,
-    to: path.replace(/\"/g, "")
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, "")))));
-};
 
 const options = {
   // isCaseSensitive: false,
@@ -609,40 +582,97 @@ const options = {
   // ignoreFieldNorm: false,
   keys: ["node.frontmatter.title", "node.frontmatter.subTitle", "node.frontmatter.category"]
 };
-const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].ul`
-  margin: 0;
-
-  & h3 {
-  }
-
-  & small {
-    display: block;
-  }
-`;
-const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["default"])(gatsby_link__WEBPACK_IMPORTED_MODULE_12___default.a)`
-  display: block;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  color: ${props => props.theme.navigator.colors.postsListItemLink};
-
-  @media (hover: hover) {
-    &:hover {
-      color: ${props => props.theme.navigator.colors.postsListItemLinkHover};
-      background-color: ${props => props.theme.base.colors.lines};
-      & .pointer {
-        border-radius: 65% 75%;
-      }
-    }
-  }
-`;
 /* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 const useSearchData = () => {
   let searchData = _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0__.data;
   return searchData;
 };
+
+/***/ }),
+
+/***/ "./src/components/ActionsBar/SearchListItem.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/ActionsBar/SearchListItem.tsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Grow */ "./node_modules/@material-ui/core/esm/Grow/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-link */ "./node_modules/gatsby-link/index.js");
+/* harmony import */ var gatsby_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gatsby_link__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+function SearchListItem({
+  title,
+  subTitle,
+  slug,
+  linkOnClick
+}) {
+  const titleName = JSON.stringify(title, null, 4);
+  const subTitleName = JSON.stringify(subTitle, null, 4);
+  const path = JSON.stringify(slug, null, 4);
+
+  const movePage = () => {
+    linkOnClick();
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+    onClick: movePage,
+    to: path.replace(/\"/g, "")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    in: true,
+    timeout: 500
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
+}
+
+const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(gatsby_link__WEBPACK_IMPORTED_MODULE_3___default.a)`
+  color: ${props => props.theme.navigator.colors.postsListItemLink};
+
+  &:hover {
+    color: ${props => props.theme.navigator.colors.postsListItemLinkHover};
+  }
+`;
+const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul`
+  list-style: none;
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100px;
+
+  resize: both;
+  overflow: auto;
+`;
+const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
+  width: 90%;
+  height: 90px;
+  padding: 0.5rem;
+  font-size: ${props => props.theme.main.fonts.subTitle.size}em;
+  text-align: center;
+  border-radius: 10px;
+  white-space: nowrap;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  p {
+    margin: 0;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (SearchListItem);
 
 /***/ })
 
