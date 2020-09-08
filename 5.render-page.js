@@ -50,11 +50,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ArrowUpward */ "./node_modules/@material-ui/icons/ArrowUpward.js");
 /* harmony import */ var _material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search */ "./src/components/ActionsBar/Search.tsx");
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
-/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
-/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var _material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/WbSunny */ "./node_modules/@material-ui/icons/WbSunny.js");
+/* harmony import */ var _material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _FontSetter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FontSetter */ "./src/components/ActionsBar/FontSetter.tsx");
+/* harmony import */ var _CategoryFilter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CategoryFilter */ "./src/components/ActionsBar/CategoryFilter.tsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @emotion/core */ "./node_modules/@emotion/core/dist/core.esm.js");
+
 
 
 
@@ -74,7 +77,7 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     this.state = {
       fullscreen: false
     };
-    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_8__["featureNavigator"].bind(this);
+    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_9__["featureNavigator"].bind(this);
 
     this.arrowUpOnClick = () => {
       this.props.setScrollToTop(true);
@@ -87,6 +90,10 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     this.categoryFilterOnClick = val => {
       this.props.setCategoryFilter(val);
     };
+
+    this.themeToggleClick = () => {
+      this.props.setThemeToggle();
+    };
   }
 
   render() {
@@ -96,22 +103,27 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
       isWideScreen,
       categories
     } = this.props;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(StyleActionsBar, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(Group, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to list",
       onClick: this.homeOnClick,
       title: "Back to the list",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_CategoryFilter__WEBPACK_IMPORTED_MODULE_11__["default"], {
       categories: categories,
       filterCategory: this.categoryFilterOnClick
-    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_10__["default"], {
       increaseFont: this.fontSetterOnClick
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Back to top",
       onClick: this.arrowUpOnClick,
       title: "Scroll to top",
       className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      "aria-label": "Theme Toggle",
+      onClick: this.themeToggleClick,
+      title: "Theme Change",
+      className: "iconButton"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_12__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null))));
   }
 
 }
@@ -121,16 +133,18 @@ const mapStateToProps = state => {
     navigatorPosition: state.navigatorPosition,
     navigatorShape: state.navigatorShape,
     isWideScreen: state.isWideScreen,
-    categoryFilter: state.categoryFilter
+    categoryFilter: state.categoryFilter,
+    themeToggle: state.themeToggle
   };
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"],
-  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_7__["setScrollToTop"],
-  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_7__["setFontSizeIncrease"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_7__["setCategoryFilter"]
+  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorPosition"],
+  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorShape"],
+  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_8__["setScrollToTop"],
+  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_8__["setFontSizeIncrease"],
+  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_8__["setCategoryFilter"],
+  setThemeToggle: _state_store__WEBPACK_IMPORTED_MODULE_8__["setThemeToggle"]
 };
 const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
@@ -606,10 +620,8 @@ const options = {
 };
 const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].ul`
   margin: 0;
-  margin-left: 30px;
 
-  & h2 {
-    font-size: 1.5em;
+  & h3 {
   }
 
   & small {
