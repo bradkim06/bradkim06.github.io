@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
@@ -117,16 +117,16 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(Group, null, navigatorPosition === "is-aside" && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
       increaseFont: this.fontSetterOnClick
     }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      "aria-label": "Back to top",
-      onClick: this.arrowUpOnClick,
-      title: "Scroll to top",
-      className: "iconButton"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
       "aria-label": "Theme Toggle",
       onClick: this.themeToggleClick,
       title: "Theme Change",
       className: "iconButton"
-    }, this.props.themeToggle ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null))));
+    }, this.props.themeToggle ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      "aria-label": "Back to top",
+      onClick: this.arrowUpOnClick,
+      title: "Scroll to top",
+      className: "iconButton"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
   }
 
 }
