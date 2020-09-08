@@ -126,7 +126,7 @@ class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
       onClick: this.themeToggleClick,
       title: "Theme Change",
       className: "iconButton"
-    }, this.props.themeToggle ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null) : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null))));
+    }, this.props.themeToggle ? Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : Object(_emotion_core__WEBPACK_IMPORTED_MODULE_13__["jsx"])(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null))));
   }
 
 }
