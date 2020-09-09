@@ -387,7 +387,7 @@ function _templateObject() {
 
 
 
-function InfoBar(_ref) {
+var InfoBar = function InfoBar(_ref) {
   var pages = _ref.pages;
   var state = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(function (state) {
     return {
@@ -413,7 +413,7 @@ function InfoBar(_ref) {
     src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_6___default.a,
     alt: "infoBar avatar"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitleNote)));
-}
+};
 
 var InfoBarStyle = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].aside(_templateObject(), function (props) {
   return props.theme.bars.colors.background;

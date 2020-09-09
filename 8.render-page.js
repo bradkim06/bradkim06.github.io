@@ -80,7 +80,7 @@ function _templateObject() {
 
 
 
-function InfoBox() {
+var InfoBox = function InfoBox() {
   var state = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
     return {
       navigatorShape: state.navigatorShape,
@@ -89,17 +89,17 @@ function InfoBox() {
   }, react_redux__WEBPACK_IMPORTED_MODULE_3__["shallowEqual"]);
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
-  var expandOnClick = function expandOnClick() {
+  function expandOnClick() {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorShape"])("closed"));
-  };
+  }
 
-  var avatarOnClick = function avatarOnClick(e) {
+  function avatarOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigatorFunc"])(e, state, dispatch);
-  };
+  }
 
-  var menulinkOnClick = function menulinkOnClick(e) {
+  function menulinkOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAsideFunc"])(e, state, dispatch);
-  };
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyleInfoBox, {
     className: (state.navigatorPosition ? state.navigatorPosition : "") + " \n         " + (state.navigatorShape ? state.navigatorShape : "")
@@ -109,7 +109,7 @@ function InfoBox() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
     linkOnClick: menulinkOnClick
   })));
-}
+};
 
 var StyleInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].aside(_templateObject(), function (props) {
   return props.theme.mediaQueryTresholds.L;
@@ -202,7 +202,7 @@ function _templateObject() {
 
 
 
-function InfoHeader(_ref) {
+var InfoHeader = function InfoHeader(_ref) {
   var avatarOnClick = _ref.avatarOnClick,
       expandOnClick = _ref.expandOnClick;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HeaderAvatarLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -218,7 +218,7 @@ function InfoHeader(_ref) {
     onClick: expandOnClick,
     title: "Expand the box"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_5___default.a, null)));
-}
+};
 
 var Header = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header(_templateObject(), function (props) {
   return props.theme.info.colors.socialIcons;
@@ -287,7 +287,7 @@ function _templateObject() {
 
 
 
-function InfoMenu(_ref) {
+var InfoMenu = function InfoMenu(_ref) {
   var linkOnClick = _ref.linkOnClick;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyleInfoMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledLink, {
     key: "/about/",
@@ -295,7 +295,7 @@ function InfoMenu(_ref) {
     onClick: linkOnClick,
     "data-shape": "closed"
   }, "About"));
-}
+};
 
 var StyleInfoMenu = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
 var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_3__["Link"])(_templateObject2(), function (props) {
@@ -316,7 +316,6 @@ var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return InfoHeader; });
 /* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -338,10 +337,13 @@ function _templateObject() {
 
 
 
-function InfoHeader() {
+
+var InfoText = function InfoText() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Text, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_3___default.a.infoText);
-}
+};
+
 var Text = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (InfoText);
 
 /***/ })
 

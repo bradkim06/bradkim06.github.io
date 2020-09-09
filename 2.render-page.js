@@ -384,6 +384,7 @@ const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
 const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
   width: 80%;
   display: flex;
+  word-break: break-all;
   flex-direction: column;
   padding: 1rem;
   color: ${props => props.theme.navigator.colors.postsListItemLink};
@@ -392,7 +393,7 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
   text-align: center;
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
