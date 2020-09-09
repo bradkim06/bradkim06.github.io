@@ -99,32 +99,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class List extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  render() {
-    const {
-      posts,
-      linkOnClick,
-      expandOnClick,
-      removeFilter,
-      categoryFilter,
-      navigatorShape
-    } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Posts, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      forceCheckOnScroll: true,
-      isNavigator: true
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      expandOnClick: expandOnClick,
-      categoryFilter: categoryFilter,
-      navigatorShape: navigatorShape,
-      removeFilter: removeFilter
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostList, null, posts.edges && posts.edges.map((post, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      key: i,
-      post: post,
-      linkOnClick: linkOnClick,
-      categoryFilter: categoryFilter
-    }))))));
-  }
-
+function List({
+  posts,
+  linkOnClick,
+  expandOnClick,
+  removeFilter,
+  categoryFilter,
+  navigatorShape
+}) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Posts, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    forceCheckOnScroll: true,
+    isNavigator: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    expandOnClick: expandOnClick,
+    categoryFilter: categoryFilter,
+    navigatorShape: navigatorShape,
+    removeFilter: removeFilter
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PostList, null, posts.edges && posts.edges.map((post, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    key: i,
+    post: post,
+    linkOnClick: linkOnClick,
+    categoryFilter: categoryFilter
+  }))))));
 }
 
 const Posts = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
@@ -298,53 +294,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class ListItem extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.state = {
-      hidden: false
-    };
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.categoryFilter !== this.props.categoryFilter) {
-      const category = this.props.post.node.frontmatter.category;
-      const categoryFilter = this.props.categoryFilter;
-
-      if (categoryFilter === "all posts") {
-        this.setState({
-          hidden: false
-        });
-      } else if (category !== categoryFilter) {
-        this.setState({
-          hidden: true
-        });
-      } else if (category === categoryFilter) {
-        this.setState({
-          hidden: false
-        });
-      }
+function ListItem({
+  post,
+  categoryFilter,
+  linkOnClick
+}) {
+  const {
+    0: hidden,
+    1: setHidden
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const category = post.node.frontmatter.category;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (categoryFilter === "all posts") {
+      setHidden(false);
+    } else if (category !== categoryFilter) {
+      setHidden(true);
+    } else if (category === categoryFilter) {
+      setHidden(false);
     }
-  }
-
-  render() {
-    const {
-      post,
-      linkOnClick
-    } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledListItem, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: `${post.node.frontmatter.category}`,
-      style: {
-        display: `${this.state.hidden ? "none" : "block"}`
-      },
-      key: post.node.fields.slug
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
-      activeClassName: "active",
-      to: post.node.fields.slug,
-      onClick: linkOnClick
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemText, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, post.node.frontmatter.title, " "), post.node.frontmatter.subTitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, post.node.frontmatter.subTitle))))));
-  }
-
+  }, [categoryFilter]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledListItem, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: `${post.node.frontmatter.category}`,
+    style: {
+      display: `${hidden ? "none" : "block"}`
+    },
+    key: post.node.fields.slug
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
+    activeClassName: "active",
+    to: post.node.fields.slug,
+    onClick: linkOnClick
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemText, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, post.node.frontmatter.title, " "), post.node.frontmatter.subTitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, post.node.frontmatter.subTitle))))));
 }
 
 const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
@@ -502,55 +481,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class Navigator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.linkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavigatorAside"].bind(this);
+function Navigator({
+  posts
+}) {
+  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => ({
+    navigatorShape: state.navigatorShape,
+    navigatorPosition: state.navigatorPosition,
+    categoryFilter: state.categoryFilter
+  }), react_redux__WEBPACK_IMPORTED_MODULE_1__["shallowEqual"]);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
 
-    this.expandOnClick = () => {
-      this.props.setNavigatorShape("open"); // setTimeout(forceCheck, 600);
-    };
-
-    this.removefilterOnClick = () => {
-      this.props.setCategoryFilter("all posts");
-    };
+  function expandOnClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"])("open")); // setTimeout(forceCheck, 600);
   }
 
-  render() {
-    const {
-      posts,
-      navigatorPosition,
-      navigatorShape,
-      categoryFilter
-    } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleNavigator, {
-      className: `${navigatorPosition ? navigatorPosition : ""} ${navigatorShape ? navigatorShape : ""} `
-    }, posts.totalCount && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_List__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      posts: posts,
-      navigatorPosition: navigatorPosition,
-      navigatorShape: navigatorShape,
-      linkOnClick: this.linkOnClick,
-      expandOnClick: this.expandOnClick,
-      categoryFilter: categoryFilter,
-      removeFilter: this.removefilterOnClick
-    }));
+  function linkOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavigatorAsideFunc"])(e, state, dispatch);
   }
 
-}
+  function removefilterOnClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setCategoryFilter"])("all posts"));
+  }
 
-const mapStateToProps = state => {
-  return {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleNavigator, {
+    className: `${state.navigatorPosition ? state.navigatorPosition : ""} ${state.navigatorShape ? state.navigatorShape : ""} `
+  }, posts.totalCount && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_List__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    posts: posts,
     navigatorPosition: state.navigatorPosition,
     navigatorShape: state.navigatorShape,
-    categoryFilter: state.categoryFilter
-  };
-};
+    linkOnClick: linkOnClick,
+    expandOnClick: expandOnClick,
+    categoryFilter: state.categoryFilter,
+    removeFilter: removefilterOnClick
+  }));
+}
 
-const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_3__["setCategoryFilter"]
-};
 const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
   transform: translate3d(0, 0, 0);
   will-change: left, top, bottom, width;
@@ -656,7 +621,7 @@ const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Navigator));
+/* harmony default export */ __webpack_exports__["default"] = (Navigator);
 
 /***/ })
 

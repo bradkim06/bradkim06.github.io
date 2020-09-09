@@ -72,78 +72,56 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class ActionsBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.state = {
-      fullscreen: false
-    };
-    this.homeOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigator"].bind(this);
+function ActionsBar({
+  categories
+}) {
+  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => ({
+    navigatorShape: state.navigatorShape,
+    navigatorPosition: state.navigatorPosition,
+    isWideScreen: state.isWideScreen
+  }), react_redux__WEBPACK_IMPORTED_MODULE_3__["shallowEqual"]);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
-    this.arrowUpOnClick = () => {
-      this.props.setScrollToTop(true);
-    };
-
-    this.fontSetterOnClick = val => {
-      this.props.setFontSizeIncrease(val);
-    };
-
-    this.categoryFilterOnClick = val => {
-      this.props.setCategoryFilter(val);
-    };
-
-    this.themeToggleClick = () => {
-      this.props.setThemeToggle();
-    };
+  function homeOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigatorFunc"])(e, state, dispatch);
   }
 
-  render() {
-    const {
-      navigatorPosition,
-      navigatorShape,
-      isWideScreen,
-      categories
-    } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
-      "aria-label": "Back to list",
-      onClick: this.homeOnClick,
-      title: "Back to the list"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (isWideScreen && navigatorShape === "open" || navigatorPosition !== "is-aside") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CategoryFilter__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      categories: categories,
-      filterCategory: this.categoryFilterOnClick
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, navigatorPosition === "is-aside" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
-      increaseFont: this.fontSetterOnClick
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
-      "aria-label": "Theme Toggle",
-      onClick: this.themeToggleClick,
-      title: "Theme Change"
-    }, this.props.themeToggle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
-      "aria-label": "Back to top",
-      onClick: this.arrowUpOnClick,
-      title: "Scroll to top"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
+  function arrowUpOnClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"])(true));
   }
 
+  function fontSetterOnClick(val) {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"])(val));
+  }
+
+  function categoryFilterOnClick(val) {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"])(val));
+  }
+
+  function themeToggleClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setThemeToggle"])());
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
+    "aria-label": "Back to list",
+    onClick: homeOnClick,
+    title: "Back to the list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_4___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_6__["default"], null), (state.isWideScreen && state.navigatorShape === "open" || state.navigatorPosition !== "is-aside") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CategoryFilter__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    categories: categories,
+    filterCategory: categoryFilterOnClick
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, state.navigatorPosition === "is-aside" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FontSetter__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    increaseFont: fontSetterOnClick
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
+    "aria-label": "Theme Toggle",
+    onClick: themeToggleClick,
+    title: "Theme Change"
+  }, state.themeToggle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_WbSunny__WEBPACK_IMPORTED_MODULE_7___default.a, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Brightness2__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
+    "aria-label": "Back to top",
+    onClick: arrowUpOnClick,
+    title: "Scroll to top"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
 }
 
-const mapStateToProps = state => {
-  return {
-    navigatorPosition: state.navigatorPosition,
-    navigatorShape: state.navigatorShape,
-    isWideScreen: state.isWideScreen,
-    categoryFilter: state.categoryFilter,
-    themeToggle: state.themeToggle
-  };
-};
-
-const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_9__["setNavigatorShape"],
-  setScrollToTop: _state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"],
-  setFontSizeIncrease: _state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"],
-  setCategoryFilter: _state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"],
-  setThemeToggle: _state_store__WEBPACK_IMPORTED_MODULE_9__["setThemeToggle"]
-};
 const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
   background: ${props => props.theme.bars.colors.background};
@@ -202,7 +180,7 @@ const Group = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 const StyledIconButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"])`
   color: ${props => props.theme.bars.colors.icon};
 `;
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, mapDispatchToProps)(ActionsBar));
+/* harmony default export */ __webpack_exports__["default"] = (ActionsBar);
 
 /***/ }),
 

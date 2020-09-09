@@ -76,46 +76,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class InfoBox extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.avatarOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigator"].bind(this);
-    this.menulinkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAside"].bind(this);
+function InfoBox() {
+  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => ({
+    navigatorShape: state.navigatorShape,
+    navigatorPosition: state.navigatorPosition
+  }), react_redux__WEBPACK_IMPORTED_MODULE_2__["shallowEqual"]);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
-    this.expandOnClick = () => {
-      this.props.setNavigatorShape("closed");
-    };
+  function expandOnClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"])("closed"));
   }
 
-  render() {
-    const {
-      navigatorPosition,
-      navigatorShape
-    } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
-      className: `${navigatorPosition ? navigatorPosition : ""} 
-         ${navigatorShape ? navigatorShape : ""}`
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      avatarOnClick: this.avatarOnClick,
-      expandOnClick: this.expandOnClick
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      linkOnClick: this.menulinkOnClick
-    })));
+  function avatarOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
   }
 
+  function menulinkOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
+    className: `${state.navigatorPosition ? state.navigatorPosition : ""} 
+         ${state.navigatorShape ? state.navigatorShape : ""}`
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    avatarOnClick: avatarOnClick,
+    expandOnClick: expandOnClick
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    linkOnClick: menulinkOnClick
+  })));
 }
 
-const mapStateToProps = state => {
-  return {
-    navigatorPosition: state.navigatorPosition,
-    navigatorShape: state.navigatorShape
-  };
-};
-
-const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorPosition"],
-  setNavigatorShape: _state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"]
-};
 const StyleInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].aside`
   display: none;
   @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
@@ -163,7 +153,7 @@ const InfoContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].di
     display: none;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(InfoBox));
+/* harmony default export */ __webpack_exports__["default"] = (InfoBox);
 
 /***/ }),
 
@@ -338,16 +328,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 
 
 
-
-InfoMenu.propTypes = {
-  linkOnClick: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired
-};
 
 function InfoMenu({
   linkOnClick
@@ -368,7 +352,7 @@ const StyleInfoMenu = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].
   margin: 0;
   width: 100%;
 `;
-const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_3__["Link"])`
+const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"])`
   padding: 0.5em;
   font-weight: 300;
   text-transform: lowercase;
@@ -395,10 +379,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../content/meta/config */ "./content/meta/config.js");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_content_meta_config__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 function InfoHeader() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, null, "software developer.");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_2___default.a.infoText);
 }
 const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: block;

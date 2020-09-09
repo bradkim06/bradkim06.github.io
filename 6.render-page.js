@@ -37,10 +37,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../images/jpg/test.png */ "./src/images/jpg/test.png");
 /* harmony import */ var _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
-/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
-/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../content/meta/config */ "./content/meta/config.js");
-/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_content_meta_config__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../content/meta/config */ "./content/meta/config.js");
+/* harmony import */ var _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_content_meta_config__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -50,25 +49,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function InfoBar({
+  pages
+}) {
+  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useSelector"])(state => ({
+    navigatorShape: state.navigatorShape,
+    navigatorPosition: state.navigatorPosition
+  }), react_redux__WEBPACK_IMPORTED_MODULE_4__["shallowEqual"]);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
 
-class InfoBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-    this.homeLinkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigator"].bind(this);
-    this.pageLinkOnClick = _utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAside"].bind(this);
+  function homeLinkOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
   }
 
-  render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoBarStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AvatarLinkBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-      to: "/",
-      onClick: this.homeLinkOnClick,
-      title: "back to Home"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
-      alt: "infoBar avatar"
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_8___default.a.infoTitleNote)));
+  function pageLinkOnClick(e) {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
   }
 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoBarStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AvatarLinkBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/",
+    onClick: homeLinkOnClick,
+    title: "back to Home"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+    alt: "infoBar avatar"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitleNote)));
 }
 
 const InfoBarStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].aside`
@@ -109,18 +114,7 @@ const BarTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
     margin: 2px 0 0 0;
   }
 `;
-
-const mapStateToProps = state => {
-  return {
-    navigatorPosition: state.navigatorPosition,
-    navigatorShape: state.navigatorShape
-  };
-};
-
-const mapDispatchToProps = {
-  setNavigatorPosition: _state_store__WEBPACK_IMPORTED_MODULE_6__["setNavigatorPosition"]
-};
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(InfoBar));
+/* harmony default export */ __webpack_exports__["default"] = (InfoBar);
 
 /***/ }),
 
