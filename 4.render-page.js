@@ -83,17 +83,17 @@ function InfoBox() {
   }), react_redux__WEBPACK_IMPORTED_MODULE_2__["shallowEqual"]);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
-  function expandOnClick() {
+  const expandOnClick = () => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"])("closed"));
-  }
+  };
 
-  function avatarOnClick(e) {
+  const avatarOnClick = e => {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
-  }
+  };
 
-  function menulinkOnClick(e) {
+  const menulinkOnClick = e => {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
-  }
+  };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
     className: `${state.navigatorPosition ? state.navigatorPosition : ""} 

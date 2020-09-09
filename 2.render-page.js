@@ -382,13 +382,14 @@ const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
   place-items: center;
 `;
 const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   color: ${props => props.theme.navigator.colors.postsListItemLink};
   border-radius: 30px;
   background-color: ${props => props.theme.search.colors.listBackground};
+  text-align: center;
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -838,17 +839,17 @@ function Navigator({
   }), react_redux__WEBPACK_IMPORTED_MODULE_1__["shallowEqual"]);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
 
-  function expandOnClick() {
+  const expandOnClick = () => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"])("open")); // setTimeout(forceCheck, 600);
-  }
+  };
 
-  function linkOnClick(e) {
+  const linkOnClick = e => {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavigatorAsideFunc"])(e, state, dispatch);
-  }
+  };
 
-  function removefilterOnClick() {
+  const removefilterOnClick = () => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setCategoryFilter"])("all posts"));
-  }
+  };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleNavigator, {
     className: `${state.navigatorPosition ? state.navigatorPosition : ""} ${state.navigatorShape ? state.navigatorShape : ""} `

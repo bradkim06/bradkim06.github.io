@@ -82,25 +82,25 @@ function ActionsBar({
   }), react_redux__WEBPACK_IMPORTED_MODULE_3__["shallowEqual"]);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
-  function homeOnClick(e) {
+  const homeOnClick = e => {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigatorFunc"])(e, state, dispatch);
-  }
+  };
 
-  function arrowUpOnClick() {
+  const arrowUpOnClick = () => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"])(true));
-  }
+  };
 
-  function fontSetterOnClick(val) {
+  const fontSetterOnClick = val => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"])(val));
-  }
+  };
 
-  function categoryFilterOnClick(val) {
+  const categoryFilterOnClick = val => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"])(val));
-  }
+  };
 
-  function themeToggleClick() {
+  const themeToggleClick = () => {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setThemeToggle"])());
-  }
+  };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
     "aria-label": "Back to list",
@@ -226,19 +226,19 @@ function CategoryFilter({
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const anchorRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
-  const handleToggle = () => {
+  function handleToggle() {
     setOpen(prevOpen => !prevOpen);
-  };
+  }
 
-  const handleClose = event => {
+  function handleClose(event) {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
 
     setOpen(false);
-  };
+  }
 
-  const handleSetting = event => {
+  function handleSetting(event) {
     const category = event.target.innerText.trim();
     filterCategory(category);
 
@@ -247,11 +247,14 @@ function CategoryFilter({
     }
 
     setOpen(false);
-  }; // return focus to the button when we transitioned from !open -> open
+  } // return focus to the button when we transitioned from !open -> open
 
 
   const prevOpen = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(open);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    console.log("prevOpen:" + prevOpen.current);
+    console.log("open:" + open);
+
     if (prevOpen.current === true && open === false) {
       anchorRef.current.focus();
     }
@@ -567,12 +570,13 @@ const StyledDialog = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["def
     background-color: ${props => props.theme.search.colors.background};
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 const useSearchData = () => {
   let searchData = _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0__.data;
   return searchData;
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 /***/ }),
 
@@ -631,13 +635,14 @@ const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
   place-items: center;
 `;
 const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   color: ${props => props.theme.navigator.colors.postsListItemLink};
   border-radius: 30px;
   background-color: ${props => props.theme.search.colors.listBackground};
+  text-align: center;
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
