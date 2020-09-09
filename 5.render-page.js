@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
@@ -444,6 +444,8 @@ var _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0___namespac
 /* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
 /* harmony import */ var fuse_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! fuse.js */ "./node_modules/fuse.js/dist/fuse.esm.js");
 /* harmony import */ var _SearchListItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SearchListItem */ "./src/components/ActionsBar/SearchListItem.tsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
 
 
 
@@ -507,7 +509,7 @@ function SearchDialog() {
     "data-shape": "closed",
     title: "Search",
     className: "iconButton"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_8___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledDialog, {
     open: open,
     onClose: handleClose,
     scroll: scroll,
@@ -560,6 +562,11 @@ const options = {
   // ignoreFieldNorm: false,
   keys: ["node.frontmatter.title", "node.frontmatter.subTitle", "node.frontmatter.category"]
 };
+const StyledDialog = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["default"])(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_3__["default"])`
+  .MuiDialog-paperFullWidth {
+    background-color: ${props => props.theme.search.colors.background};
+  }
+`;
 /* harmony default export */ __webpack_exports__["default"] = (SearchDialog);
 
 const useSearchData = () => {
@@ -609,7 +616,7 @@ function SearchListItem({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_1__["default"], {
     in: true,
     timeout: 500
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
 }
 
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
@@ -629,19 +636,19 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
   flex-direction: column;
   padding: 1rem;
   color: ${props => props.theme.navigator.colors.postsListItemLink};
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: ${props => props.theme.search.colors.listBackground};
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     color: ${props => props.theme.navigator.colors.postsListItemLinkHover};
+    background-color: ${props => props.theme.search.colors.hoverBackground};
   }
 
-  h3 {
+  h2 {
     margin: 0;
     font-weight: 700;
   }
