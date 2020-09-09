@@ -76,24 +76,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function InfoBox() {
+const InfoBox = () => {
   const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => ({
     navigatorShape: state.navigatorShape,
     navigatorPosition: state.navigatorPosition
   }), react_redux__WEBPACK_IMPORTED_MODULE_2__["shallowEqual"]);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
-  const expandOnClick = () => {
+  function expandOnClick() {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"])("closed"));
-  };
+  }
 
-  const avatarOnClick = e => {
+  function avatarOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
-  };
+  }
 
-  const menulinkOnClick = e => {
+  function menulinkOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
-  };
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
     className: `${state.navigatorPosition ? state.navigatorPosition : ""} 
@@ -104,7 +104,7 @@ function InfoBox() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
     linkOnClick: menulinkOnClick
   })));
-}
+};
 
 const StyleInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].aside`
   display: none;
@@ -185,10 +185,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function InfoHeader({
+const InfoHeader = ({
   avatarOnClick,
   expandOnClick
-}) {
+}) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderAvatarLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     onClick: avatarOnClick,
@@ -202,7 +202,7 @@ function InfoHeader({
     onClick: expandOnClick,
     title: "Expand the box"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
-}
+};
 
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header`
   line-height: 1;
@@ -333,16 +333,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function InfoMenu({
+const InfoMenu = ({
   linkOnClick
-}) {
+}) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
     key: "/about/",
     to: "/about/",
     onClick: linkOnClick,
     "data-shape": "closed"
   }, "About"));
-}
+};
 
 const StyleInfoMenu = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav`
   display: flex;
@@ -375,7 +375,6 @@ const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return InfoHeader; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
@@ -384,9 +383,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function InfoHeader() {
+
+const InfoText = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_2___default.a.infoText);
-}
+};
+
 const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: block;
   font-weight: 300;
@@ -408,6 +409,7 @@ const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   //   display: none;
   // }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (InfoText);
 
 /***/ }),
 

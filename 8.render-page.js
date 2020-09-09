@@ -89,17 +89,17 @@ function InfoBox() {
   }, react_redux__WEBPACK_IMPORTED_MODULE_3__["shallowEqual"]);
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
-  function expandOnClick() {
+  var expandOnClick = function expandOnClick() {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_8__["setNavigatorShape"])("closed"));
-  }
+  };
 
-  function avatarOnClick(e) {
+  var avatarOnClick = function avatarOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigatorFunc"])(e, state, dispatch);
-  }
+  };
 
-  function menulinkOnClick(e) {
+  var menulinkOnClick = function menulinkOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAsideFunc"])(e, state, dispatch);
-  }
+  };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyleInfoBox, {
     className: (state.navigatorPosition ? state.navigatorPosition : "") + " \n         " + (state.navigatorShape ? state.navigatorShape : "")

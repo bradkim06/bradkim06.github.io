@@ -49,9 +49,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function InfoBar({
+const InfoBar = ({
   pages
-}) {
+}) => {
   const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useSelector"])(state => ({
     navigatorShape: state.navigatorShape,
     navigatorPosition: state.navigatorPosition
@@ -74,7 +74,7 @@ function InfoBar({
     src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "infoBar avatar"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitleNote)));
-}
+};
 
 const InfoBarStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].aside`
   position: absolute;

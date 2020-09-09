@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
@@ -72,9 +72,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ActionsBar({
+const ActionsBar = ({
   categories
-}) {
+}) => {
   const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => ({
     navigatorShape: state.navigatorShape,
     navigatorPosition: state.navigatorPosition,
@@ -82,25 +82,25 @@ function ActionsBar({
   }), react_redux__WEBPACK_IMPORTED_MODULE_3__["shallowEqual"]);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
-  const homeOnClick = e => {
+  function homeOnClick(e) {
     Object(_utils_shared__WEBPACK_IMPORTED_MODULE_10__["featureNavigatorFunc"])(e, state, dispatch);
-  };
+  }
 
-  const arrowUpOnClick = () => {
+  function arrowUpOnClick() {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setScrollToTop"])(true));
-  };
+  }
 
-  const fontSetterOnClick = val => {
+  function fontSetterOnClick(val) {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setFontSizeIncrease"])(val));
-  };
+  }
 
-  const categoryFilterOnClick = val => {
+  function categoryFilterOnClick(val) {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setCategoryFilter"])(val));
-  };
+  }
 
-  const themeToggleClick = () => {
+  function themeToggleClick() {
     dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_9__["setThemeToggle"])());
-  };
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleActionsBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledIconButton, {
     "aria-label": "Back to list",
@@ -120,7 +120,7 @@ function ActionsBar({
     onClick: arrowUpOnClick,
     title: "Scroll to top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
-}
+};
 
 const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
@@ -216,10 +216,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function CategoryFilter({
+const CategoryFilter = ({
   categories,
   filterCategory
-}) {
+}) => {
   const {
     0: open,
     1: setOpen
@@ -293,7 +293,7 @@ function CategoryFilter({
     key: category,
     onClick: handleSetting
   }, category))))))));
-}
+};
 
 const FilterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].nav`
   @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
@@ -338,25 +338,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function FontSetter({
+const FontSetter = ({
   increaseFont
-}) {
+}) => {
   const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
   const anchorRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.useRef(null);
 
-  const handleToggle = () => {
+  function handleToggle() {
     setOpen(prevOpen => !prevOpen);
-  };
+  }
 
-  const handleClose = event => {
+  function handleClose(event) {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
 
     setOpen(false);
-  };
+  }
 
-  const handleSetting = event => {
+  function handleSetting(event) {
     const val = event.target.innerText.replace("%", "");
     const factor = +val / 100;
     increaseFont(factor);
@@ -366,7 +366,7 @@ function FontSetter({
     }
 
     setOpen(false);
-  }; // return focus to the button when we transitioned from !open -> open
+  } // return focus to the button when we transitioned from !open -> open
 
 
   const prevOpen = react__WEBPACK_IMPORTED_MODULE_0___default.a.useRef(open);
@@ -409,7 +409,7 @@ function FontSetter({
   }, "125%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: handleSetting
   }, "100%")))))));
-}
+};
 
 const FontSizeSetter = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].nav`
   @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
@@ -463,7 +463,7 @@ var _public_page_data_sq_d_2806038986_json__WEBPACK_IMPORTED_MODULE_0___namespac
 
 
 
-function SearchDialog() {
+const SearchDialog = () => {
   const data = useSearchData();
   const fuse = new fuse_js__WEBPACK_IMPORTED_MODULE_11__["default"](data.allMdx.edges, options);
   const {
@@ -484,14 +484,14 @@ function SearchDialog() {
     setScroll(scrollType);
   };
 
-  const handleClose = () => {
+  function handleClose() {
     setOpen(false);
     updateQuery("");
-  };
+  }
 
-  const onSearch = event => {
+  function onSearch(event) {
     updateQuery(event.currentTarget.value);
-  };
+  }
 
   const descriptionElementRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.useRef(null);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
@@ -548,7 +548,7 @@ function SearchDialog() {
     onClick: handleClose,
     color: "primary"
   }, "Cancel"))));
-}
+};
 
 const options = {
   // isCaseSensitive: false,
@@ -600,19 +600,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function SearchListItem({
+const SearchListItem = ({
   title,
   subTitle,
   slug,
   linkOnClick
-}) {
+}) => {
   const titleName = JSON.stringify(title, null, 4);
   const subTitleName = JSON.stringify(subTitle, null, 4);
   const path = JSON.stringify(slug, null, 4);
 
-  const movePage = () => {
+  function movePage() {
     linkOnClick();
-  };
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     onClick: movePage,
@@ -621,7 +621,7 @@ function SearchListItem({
     in: true,
     timeout: 500
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
-}
+};
 
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   aspect-ratio: 16/9;
