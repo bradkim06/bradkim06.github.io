@@ -20,10 +20,10 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoBar.tsx":
-/*!********************************************!*\
-  !*** ./src/components/InfoBox/InfoBar.tsx ***!
-  \********************************************/
+/***/ "./src/components/Info/Bar.tsx":
+/*!*************************************!*\
+  !*** ./src/components/Info/Bar.tsx ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52,18 +52,15 @@ __webpack_require__.r(__webpack_exports__);
 const InfoBar = ({
   pages
 }) => {
-  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useSelector"])(state => ({
-    navigatorShape: state.navigatorShape,
-    navigatorPosition: state.navigatorPosition
-  }), react_redux__WEBPACK_IMPORTED_MODULE_4__["shallowEqual"]);
+  const state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavData"])();
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["useDispatch"])();
 
   function homeLinkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavFeature"])(e, state, dispatch);
   }
 
-  function pageLinkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
+  function pageLinkOnClick() {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavAside"])(state, dispatch);
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoBarStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AvatarLinkBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {

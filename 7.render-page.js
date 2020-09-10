@@ -325,10 +325,10 @@ function createSvgIcon(path, displayName) {
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoBar.tsx":
-/*!********************************************!*\
-  !*** ./src/components/InfoBox/InfoBar.tsx ***!
-  \********************************************/
+/***/ "./src/components/Info/Bar.tsx":
+/*!*************************************!*\
+  !*** ./src/components/Info/Bar.tsx ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -389,20 +389,15 @@ function _templateObject() {
 
 var InfoBar = function InfoBar(_ref) {
   var pages = _ref.pages;
-  var state = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(function (state) {
-    return {
-      navigatorShape: state.navigatorShape,
-      navigatorPosition: state.navigatorPosition
-    };
-  }, react_redux__WEBPACK_IMPORTED_MODULE_5__["shallowEqual"]);
+  var state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavData"])();
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
 
   function homeLinkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["featureNavigatorFunc"])(e, state, dispatch);
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavFeature"])(e, state, dispatch);
   }
 
-  function pageLinkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavigatorAsideFunc"])(e, state, dispatch);
+  function pageLinkOnClick() {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavAside"])(state, dispatch);
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(InfoBarStyle, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AvatarLinkBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_3__["Link"], {

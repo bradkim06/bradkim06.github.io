@@ -327,10 +327,10 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 
 /***/ }),
 
-/***/ "./src/components/ActionsBar/SearchListItem.tsx":
-/*!******************************************************!*\
-  !*** ./src/components/ActionsBar/SearchListItem.tsx ***!
-  \******************************************************/
+/***/ "./src/components/Actions/SearchListItem.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/Actions/SearchListItem.tsx ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -391,7 +391,7 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
   flex-direction: column;
   padding: 1rem;
   color: ${props => props.theme.navigator.colors.postsListItemLink};
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: ${props => props.theme.search.colors.listBackground};
   text-align: center;
 
@@ -441,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _ListHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ListHeader */ "./src/components/Navigator/ListHeader.tsx");
 /* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ListItem */ "./src/components/Navigator/ListItem.tsx");
-/* harmony import */ var _SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SpringScrollbars */ "./src/components/SpringScrollbars/index.js");
+/* harmony import */ var _Scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Scroll */ "./src/components/Scroll/index.js");
 
 
 
@@ -456,7 +456,7 @@ const List = ({
   categoryFilter,
   navigatorShape
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Posts, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SpringScrollbars__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Posts, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Scroll__WEBPACK_IMPORTED_MODULE_4__["default"], {
     forceCheckOnScroll: true,
     isNavigator: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ListHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -637,7 +637,7 @@ const Filter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ActionsBar_SearchListItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ActionsBar/SearchListItem */ "./src/components/ActionsBar/SearchListItem.tsx");
+/* harmony import */ var _Actions_SearchListItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Actions/SearchListItem */ "./src/components/Actions/SearchListItem.tsx");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 
 
@@ -668,7 +668,7 @@ const ListItem = ({
       display: `${hidden ? "none" : "block"}`
     },
     key: post.node.fields.slug
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ActionsBar_SearchListItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_SearchListItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: post.node.frontmatter.title,
     subTitle: post.node.frontmatter.subTitle && post.node.frontmatter.subTitle,
     slug: post.node.fields.slug,
@@ -846,19 +846,16 @@ __webpack_require__.r(__webpack_exports__);
 const Navigator = ({
   posts
 }) => {
-  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => ({
-    navigatorShape: state.navigatorShape,
-    navigatorPosition: state.navigatorPosition,
-    categoryFilter: state.categoryFilter
-  }), react_redux__WEBPACK_IMPORTED_MODULE_1__["shallowEqual"]);
+  const stateFilter = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.categoryFilter);
+  const state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavData"])();
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
 
   function expandOnClick() {
-    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"])("open")); // setTimeout(forceCheck, 600);
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_3__["setNavigatorShape"])("open"));
   }
 
-  function linkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavigatorAsideFunc"])(e, state, dispatch);
+  function linkOnClick() {
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_4__["moveNavAside"])(state, dispatch);
   }
 
   function removefilterOnClick() {
@@ -873,7 +870,7 @@ const Navigator = ({
     navigatorShape: state.navigatorShape,
     linkOnClick: linkOnClick,
     expandOnClick: expandOnClick,
-    categoryFilter: state.categoryFilter,
+    categoryFilter: stateFilter,
     removeFilter: removefilterOnClick
   }));
 };
@@ -984,6 +981,22 @@ const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 `;
 /* harmony default export */ __webpack_exports__["default"] = (Navigator);
+
+/***/ }),
+
+/***/ "./src/components/Navigator/index.tsx":
+/*!********************************************!*\
+  !*** ./src/components/Navigator/index.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Navigator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navigator */ "./src/components/Navigator/Navigator.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Navigator__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
 
 /***/ })
 

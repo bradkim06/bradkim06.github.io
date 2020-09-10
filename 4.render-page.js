@@ -49,10 +49,10 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoBox.tsx":
-/*!********************************************!*\
-  !*** ./src/components/InfoBox/InfoBox.tsx ***!
-  \********************************************/
+/***/ "./src/components/Info/Box.tsx":
+/*!*************************************!*\
+  !*** ./src/components/Info/Box.tsx ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -62,9 +62,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _InfoHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InfoHeader */ "./src/components/InfoBox/InfoHeader.tsx");
-/* harmony import */ var _InfoText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoText */ "./src/components/InfoBox/InfoText.tsx");
-/* harmony import */ var _InfoMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoMenu */ "./src/components/InfoBox/InfoMenu.tsx");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./src/components/Info/Header.tsx");
+/* harmony import */ var _Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Text */ "./src/components/Info/Text.tsx");
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Menu */ "./src/components/Info/Menu.tsx");
 /* harmony import */ var _utils_shared__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../utils/shared */ "./src/utils/shared.tsx");
 /* harmony import */ var _state_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/store */ "./src/state/store.tsx");
 
@@ -77,10 +77,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const InfoBox = () => {
-  const state = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => ({
-    navigatorShape: state.navigatorShape,
-    navigatorPosition: state.navigatorPosition
-  }), react_redux__WEBPACK_IMPORTED_MODULE_2__["shallowEqual"]);
+  const state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavData"])();
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
   function expandOnClick() {
@@ -88,20 +85,21 @@ const InfoBox = () => {
   }
 
   function avatarOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["featureNavigatorFunc"])(e, state, dispatch);
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavFeature"])(e, state, dispatch);
   }
 
-  function menulinkOnClick(e) {
-    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavigatorAsideFunc"])(e, state, dispatch);
+  function menulinkOnClick() {
+    dispatch(Object(_state_store__WEBPACK_IMPORTED_MODULE_7__["setNavigatorShape"])("closed"));
+    Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavAside"])(state, dispatch);
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoBox, {
     className: `${state.navigatorPosition ? state.navigatorPosition : ""} 
          ${state.navigatorShape ? state.navigatorShape : ""}`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoHeader__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
     avatarOnClick: avatarOnClick,
     expandOnClick: expandOnClick
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoText__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InfoMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_5__["default"], {
     linkOnClick: menulinkOnClick
   })));
 };
@@ -157,10 +155,10 @@ const InfoContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].di
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoHeader.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/InfoBox/InfoHeader.tsx ***!
-  \***********************************************/
+/***/ "./src/components/Info/Header.tsx":
+/*!****************************************!*\
+  !*** ./src/components/Info/Header.tsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -316,10 +314,10 @@ const HeaderTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h1
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoMenu.tsx":
-/*!*********************************************!*\
-  !*** ./src/components/InfoBox/InfoMenu.tsx ***!
-  \*********************************************/
+/***/ "./src/components/Info/Menu.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Info/Menu.tsx ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -366,10 +364,10 @@ const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
 
 /***/ }),
 
-/***/ "./src/components/InfoBox/InfoText.tsx":
-/*!*********************************************!*\
-  !*** ./src/components/InfoBox/InfoText.tsx ***!
-  \*********************************************/
+/***/ "./src/components/Info/Text.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Info/Text.tsx ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
