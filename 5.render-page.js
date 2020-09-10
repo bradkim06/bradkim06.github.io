@@ -170,13 +170,15 @@ const Group = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   flex-direction: row;
   align-items: center;
 
+  .MuiIconButton-root {
+    color: ${props => props.theme.bars.colors.icon};
+  }
+
   @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
     flex-direction: column;
   }
 `;
-const StyledIconButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"])`
-  color: ${props => props.theme.bars.colors.icon};
-`;
+const StyledIconButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"])``;
 /* harmony default export */ __webpack_exports__["default"] = (ActionsBar);
 
 /***/ }),
@@ -320,8 +322,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
 /* harmony import */ var _material_ui_icons_FormatSize__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/FormatSize */ "./node_modules/@material-ui/icons/FormatSize.js");
 /* harmony import */ var _material_ui_icons_FormatSize__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_FormatSize__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-
 
 
 
@@ -371,7 +371,7 @@ const FontSetter = ({
 
     prevOpen.current = open;
   }, [open]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FontSizeSetter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
     ref: anchorRef,
     "aria-controls": open ? "menu-list-grow" : undefined,
     "aria-haspopup": "true",
@@ -405,13 +405,6 @@ const FontSetter = ({
   }, "100%")))))));
 };
 
-const FontSizeSetter = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].nav`
-  @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
-  }
-  .fontOpen {
-    color: ${props => props.theme.bars.colors.icon};
-  }
-`;
 /* harmony default export */ __webpack_exports__["default"] = (FontSetter);
 
 /***/ }),
