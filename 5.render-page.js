@@ -625,8 +625,11 @@ const SearchListItem = ({
 
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   aspect-ratio: 16/9;
-  background: red;
   margin: 0.5rem 0;
+
+  @media (max-width: ${props => props.theme.mediaQueryTresholds.M}px) {
+    margin: 0.25rem 0;
+  }
 `;
 const SearchWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul`
   list-style: none;
@@ -661,6 +664,16 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
 
   small {
     font-weight: 400;
+  }
+
+  @media (max-width: ${props => props.theme.mediaQueryTresholds.M}px) {
+    h2 {
+      font-size: 16px;
+    }
+
+    small {
+      font-size: 12px;
+    }
   }
 `;
 /* harmony default export */ __webpack_exports__["default"] = (SearchListItem);
