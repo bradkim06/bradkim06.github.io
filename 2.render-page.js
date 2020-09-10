@@ -411,6 +411,17 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
 
   small {
     font-weight: 400;
+    font-size: 18px;
+  }
+
+  @media (max-width: ${props => props.theme.mediaQueryTresholds.L}px) {
+    h2 {
+      font-size: 20px;
+    }
+
+    small {
+      font-size: 14px;
+    }
   }
 
   @media (max-width: ${props => props.theme.mediaQueryTresholds.M}px) {
