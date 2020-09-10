@@ -441,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _ListHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ListHeader */ "./src/components/Navigator/ListHeader.tsx");
 /* harmony import */ var _ListItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ListItem */ "./src/components/Navigator/ListItem.tsx");
-/* harmony import */ var _Scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Scroll */ "./src/components/Scroll/index.js");
+/* harmony import */ var _Scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Scroll */ "./src/components/Scroll/index.tsx");
 
 
 
