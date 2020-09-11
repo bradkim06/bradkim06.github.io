@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://bradkim06.github.io/sitemap.xml
-Host: https://bradkim06.github.io
