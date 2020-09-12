@@ -79,8 +79,7 @@ function _templateObject() {
 
 
 
-
-var InfoBox = function InfoBox() {
+/* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_7__["moveNavData"])();
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
 
@@ -105,8 +104,7 @@ var InfoBox = function InfoBox() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_6__["default"], {
     linkOnClick: menulinkOnClick
   })));
-};
-
+});
 var StyleInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].aside(_templateObject(), function (props) {
   return props.theme.mediaQueryTresholds.L;
 }, function (props) {
@@ -123,7 +121,6 @@ var InfoContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(
 }, function (props) {
   return props.theme.navigator.sizes.closedHeight;
 });
-/* harmony default export */ __webpack_exports__["default"] = (InfoBox);
 
 /***/ }),
 
@@ -197,8 +194,7 @@ function _templateObject() {
 
 
 
-
-var InfoHeader = function InfoHeader(_ref) {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var avatarOnClick = _ref.avatarOnClick,
       expandOnClick = _ref.expandOnClick;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HeaderAvatarLink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -214,8 +210,7 @@ var InfoHeader = function InfoHeader(_ref) {
     onClick: expandOnClick,
     title: "Expand the box"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_5___default.a, null)));
-};
-
+});
 var Header = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header(_templateObject(), function (props) {
   return props.theme.info.colors.socialIcons;
 });
@@ -239,7 +234,6 @@ var HeaderTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1(_
 }, function (props) {
   return props.theme.info.fonts.boxTitleSizeL;
 });
-/* harmony default export */ __webpack_exports__["default"] = (InfoHeader);
 
 /***/ }),
 
@@ -282,8 +276,7 @@ function _templateObject() {
 
 
 
-
-var InfoMenu = function InfoMenu(_ref) {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var linkOnClick = _ref.linkOnClick;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyleInfoMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledLink, {
     key: "/about/",
@@ -291,15 +284,13 @@ var InfoMenu = function InfoMenu(_ref) {
     onClick: linkOnClick,
     "data-shape": "closed"
   }, "About"));
-};
-
+});
 var StyleInfoMenu = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav(_templateObject());
 var StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_3__["Link"])(_templateObject2(), function (props) {
   return props.theme.info.colors.menuLink;
 }, function (props) {
   return props.theme.info.colors.menuLinkHover;
 });
-/* harmony default export */ __webpack_exports__["default"] = (InfoMenu);
 
 /***/ }),
 
@@ -333,13 +324,10 @@ function _templateObject() {
 
 
 
-
-var InfoText = function InfoText() {
+/* harmony default export */ __webpack_exports__["default"] = (function () {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Text, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_3___default.a.infoText);
-};
-
+});
 var Text = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (InfoText);
 
 /***/ })
 

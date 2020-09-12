@@ -366,7 +366,7 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grow__WEBPACK_IMPORTED_MODULE_1__["default"], {
     in: true,
     timeout: 500
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
 });
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   aspect-ratio: 16/9;
@@ -402,33 +402,34 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
     background-color: ${props => props.theme.search.colors.hoverBackground};
   }
 
-  h2 {
+  h1 {
     margin: 0;
     font-weight: 700;
+    font-size: 1.8em;
   }
 
   small {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1em;
   }
 
   @media (max-width: ${props => props.theme.mediaQueryTresholds.L}px) {
-    h2 {
-      font-size: 20px;
+    h1 {
+      font-size: 1.5em;
     }
 
     small {
-      font-size: 14px;
+      font-size: 0.9em;
     }
   }
 
   @media (max-width: ${props => props.theme.mediaQueryTresholds.M}px) {
-    h2 {
-      font-size: 16px;
+    h1 {
+      font-size: 1.2em;
     }
 
     small {
-      font-size: 12px;
+      font-size: 0.8em;
     }
   }
 `;
@@ -690,8 +691,8 @@ const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
         padding: 0.8rem 0.5rem 0 0.5rem;
         text-align: center;
 
-        h2 {
-          font-size: 16px;
+        h1 {
+          font-size: 0.9em;
         }
 
         small {
