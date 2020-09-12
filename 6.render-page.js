@@ -48,8 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const InfoBar = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   pages
 }) => {
   const state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavData"])();
@@ -71,8 +70,7 @@ const InfoBar = ({
     src: _images_jpg_test_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "infoBar avatar"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BarTitle, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, _content_meta_config__WEBPACK_IMPORTED_MODULE_7___default.a.infoTitleNote)));
-};
-
+});
 const InfoBarStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].aside`
   position: absolute;
   background: ${props => props.theme.bars.colors.background};
@@ -111,7 +109,6 @@ const BarTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
     margin: 2px 0 0 0;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (InfoBar);
 
 /***/ }),
 

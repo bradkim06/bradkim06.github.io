@@ -75,8 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const InfoBox = () => {
+/* harmony default export */ __webpack_exports__["default"] = (() => {
   const state = Object(_utils_shared__WEBPACK_IMPORTED_MODULE_6__["moveNavData"])();
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
@@ -102,8 +101,7 @@ const InfoBox = () => {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(InfoContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Text__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_5__["default"], {
     linkOnClick: menulinkOnClick
   })));
-};
-
+});
 const StyleInfoBox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].aside`
   display: none;
   @media (min-width: ${props => props.theme.mediaQueryTresholds.L}px) {
@@ -151,7 +149,6 @@ const InfoContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].di
     display: none;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (InfoBox);
 
 /***/ }),
 
@@ -182,8 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const InfoHeader = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   avatarOnClick,
   expandOnClick
 }) => {
@@ -200,8 +196,7 @@ const InfoHeader = ({
     onClick: expandOnClick,
     title: "Expand the box"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_4___default.a, null)));
-};
-
+});
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header`
   line-height: 1;
   position: relative;
@@ -310,7 +305,6 @@ const HeaderTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h1
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (InfoHeader);
 
 /***/ }),
 
@@ -330,8 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const InfoMenu = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   linkOnClick
 }) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyleInfoMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, {
@@ -340,8 +333,7 @@ const InfoMenu = ({
     onClick: linkOnClick,
     "data-shape": "closed"
   }, "About"));
-};
-
+});
 const StyleInfoMenu = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav`
   display: flex;
   flex-direction: column;
@@ -360,7 +352,6 @@ const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defaul
     color: ${props => props.theme.info.colors.menuLinkHover};
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (InfoMenu);
 
 /***/ }),
 
@@ -381,11 +372,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const InfoText = () => {
+/* harmony default export */ __webpack_exports__["default"] = (() => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Text, null, _content_meta_config__WEBPACK_IMPORTED_MODULE_2___default.a.infoText);
-};
-
+});
 const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: block;
   font-weight: 300;
@@ -407,7 +396,6 @@ const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   //   display: none;
   // }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (InfoText);
 
 /***/ }),
 

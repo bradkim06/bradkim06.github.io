@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
@@ -71,8 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const ActionsBar = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   categories
 }) => {
   const isThemeState = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => state.themeToggle);
@@ -117,8 +116,7 @@ const ActionsBar = ({
     onClick: arrowUpOnClick,
     title: "Scroll to top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowUpward__WEBPACK_IMPORTED_MODULE_5___default.a, null))));
-};
-
+});
 const StyleActionsBar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
   background: ${props => props.theme.bars.colors.background};
@@ -179,7 +177,6 @@ const Group = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   }
 `;
 const StyledIconButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"])``;
-/* harmony default export */ __webpack_exports__["default"] = (ActionsBar);
 
 /***/ }),
 
@@ -214,8 +211,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const CategoryFilter = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   categories,
   filterCategory
 }) => {
@@ -289,8 +285,7 @@ const CategoryFilter = ({
     key: category,
     onClick: handleSetting
   }, category))))))));
-};
-
+});
 const FilterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].nav`
   @media (min-width: ${props => props.theme.mediaQueryTresholds.M}px) {
   }
@@ -298,7 +293,6 @@ const FilterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].
     color: ${props => props.theme.bars.colors.icon};
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (CategoryFilter);
 
 /***/ }),
 
@@ -331,8 +325,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const FontSetter = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   increaseFont
 }) => {
   const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
@@ -403,9 +396,7 @@ const FontSetter = ({
   }, "125%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: handleSetting
   }, "100%")))))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (FontSetter);
+});
 
 /***/ }),
 
@@ -586,8 +577,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const SearchListItem = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   title,
   subTitle,
   slug,
@@ -608,8 +598,7 @@ const SearchListItem = ({
     in: true,
     timeout: 500
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
-};
-
+});
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   aspect-ratio: 16/9;
   margin: 0.5rem 0;
@@ -674,7 +663,6 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (SearchListItem);
 
 /***/ })
 

@@ -346,8 +346,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const SearchListItem = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   title,
   subTitle,
   slug,
@@ -368,8 +367,7 @@ const SearchListItem = ({
     in: true,
     timeout: 500
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FlexChild, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, titleName.replace(/\"/g, "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Divider, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, subTitleName !== "null" && subTitleName.replace(/\"/g, ""))))));
-};
-
+});
 const Divider = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   aspect-ratio: 16/9;
   margin: 0.5rem 0;
@@ -434,7 +432,6 @@ const FlexChild = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li`
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (SearchListItem);
 
 /***/ }),
 
@@ -458,8 +455,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const List = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   posts,
   linkOnClick,
   expandOnClick,
@@ -481,8 +477,7 @@ const List = ({
     linkOnClick: linkOnClick,
     categoryFilter: categoryFilter
   }))))));
-};
-
+});
 const Posts = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   position: absolute;
   left: 0;
@@ -517,7 +512,6 @@ const PostList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul`
     display: none;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (List);
 
 /***/ }),
 
@@ -543,14 +537,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-function ListHeader({
+/* harmony default export */ __webpack_exports__["default"] = (({
   expandOnClick,
   categoryFilter,
   navigatorShape,
   removeFilter
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, navigatorShape === "closed" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Closed, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "List of posts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, navigatorShape === "closed" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Closed, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "List of posts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     "aria-label": "Expand the list",
     onClick: expandOnClick,
     title: "Expand the list",
@@ -561,8 +554,7 @@ function ListHeader({
     title: "Clear filtering",
     className: "removeButton"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_3___default.a, null))));
-}
-
+});
 const Closed = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
   display: none;
 
@@ -581,7 +573,7 @@ const Closed = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
     padding: 0 30px 0 40px;
   }
 
-  & h3 {
+  & h1 {
     font-size: 1.1em;
     color: ${props => props.theme.navigator.colors.postsHeader};
     font-weight: 600;
@@ -633,7 +625,6 @@ const Filter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (ListHeader);
 
 /***/ }),
 
@@ -653,8 +644,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const ListItem = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   post,
   categoryFilter,
   linkOnClick
@@ -685,8 +675,7 @@ const ListItem = ({
     slug: post.node.fields.slug,
     linkOnClick: linkOnClick
   })));
-};
-
+});
 const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   & ul {
     padding: 0;
@@ -827,8 +816,6 @@ const StyledListItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
 //   }
 // `;
 
-/* harmony default export */ __webpack_exports__["default"] = (ListItem);
-
 /***/ }),
 
 /***/ "./src/components/Navigator/Navigator.tsx":
@@ -853,8 +840,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const Navigator = ({
+/* harmony default export */ __webpack_exports__["default"] = (({
   posts
 }) => {
   const stateFilter = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(state => state.categoryFilter);
@@ -884,8 +870,7 @@ const Navigator = ({
     categoryFilter: stateFilter,
     removeFilter: removefilterOnClick
   }));
-};
-
+});
 const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
   transform: translate3d(0, 0, 0);
   will-change: left, top, bottom, width;
@@ -991,7 +976,6 @@ const StyleNavigator = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (Navigator);
 
 /***/ }),
 
