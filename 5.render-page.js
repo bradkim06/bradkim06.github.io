@@ -27,7 +27,7 @@ webpackEmptyContext.id = "./plugins/gatsby-plugin-top-layout sync recursive";
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}}]}}}");
+module.exports = JSON.parse("{\"data\":{\"allMdx\":{\"edges\":[{\"node\":{\"fields\":{\"slug\":\"/test/testing/\"},\"frontmatter\":{\"title\":\"MDX full test\",\"subTitle\":null,\"category\":\"test\"}}},{\"node\":{\"fields\":{\"slug\":\"/you-only-live-once/\"},\"frontmatter\":{\"title\":\"You only live once\",\"subTitle\":\"But if you do it right, once is enough\",\"category\":\"sayings\"}}},{\"node\":{\"fields\":{\"slug\":\"/starters/\"},\"frontmatter\":{\"title\":\"Other GatsbyJs starters\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/success/\"},\"frontmatter\":{\"title\":\"Success\",\"subTitle\":null,\"category\":null}}},{\"node\":{\"fields\":{\"slug\":\"/about/\"},\"frontmatter\":{\"title\":\"About\",\"subTitle\":null,\"category\":null}}}]}}}");
 
 /***/ }),
 
