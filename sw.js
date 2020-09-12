@@ -25,7 +25,44 @@ workbox.core.clientsClaim();
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
+self.__precacheManifest = [
+  {
+    "url": "webpack-runtime-4bc1ff4e94003106027b.js"
+  },
+  {
+    "url": "framework-8c8d363c63d1a9a80d21.js"
+  },
+  {
+    "url": "app-7c9f4ce7ed20680f623e.js"
+  },
+  {
+    "url": "offline-plugin-app-shell-fallback/index.html",
+    "revision": "6497f9808a41edd85e244e73c7a0c5ba"
+  },
+  {
+    "url": "google-fonts/s/ibmplexserif/v9/jizDREVNn1dOx-zrZ2X3pZvkTiUf2zc.woff2",
+    "revision": "7261ee2cbee34a8491898940e0af500d"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2",
+    "revision": "24f7b0944e9e03a905f9d7701573b2cd"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2",
+    "revision": "819af3d3abdc9f135d49b80a91e2ff4c"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2",
+    "revision": "33543c5cc5d88f5695dd08c87d280dfd"
+  },
+  {
+    "url": "polyfill-c00b1c2754b4605acd9f.js"
+  },
+  {
+    "url": "manifest.webmanifest",
+    "revision": "c030acd3ab7e1c6e396b89b474508f88"
+  }
+].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
@@ -115,7 +152,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-063ee57f24cc0c0eebc0.js`))) {
+  if (!resources || !(await caches.match(`/app-7c9f4ce7ed20680f623e.js`))) {
     return await fetch(event.request)
   }
 
