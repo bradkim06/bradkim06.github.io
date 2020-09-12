@@ -549,7 +549,7 @@ __webpack_require__.r(__webpack_exports__);
     onClick: expandOnClick,
     title: "Expand the list",
     className: "expandButton"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4___default.a, null))), navigatorShape === "open" && categoryFilter !== "all posts" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Filter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Category Filter:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, categoryFilter), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ExpandLess__WEBPACK_IMPORTED_MODULE_4___default.a, null))), navigatorShape === "open" && categoryFilter !== "all posts" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Filter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Active Category Filter:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, categoryFilter), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
     "aria-label": "Remove filtering",
     onClick: removeFilter,
     title: "Clear filtering",
@@ -607,6 +607,7 @@ const Filter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
     position: absolute;
     top: 0;
     right: 0;
+    color: ${props => props.theme.navigator.colors.postsHeader};
   }
   & strong {
     font-weight: 600;
