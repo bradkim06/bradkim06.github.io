@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e3953b2454b172bcd440.js"
+    "url": "webpack-runtime-7dabb21b4498a8f3362c.js"
   },
   {
     "url": "framework-b5b229d58c3c710d5429.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c656c735d2761453c685317af91b7872"
+    "revision": "08dff5abc386e1626af150cc2a2bf0e3"
   },
   {
     "url": "google-fonts/s/ibmplexserif/v9/jizDREVNn1dOx-zrZ2X3pZvkTiUf2zc.woff2",
@@ -53,6 +53,18 @@ self.__precacheManifest = [
   },
   {
     "url": "google-fonts/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2",
+    "revision": "33543c5cc5d88f5695dd08c87d280dfd"
+  },
+  {
+    "url": "google-fonts/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2",
+    "revision": "24f7b0944e9e03a905f9d7701573b2cd"
+  },
+  {
+    "url": "google-fonts/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2",
+    "revision": "819af3d3abdc9f135d49b80a91e2ff4c"
+  },
+  {
+    "url": "google-fonts/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2",
     "revision": "33543c5cc5d88f5695dd08c87d280dfd"
   },
   {
