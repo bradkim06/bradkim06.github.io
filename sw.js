@@ -27,33 +27,21 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0602f3427d4e9e84e1a2.js"
+    "url": "webpack-runtime-2b98107a9778ac3a4371.js"
   },
   {
-    "url": "framework-63ec46a3540d83159f28.js"
+    "url": "framework-b5b229d58c3c710d5429.js"
   },
   {
-    "url": "app-815d3c27f6b5d5b9977b.js"
+    "url": "app-17e94e19b5bf1d2d6ecc.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b93e4dfe9bad20db70c92a1f2144dd9e"
+    "revision": "742f72f108ee91ad97910a691ff19dd6"
   },
   {
     "url": "google-fonts/s/ibmplexserif/v9/jizDREVNn1dOx-zrZ2X3pZvkTiUf2zc.woff2",
     "revision": "7261ee2cbee34a8491898940e0af500d"
-  },
-  {
-    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2",
-    "revision": "24f7b0944e9e03a905f9d7701573b2cd"
-  },
-  {
-    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2",
-    "revision": "819af3d3abdc9f135d49b80a91e2ff4c"
-  },
-  {
-    "url": "google-fonts/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2",
-    "revision": "33543c5cc5d88f5695dd08c87d280dfd"
   },
   {
     "url": "google-fonts/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2",
@@ -71,7 +59,7 @@ self.__precacheManifest = [
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-e5cb9e0c77a823b86dc2.js"
   },
   {
-    "url": "polyfill-b2e8b08b019f2b4998a9.js"
+    "url": "polyfill-905013744daa67b74738.js"
   },
   {
     "url": "manifest.webmanifest",
@@ -167,7 +155,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-815d3c27f6b5d5b9977b.js`))) {
+  if (!resources || !(await caches.match(`/app-17e94e19b5bf1d2d6ecc.js`))) {
     return await fetch(event.request)
   }
 
